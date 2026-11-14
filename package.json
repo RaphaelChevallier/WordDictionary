@@ -1,0 +1,18 @@
+{
+  "name": "maxfluency-build-tools",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Build-only tooling; no JavaScript or network client ships in the Android app.",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "build": "node tools/android.mjs assembleDebug",
+    "build:release": "node tools/android.mjs assembleRelease",
+    "test": "node --test tools/*.test.mjs",
+    "test:android": "node tools/android.mjs :core:test :app:testDebugUnitTest",
+    "content:sync": "node tools/lexicon.mjs sync",
+    "content:verify": "node tools/starter.mjs verify",
+    "content:prepare": "node tools/starter.mjs prepare"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 3,
+  "targetReleaseApkBytes": 19000000,
+  "maximumRemovalFraction": 0.1,
+  "maximumCompressedBytes": 85000000,
+  "maximumSensesPerWord": 8,
+  "discovery": {
+    "excludedPartsOfSpeech": ["adv", "article", "det"],
+    "excludedWords": {
+      "en": [
+        "a", "an", "the", "and", "or", "but", "of", "to", "in", "on", "for", "at", "by",
+        "with", "from", "as", "is", "are", "be", "was", "were", "it", "its", "this", "that",
+        "these", "those", "some", "any", "all", "each", "both", "no", "not", "i", "you",
+        "we", "he", "she", "they", "me", "us", "him", "her", "them", "my", "your", "our",
+        "his", "their", "very", "so", "too", "also", "only", "just", "even", "then", "than"
+      ],
+      "fr": [
+        "le", "la", "les", "l'", "un", "une", "des", "du", "de", "d'", "au", "aux", "et",
+        "ou", "mais", "\u00e0", "en", "dans", "sur", "sous", "pour", "par", "avec", "sans",
+        "ce", "cet", "cette", "ces", "je", "tu", "il", "elle", "on", "nous", "vous", "ils",
+        "elles", "me", "te", "se", "y", "ne", "pas", "est", "sont", "\u00eatre", "mon", "ma",
+        "mes", "ton", "ta", "tes", "son", "sa", "ses", "notre", "nos", "votre", "vos", "leur", "leurs"
+      ],
+      "es": [
+        "el", "la", "los", "las", "un", "una", "unos", "unas", "lo", "le", "les", "al", "del",
+        "de", "a", "en", "por", "para", "con", "sin", "y", "o", "pero", "que", "se",
+        "es", "son", "ser", "estar", "yo", "t\u00fa", "\u00e9l", "ella", "ello", "nosotros", "nosotras",
+        "vosotros", "vosotras", "ellos", "ellas", "me", "te", "nos", "os", "mi", "mis", "tu",
+        "tus", "su", "sus", "este", "esta", "estos", "estas", "ese", "esa", "esos", "esas", "no", "s\u00ed"
+      ]
+    }
+  },
+  "languages": [
+    {
+      "language": "en",
+      "minimumEntries": 10000,
+      "sources": [
+        {
+          "id": "en-wiktionary",
+          "edition": "en",
+          "title": "English Wiktionary",
+          "license": "CC-BY-SA-4.0",
+          "format": "wiktextract-jsonl-gzip",
+          "priority": 10,
+          "minimumEntries": 10000,
+          "url": "https://kaikki.org/dictionary/raw-wiktextract-data.jsonl.gz"
+        },
+        {
+          "id": "en-simple",
+          "edition": "simple",
+          "title": "Simple English Wiktionary",
+          "license": "CC-BY-SA-4.0",
+          "format": "wiktextract-jsonl-gzip",
+          "priority": 20,
+          "minimumEntries": 1000,
+          "url": "https://kaikki.org/simplewiktionary/raw-wiktextract-data.jsonl.gz"
+        }
+      ]
+    },
+    {
+      "language": "fr",
+      "minimumEntries": 10000,
+      "sources": [
+        {
+          "id": "fr-wiktionary",
+          "edition": "fr",
+          "title": "French Wiktionary",
+          "license": "CC-BY-SA-4.0",
+          "format": "wiktextract-jsonl-gzip",
+          "priority": 10,
+          "minimumEntries": 10000,
+          "url": "https://kaikki.org/dictionary/downloads/fr/fr-extract.jsonl.gz"
+        }
+      ]
+    },
+    {
+      "language": "es",
+      "minimumEntries": 10000,
+      "sources": [
+        {
+          "id": "es-wiktionary",
+          "edition": "es",
+          "title": "Spanish Wiktionary",
+          "license": "CC-BY-SA-4.0",
+          "format": "wiktextract-jsonl-gzip",
+          "priority": 10,
+          "minimumEntries": 10000,
+          "url": "https://kaikki.org/dictionary/downloads/es/es-extract.jsonl.gz"
+        }
+      ]
+    }
+  ]
+}
