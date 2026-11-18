@@ -1,5 +1,6 @@
 package com.maxfluency.app
 
+import android.app.Application
 import android.database.sqlite.SQLiteDatabase
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
@@ -9,6 +10,7 @@ import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
 import androidx.lifecycle.ViewModelProvider
+import androidx.work.Configuration
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Rule
@@ -22,22 +24,15 @@ import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
 
 @RunWith(RobolectricTestRunner::class)
-@Config(sdk = [35], qualifiers = "en-rUS-w411dp-h891dp")
+@Config(sdk = [35], qualifiers = "en-rUS-w411dp-h891dp", application = InvalidPersonalStoreApplication::class)
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 class StartupFailureTest {
     private val compose = createAndroidComposeRule<MainActivity>()
     private val storageFailure = object : ExternalResource() {
-        override fun before() {
-            val context = RuntimeEnvironment.getApplication()
-            context.deleteDatabase("personal.sqlite")
-            val file = context.getDatabasePath("personal.sqlite")
-            check(file.parentFile!!.isDirectory || file.parentFile!!.mkdirs())
-            SQLiteDatabase.openOrCreateDatabase(file, null).use { it.version = 999 }
-        }
-
         override fun after() {
             RuntimeEnvironment.getApplication().deleteDatabase("personal.sqlite")
         }
+
     }
 
     @get:Rule val rules: RuleChain = RuleChain.outerRule(storageFailure).around(compose)
@@ -62,5 +57,19 @@ class StartupFailureTest {
         compose.onNodeWithTag("nav-alternate").performClick()
         compose.onNode(hasText(error) and hasAnyAncestor(hasTestTag("today-screen"))).assertIsDisplayed()
         assertEquals(R.string.error_dictionary, model.state.value.error)
+    }
+}
+
+class InvalidPersonalStoreApplication : Application(), Configuration.Provider {
+    override val workManagerConfiguration: Configuration
+        get() = Configuration.Builder().build()
+
+    override fun onCreate() {
+        super.onCreate()
+        // Inject before an activity or a cached SQLite helper can open this database.
+        deleteDatabase("personal.sqlite")
+        val file = getDatabasePath("personal.sqlite")
+        check(file.parentFile!!.isDirectory || file.parentFile!!.mkdirs())
+        SQLiteDatabase.openOrCreateDatabase(file, null).use { it.version = 999 }
     }
 }

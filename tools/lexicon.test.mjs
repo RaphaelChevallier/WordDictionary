@@ -91,6 +91,27 @@ test("bad upstream data fails rather than publishing a partial or empty dictiona
   }), /JSON|line/i);
 });
 
+test("multiple meanings retain their own examples and omit attributed quotations", async (t) => {
+  const senses = Array.from({ length: 10 }, (_, i) => ({
+    glosses: [`Meaning ${i + 1}.`],
+    examples: [
+      { text: `  Example ${i + 1} uses this meaning.  ` },
+      { text: `Example ${i + 1} uses this meaning.` },
+      { text: "An attributed quotation.", ref: "A separate published work" },
+      { text: "A structured citation.", ref: { title: "Another published work" } },
+      { text: "A quotation without a reference.", type: "quotation" },
+    ],
+  }));
+  const data = await fixture(t, [record("mot", "", { senses }), record("livre", "Des pages.")]);
+  await buildPack({ ...data, source, release: "0.1.0" });
+  const db = new DatabaseSync(data.output, { readOnly: true });
+  try {
+    const stored = JSON.parse(db.prepare("SELECT senses FROM entries WHERE lookup_key=?").get("mot\x1fmot").senses);
+    assert.equal(stored.length, 10);
+    stored.forEach((sense, i) => assert.deepEqual(sense.examples, [`Example ${i + 1} uses this meaning.`]));
+  } finally { db.close(); }
+});
+
 test("JSONL framing accepts Unicode paragraph separators inside valid JSON strings", async (t) => {
   const data = await fixture(t, [
     { ...record("Zahnarzt", "Ein Text.\u2029Noch ein Text."), lang_code: "de" },

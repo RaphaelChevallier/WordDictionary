@@ -59,19 +59,23 @@ const result = windows
 if (result.error) throw result.error;
 process.exitCode = result.status ?? 1;
 if (result.status === 0) {
-  for (const [task, variant, name] of [
-    ["assembleDebug", "debug", "app-debug.apk"],
-    ["assembleRelease", "release", "app-release-unsigned.apk"],
+  for (const [task, variant] of [
+    ["assembleDebug", "debug"],
+    ["assembleRelease", "release"],
   ]) {
     if (!tasks.some((requested) => requested === task || requested.endsWith(`:${task}`))) continue;
-    const apk = join(root, "app", "build", "outputs", "apk", variant, name);
-    const bytes = statSync(apk).size;
-    console.log(`${name}: ${(bytes / 1e6).toFixed(2)} MB (${bytes.toLocaleString("en")} bytes)`);
-    if (bytes >= 100_000_000) throw new Error("APK size budget exceeded: the complete app must stay below 100 MB.");
-    if (variant === "release") {
-      const { targetReleaseApkBytes } = JSON.parse(readFileSync(join(root, "content", "sources.json"), "utf8"));
-      if (bytes > targetReleaseApkBytes) {
-        console.warn(`SIZE TARGET NOT MET: ${(bytes / 1e6).toFixed(2)} MB exceeds the ${(targetReleaseApkBytes / 1e6).toFixed(1)} MB whole-app goal. Full dictionary coverage was preserved; no words or definitions were dropped to fit.`);
+    const directory = join(root, "app", "build", "outputs", "apk", variant);
+    const metadata = JSON.parse(readFileSync(join(directory, "output-metadata.json"), "utf8"));
+    if (!metadata.elements?.length) throw new Error("The build produced no installable APK outputs.");
+    for (const output of metadata.elements) {
+      const bytes = statSync(join(directory, output.outputFile)).size;
+      console.log(`${output.outputFile}: ${(bytes / 1e6).toFixed(2)} MB (${bytes.toLocaleString("en")} bytes)`);
+      if (bytes >= 100_000_000) throw new Error("APK size budget exceeded: the complete app must stay below 100 MB.");
+      if (variant === "release") {
+        const { targetReleaseApkBytes } = JSON.parse(readFileSync(join(root, "content", "sources.json"), "utf8"));
+        if (bytes > targetReleaseApkBytes) {
+          throw new Error(`SIZE TARGET NOT MET: ${output.outputFile} exceeds the ${(targetReleaseApkBytes / 1e6).toFixed(1)} MB per-device whole-app goal. No dictionary coverage was removed.`);
+        }
       }
     }
   }

@@ -3,7 +3,7 @@
   "targetReleaseApkBytes": 19000000,
   "maximumRemovalFraction": 0.1,
   "maximumCompressedBytes": 85000000,
-  "maximumSensesPerWord": 8,
+  "maximumSensesPerWord": 64,
   "discovery": {
     "excludedPartsOfSpeech": ["adv", "article", "det"],
     "excludedWords": {

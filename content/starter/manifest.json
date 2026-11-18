@@ -2,59 +2,63 @@
   "schemaVersion": 3,
   "compression": "zstd-blocks",
   "releaseVersion": "0.2.0",
-  "builderSha256": "ef7605cd5896f46fbb591f138176ec252c0b02c9aec651a4e98ebfaf5625f91f",
-  "builtAt": "2026-11-13T01:07:06.631Z",
+  "builderSha256": "ba56c2a9dde982ec7c9c32ffd8ccd1834b5f4d52433bddbf28a8de8f30497c49",
+  "builtAt": "2026-11-17T23:16:29.688Z",
   "license": "CC-BY-SA-4.0",
   "attribution": "Wiktionary and Simple English Wiktionary contributors; machine-readable extraction by Kaikki.org / Wiktextract. Vocabulary frequency bands: FrequencyWords / OpenSubtitles.",
-  "modifications": "Small native-language starter bank selected by frequency bands. Full dictionaries are optional public downloads.",
+  "modifications": "Small native-language starter bank selected by frequency bands, audited Spanish lookup additions and pinned source meanings/examples. Detached footnotes and broken wiki markup removed; quality warnings and source usage qualifiers retained. Attributed/embedded quotations omitted; examples belong to their precise meaning. Example-only headword additions are lookup-only; daily discovery is unchanged. Full dictionaries are optional public downloads.",
   "languages": [
     {
       "entries": 2465,
       "dailyEntries": 2403,
-      "compressedBytes": 284489,
-      "unpackedBytes": 876856,
-      "sha256": "0773ab080f7b2384c5b7e23a5d7465c701e000e6646e47662ace056d5fff3418",
+      "compressedBytes": 513366,
+      "unpackedBytes": 1577822,
+      "sha256": "a7a0bde2733163279f9a3ca6bd31f8140d5f861843a35182bdacdc90d27ef628",
       "indexBytes": 53222,
       "maximumBlockBytes": 16777216,
       "language": "en",
       "edition": "en",
       "releaseVersion": "0.2.0",
-      "compressedSha256": "0773ab080f7b2384c5b7e23a5d7465c701e000e6646e47662ace056d5fff3418",
-      "file": "en-0773ab080f7b2384.mflx"
+      "compressedSha256": "a7a0bde2733163279f9a3ca6bd31f8140d5f861843a35182bdacdc90d27ef628",
+      "file": "en-a7a0bde273316327.mflx"
     },
     {
-      "entries": 2691,
+      "entries": 2692,
       "dailyEntries": 2640,
-      "compressedBytes": 356362,
-      "unpackedBytes": 1089332,
-      "sha256": "14537b1c31ee1a8edbf9ea295419f72b06c917d3f7cf1f0d70f472c0f4429e71",
-      "indexBytes": 57613,
+      "compressedBytes": 623283,
+      "unpackedBytes": 1968472,
+      "sha256": "92c3ddcef42a3d041deb9fa48db5c3688cf58e3832914e8a6e7ed546628326c8",
+      "indexBytes": 57632,
       "maximumBlockBytes": 16777216,
       "language": "fr",
       "edition": "fr",
       "releaseVersion": "0.2.0",
-      "compressedSha256": "14537b1c31ee1a8edbf9ea295419f72b06c917d3f7cf1f0d70f472c0f4429e71",
-      "file": "fr-14537b1c31ee1a8e.mflx"
+      "compressedSha256": "92c3ddcef42a3d041deb9fa48db5c3688cf58e3832914e8a6e7ed546628326c8",
+      "file": "fr-92c3ddcef42a3d04.mflx"
     },
     {
-      "entries": 2755,
-      "dailyEntries": 2700,
-      "compressedBytes": 358245,
-      "unpackedBytes": 1077031,
-      "sha256": "b28f95937c6eedc0d63e67e08ce160724b3a7157df664086c34319136f1efa81",
-      "indexBytes": 58776,
+      "entries": 3078,
+      "dailyEntries": 2699,
+      "compressedBytes": 469056,
+      "unpackedBytes": 1423779,
+      "sha256": "3bdf740d7b4d2f2d57c2ee7313c7857150dcf57b3d0ae30db73bd2ed3949cbf9",
+      "indexBytes": 80258,
       "maximumBlockBytes": 16777216,
       "language": "es",
       "edition": "es",
       "releaseVersion": "0.2.0",
-      "compressedSha256": "b28f95937c6eedc0d63e67e08ce160724b3a7157df664086c34319136f1efa81",
-      "file": "es-b28f95937c6eedc0.mflx"
+      "compressedSha256": "3bdf740d7b4d2f2d57c2ee7313c7857150dcf57b3d0ae30db73bd2ed3949cbf9",
+      "file": "es-3bdf740d7b4d2f2d.mflx"
     }
   ],
   "rankHashes": {
     "en": "31590347caa2b106c208da53567e27fa1c56575d7c57b7f42a896752fe57b486",
     "fr": "626203b89b6a3d8ff8d201a6249c5897397df331389b780f6f2e94c8f76069bd",
     "es": "73b1cbded43f764a9f41f5c3b4718f860b47683fbef4988c5b7766e921e9e2a1"
+  },
+  "supplementHashes": {
+    "es": "1ed9c12eb5afe36da4eb8ecc70f6a4302a8a8763b7c1fe3c533a0b2f8a7ac76d",
+    "examples": "e4c53bbc439a95029845750911476a70d52407008a368a7a8bb84248a52cb769"
   },
   "discovery": {
     "excludedPartsOfSpeech": [

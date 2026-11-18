@@ -20,6 +20,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Refresh
@@ -32,6 +33,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.key
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -44,6 +46,7 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.foundation.text.KeyboardOptions
@@ -178,7 +181,11 @@ fun TodayScreen(
                     else -> state.daily?.let { daily ->
                         if (homeView == HomeView.GARDEN) {
                             val garden = daily.grid.take(gridSize)
-                            item { WordGarden(garden, onWord, gardenHeight) }
+                            item {
+                                key(daily.date, state.settings.language, state.settings.levels.getValue(state.settings.language), state.loading) {
+                                    WordGarden(garden, onWord, gardenHeight, refreshRound = daily.round)
+                                }
+                            }
                             if (garden.isNotEmpty()) item {
                                 Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                                     TextButton(
@@ -224,17 +231,20 @@ private fun FeaturedWordCard(daily: DailyWords, onWord: (String) -> Unit, onSpea
                     .withLocale(configuration.locales[0])), style = MaterialTheme.typography.bodySmall)
             }
             Text(daily.featured.word, style = MaterialTheme.typography.headlineLarge)
-            FlowRow(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp),
-                verticalArrangement = Arrangement.spacedBy(4.dp), itemVerticalAlignment = Alignment.CenterVertically) {
-                if (daily.featured.pronunciation.isNotBlank()) {
-                    Text(daily.featured.pronunciation, style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        maxLines = 2, overflow = TextOverflow.Ellipsis)
-                }
-                TextButton(onClick = { onSpeak(daily.featured) }) { Text(stringResource(R.string.listen_device_voice)) }
-            }
+            PronunciationGuide(daily.featured)
+            TextButton(onClick = { onSpeak(daily.featured) }) { Text(stringResource(R.string.listen_device_voice)) }
             daily.featured.senses.firstOrNull()?.let {
                 Text(it.definition, style = MaterialTheme.typography.bodyLarge, maxLines = 4, overflow = TextOverflow.Ellipsis)
+            }
+            val additionalMeanings = daily.featuredMeaningCount - 1
+            if (additionalMeanings > 0) {
+                Row(Modifier.testTag("more-meanings"), horizontalArrangement = Arrangement.spacedBy(4.dp),
+                    verticalAlignment = Alignment.CenterVertically) {
+                    Text(pluralStringResource(R.plurals.more_meanings, additionalMeanings, additionalMeanings),
+                        style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, contentDescription = null,
+                        modifier = Modifier.size(16.dp), tint = MaterialTheme.colorScheme.onSurfaceVariant)
+                }
             }
         }
     }

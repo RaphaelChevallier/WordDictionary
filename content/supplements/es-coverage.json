@@ -1,0 +1,5802 @@
+{
+  "schemaVersion": 1,
+  "language": "es",
+  "sourceEdition": "es",
+  "sourceId": "es-wiktionary",
+  "sourceUrl": "https://kaikki.org/eswiktionary/raw-wiktextract-data.jsonl.gz",
+  "sourceSha256": "206001cbdfc783cf4076789366e2c0cb27860da739ddfcc0189c4c878b189da1",
+  "license": "CC-BY-SA-4.0",
+  "publisherArchiveSha256": "aa89deffe47a2a787f8f1e76f0788817c7f33789132fc40d6c594c87ca6f74ad",
+  "methodology": "Native Spanish lookup meanings missing from every publisher spelling/alias. Excludes form-only references, explicitly imprecise or citation-needed definitions, malformed glosses, control-character spellings, and bundled duplicates. Includes lexical words, expressions and affixes, not all independent words. Uncertain sense-only differences are not automatically merged. Lookup only: daily discovery is unchanged pending separate curation.",
+  "auditCandidateHeadwords": 732,
+  "entries": [
+    {
+      "word": "-aba",
+      "pronunciation": "[ˈaβ̞a]",
+      "senses": [
+        {
+          "partOfSpeech": "suffix",
+          "definition": "Terminación verbal para el pretérito imperfecto del modo indicativo en verbos de la primera conjugación (infinitivos en -ar).",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "-ad",
+      "pronunciation": "[ˈað̞]",
+      "senses": [
+        {
+          "partOfSpeech": "suffix",
+          "definition": "Terminación verbal para segunda persona del plural (vosotros) del modo imperativo en conjugaciones primera (terminada en -ar)",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "-amos",
+      "pronunciation": "[ˈamos]",
+      "senses": [
+        {
+          "partOfSpeech": "suffix",
+          "definition": "Terminación verbal para la primera persona del plural (nosotros) del presente del modo indicativo en verbos de primera cojungación (terminados en -ar)",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        },
+        {
+          "partOfSpeech": "suffix",
+          "definition": "Terminación verbal para la primera persona del plural (nosotros) del pretérito indefinido del modo indicativo de verbos de primera cojungación (terminados en -ar)",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "-an",
+      "pronunciation": "[ˈãn]",
+      "senses": [
+        {
+          "partOfSpeech": "suffix",
+          "definition": "Marca la tercera persona del plural (ellas, ellos) del presente de indicativo de los verbos de la primera conjugación (-ar).",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "-deras",
+      "pronunciation": "[ˈd̪eɾas]",
+      "senses": [
+        {
+          "partOfSpeech": "suffix",
+          "definition": "Forma sustantivos a partir de verbos, con el significado de \"capacidad\" para hacer lo indicado por la base.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "-ed",
+      "pronunciation": "[ˈeð̞]",
+      "senses": [
+        {
+          "partOfSpeech": "suffix",
+          "definition": "Terminación verbal para segunda persona del plural (vosotros) del modo imperativo en conjugaciones primera (terminada en -er).",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "-es",
+      "pronunciation": "[ˈes]",
+      "senses": [
+        {
+          "partOfSpeech": "suffix",
+          "definition": "Forma el plural regular de sustantivos y adjetivos terminados en -y precedida de vocal, -l, -r, -n, -d, -z, -j, incluyendo sus abreviaturas, así como de monosílabos y polisílabos agudos terminados en -s o en -x, y de algunos préstamos de otras lenguas terminados en -ch (como sándwich → sándwiches).",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        },
+        {
+          "partOfSpeech": "suffix",
+          "definition": "Marca la segunda persona del singular (tú) en el presente de indicativo de la mayor parte de los verbos de la segunda y tercera conjugación (terminados en -er, -ir), excepto en algunos irregulares (como ir → vas).",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        },
+        {
+          "partOfSpeech": "suffix",
+          "definition": "Marca la segunda persona del singular (tú) en el presente de subjuntivo de la mayor parte de los verbos de la primera conjugación (terminados en -ar), excepto en algunos irregulares (como estar → \"estés\").",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "-imos",
+      "pronunciation": "[ˈimos]",
+      "senses": [
+        {
+          "partOfSpeech": "suffix",
+          "definition": "Terminación verbal para la primera persona del plural (nosotros) del pretérito indefinido del modo indicativo en verbos de las conjugaciones segunda (infinitivos en -er) y tercera (infinitivos en -ir).",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        },
+        {
+          "partOfSpeech": "suffix",
+          "definition": "Terminación verbal para la primera persona del plural (nosotros) del presente del modo indicativo en verbos de la tercera conjugación (infinitivos en -ir).",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "-ir",
+      "pronunciation": "[ˈiɾ]",
+      "senses": [
+        {
+          "partOfSpeech": "suffix",
+          "definition": "Forma el infinitivo en verbos de la tercera conjugación.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "-iste",
+      "pronunciation": "[ˈist̪e]",
+      "senses": [
+        {
+          "partOfSpeech": "suffix",
+          "definition": "Terminación verbal para la segunda persona singular del pretérito del modo indicativo en verbos de la segunda y tercera conjugaciones (infinitivos en -er y en -ir).",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "-mos",
+      "pronunciation": "[ˈmos]",
+      "senses": [
+        {
+          "partOfSpeech": "suffix",
+          "definition": "Terminación verbal para la primera persona del plural (nosotros) para todos los tiempos, modos y conjugaciones.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "-r",
+      "pronunciation": "[ˈɾ]",
+      "senses": [
+        {
+          "partOfSpeech": "suffix",
+          "definition": "Marca del infinitivo de todos los verbos en español.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "-s",
+      "pronunciation": "[ˈs]",
+      "senses": [
+        {
+          "partOfSpeech": "suffix",
+          "definition": "Forma el plural regular de sustantivos y adjetivos terminados en vocal, de algunas abreviaturas y de ciertos préstamos de otras lenguas terminados en consonantes diferentes de -l, -r, -n, -d, -z, -j, -s, -x, -ch, o en grupos consonánticos (como gong → gongs).",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        },
+        {
+          "partOfSpeech": "suffix",
+          "definition": "Marca la segunda persona del singular en la mayor parte de los tiempos de conjugación verbal regular (excepto en el imperativo afirmativo).",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "-ste",
+      "pronunciation": "[ˈst̪e]",
+      "senses": [
+        {
+          "partOfSpeech": "suffix",
+          "definition": "Terminación verbal para la segunda persona del singular (tú) del pretérito indefinido del modo indicativo en verbos de las conjugaciones primera (infinitivos en -ar), segunda (infinitivos en -er) y tercera (infinitivos en -ir).",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "-ábamos",
+      "pronunciation": "[ˈaβ̞amos]",
+      "senses": [
+        {
+          "partOfSpeech": "suffix",
+          "definition": "Terminación verbal para la primera persona del plural del pretérito imperfecto del modo indicativo en verbos de la primera conjugación (infinitivos en -ar).",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "-é",
+      "pronunciation": "[ˈe]",
+      "senses": [
+        {
+          "partOfSpeech": "suffix",
+          "definition": "Terminación verbal para la primera persona del singular del pretérito indefinido del modo indicativo en verbos de la primera conjugación (infinitivos en -ar).",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "-íamos",
+      "pronunciation": "[ˈiamos]",
+      "senses": [
+        {
+          "partOfSpeech": "suffix",
+          "definition": "Terminación regular para la primera persona del plural del pretérito imperfecto del modo indicativo en verbos de la segunda y tercera conjugación (infinitivos en -er, -ir).",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "-ó",
+      "pronunciation": "[ˈo]",
+      "senses": [
+        {
+          "partOfSpeech": "suffix",
+          "definition": "Terminación verbal para la tercera persona del singular del pretérito indefinido del modo indicativo en verbos de la primera, segunda y tercera conjugaciones (infinitivos en -ar, -er e -ir).",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "Dios aprieta, pero no ahoga",
+      "pronunciation": "[ˈd̪jos aˈpɾjet̪a &#124; ˈpeɾo ˈno aˈoɣ̞a]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se usa cuando sucede algo que alivia o hace más llevadera una situación difícil.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "Dios aprieta, pero no ahorca"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "Dios los cría y ellos se juntan",
+      "pronunciation": "[ˈd̪jos los ˈkɾia i ˈeʝos se ˈxũn̪t̪ãn]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se usa para indicar que las personas que tienen gustos, ideas o características similares tienden a juntarse o asociarse entre ellas.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "Roma no paga traidores",
+      "pronunciation": "[ˈroma ˈno ˈpaɣ̞a t̪ɾajˈð̞oɾes]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "La deslealtad tendrá sus consecuencias afines.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "Roma no se hizo en un día",
+      "pronunciation": "[ˈroma ˈno se ˈiso ẽn ũn̪ ˈd̪ia]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Aconseja la constancia y perseverancia a la hora de afrontar una tarea costosa.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "no se ganó Zamora en una hora"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "a Dios rogando y con el mazo dando",
+      "pronunciation": "[a ˈð̞jos roˈɣ̞ãn̪d̪o i kõn el ˈmaso ˈð̞ãn̪d̪o]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "La oración debe estar acompañada de las obras.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        },
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se aplica también, para señalar su doble moral, a aquellas personas que siendo muy beatas hacen lo contrario de lo que predican.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "a Seguro se lo llevaron preso",
+      "pronunciation": "[a seˈɣ̞uɾo se lo ʝeˈβ̞aɾõn ˈpɾeso]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Para expresar que no se tiene ninguna certeza sobre el futuro.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "a Zaragoza o al charco",
+      "pronunciation": "[a saɾaˈɣ̞osa o alʲ ˈt͡ʃaɾko]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica la proverbial tozudez aragonesa.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "a abril, deséale por lluvioso y témele por vil",
+      "pronunciation": "[a aˈβ̞ɾil &#124; d̪eˈseale poɾ ʝuˈβ̞joso i ˈt̪emele poɾ ˈβ̞il]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Hace referencia a que abril suele traer lluvias pero también se muestra poco fiable, con tiempo inestable.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "a buen entendedor, pocas palabras bastan",
+      "pronunciation": "[a ˈβ̞wẽn ẽn̪t̪ẽn̪d̪eˈð̞oɾ &#124; ˈpokas paˈlaβ̞ɾas ˈβ̞ast̪ãn]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Señala que quien posee un buen entendimiento no necesita largas explicaciones para comprender algo. Se aplica como ensalzamiento del laconismo, en especial en un diálogo, en el que dos personas coincidiendo en intención o pensamiento sobre un asunto, son capaces de entenderse con pocas palabras. En la actualidad, se suele emplear solamente la primera parte del dicho, con la intención de advertir de forma sutil o eludir decir algo que no se desea manifestar con claridad.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "a buen hambre, no hay pan duro",
+      "pronunciation": "[a ˈβ̞wẽn ˈãmbɾe &#124; ˈno ˈaj ˈpãn̪ ˈd̪uɾo]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "En la medida que aumente la necesidad o el apremio, la exigencia por la calidad o los detalles disminuye.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "a buenas horas, mangas verdes",
+      "pronunciation": "[a ˈβ̞wenas ˈoɾas &#124; ˈmãŋgas ˈβ̞eɾð̞es]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica que algo antes esperado ha sucedido cuando ya no era oportuno.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "a buenas horas",
+        "a buena hora"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "a caballo regalado, no le mires el dentado",
+      "pronunciation": "[a kaˈβ̞aʝo reɣ̞aˈlað̞o &#124; ˈno le ˈmiɾes el̪ d̪ẽn̪ˈt̪að̞o]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Úsase para criticar la actitud de las personas que, al recibir un beneficio fortuito o espontáneo, buscan destacar sus insuficiencias.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "a caballo regalado, no le mires el diente",
+        "a caballo regalado no se le mira el diente",
+        "a caballo regalado, no se le ve el colmillo"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "a caballo regalado, no le mires el diente",
+      "pronunciation": "[a kaˈβ̞aʝo reɣ̞aˈlað̞o &#124; ˈno le ˈmiɾes el̪ ˈd̪jẽn̪t̪e]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Úsase para reprender a quienes critican o desmerecen algo que han recibido sin mérito o esfuerzo de su parte",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "a caballo regalado, no se le mira el colmillo",
+      "pronunciation": "[a kaˈβ̞aʝo reɣ̞aˈlað̞o &#124; ˈno se le ˈmiɾa el kolˈmiʝo]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Úsase para reprender a quienes critican o desmerecen algo que han recibido sin mérito o esfuerzo de su parte",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "a comer y a misa, una vez no más se avisa",
+      "pronunciation": "[a koˈmeɾ i a ˈmisa &#124; ˈuna ˈβ̞es ˈno ˈmas se aˈβ̞isa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Refrán que invita a ir a la mesa sin hacérselo repetir.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "a cuarenta de mayo, quemó la vieja el sayo, y a quince de abril, el mandil",
+      "pronunciation": "[a kwaˈɾẽn̪t̪a ð̞e ˈmaʝo &#124; keˈmo la ˈβ̞jexa el ˈsaʝo &#124; i a ˈkĩnse ð̞e aˈβ̞ɾil &#124; el mãn̪ˈd̪il]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Hace referencia a las fechas de cambio de tiempo, fin definitivo del frío y comienzo de las estaciones cálidas.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "a enero sigue febrero, los dos son marrulleros",
+      "pronunciation": "[a eˈneɾo ˈsiɣ̞e feˈβ̞ɾeɾo &#124; los ˈð̞os ˈsõm maruˈʝeɾos]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Hace referencia al tiempo poco fiable durante los dos meses.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "a falta de pan, buenas son tortas",
+      "pronunciation": "[a ˈfal̪t̪a ð̞e ˈpãn &#124; ˈβ̞wenas ˈsõn̪ ˈt̪oɾt̪as]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Si no tenemos a nuestro alcance el mejor recurso posible, hay que conformarse con lo que se tiene",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "a la moza y a la parra, alzallas la falda",
+      "pronunciation": "[a la ˈmosa i a la ˈpara &#124; alˈsaʝas la ˈfal̪d̪a]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Aconseja levantar los pámpanos de la vid para que ésta madure bien antes de vendimiar. Las ventajas de conseguir que una mujer acceda a dejarse levantar la falda no es necesario mencionarlas.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "a la vejez, viruelas",
+      "pronunciation": "[a la β̞eˈxes &#124; biˈɾwelas]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se dice de los que hacen cosas propias de gente de menos edad de la que tienen.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "a las tres relentadas, la lluvia no falta",
+      "pronunciation": "[a las ˈt̪ɾes relẽn̪ˈt̪að̞as &#124; la ˈʝuβ̞ja ˈno ˈfal̪t̪a]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Refrán de predicción del tiempo: tras tres días de relente (noches calmas y húmedas), suceden las lluvias.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "a mucho llover, esperar, que de fijo ha de escampar",
+      "pronunciation": "[a ˈmut͡ʃo ʝoˈβ̞eɾ &#124; espeˈɾaɾ &#124; ke ð̞e ˈfixo ˈa ð̞e eskãmˈpaɾ]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "No se debe salir cuando llueve, sino esperar a que se detenga y se vayan las nubes.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "a otra cosa, mariposa",
+      "pronunciation": "[a ˈot̪ɾa ˈkosa &#124; maɾiˈposa]",
+      "senses": [
+        {
+          "partOfSpeech": "phrase",
+          "definition": "Expresión que se usa para anunciar que se va a cambiar de tema o tarea, o que se desea o conviene hacerlo.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "a perro flaco todo son pulgas",
+      "pronunciation": "[a ˈpero ˈflako ˈt̪oð̞o ˈsõn ˈpulɣ̞as]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se usa para indicar que las desgracias afectan más o tienden a acumularse en aquellos que ya de por sí son desvalidos o vulnerables.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "a quien Dios no le da hijos, el diablo le da sobrinos",
+      "pronunciation": "[a kjẽn̪ ˈd̪jos ˈno le ˈð̞a ˈixos &#124; el̪ ˈd̪jaβ̞lo le ˈð̞a soˈβ̞ɾinos]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Cualquiera terminará teniendo que lidiar con el mismo tipo de problemas familiares o domésticos, incluso si decide no ser padre.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "a quince de marzo, da el sol en la sombra y canta la alondra",
+      "pronunciation": "[a ˈkĩnse ð̞e ˈmaɾso &#124; ˈð̞a el ˈsol ẽn la ˈsõmbɾa i ˈkãn̪t̪a la aˈlõn̪d̪ɾa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Hace referencia a las fechas de cambio de tiempo, el sol ya sube sobre el horizonte y comienza la primavera con el canto de los pájaros.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "a río revuelto, ganancia de pescadores",
+      "pronunciation": "[a ˈrio reˈβ̞wel̪t̪o &#124; gaˈnãnsja ð̞e peskaˈð̞oɾes]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Obtener beneficio de una situación caótica o confusa, especialmente si es de forma injusta.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "a su tiempo maduran las uvas",
+      "pronunciation": "[a su ˈt̪jẽmpo maˈð̞uɾãn las ˈuβ̞as]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Refrán español, cuyo significado debe entenderse como que las cosas requieren un tiempo, que no conviene precipitarse y que debe esperarse el tiempo propicio.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "a su tiempo se cogen las uvas, cuando están maduras"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "a todo cerdo le llega su San Martín",
+      "pronunciation": "[a ˈt̪oð̞o ˈseɾð̞o le ˈʝeɣ̞a su ˈsãm maɾˈt̪ĩn]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Úsase para afirmar que cada cual recibirá eventualmente su justa recompensa o castigo.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "a todo cerdo le llega su navidad",
+        "a todo chancho le llega su San Martín",
+        "a todo coche le llega su sábado",
+        "a cada gorrín le llega su San Martín",
+        "a cada marrano le llega su San Martín",
+        "a cada Jurel toca su Viernes Santo"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "aceituna comida, hueso fuera",
+      "pronunciation": "[asejˈt̪una koˈmið̞a &#124; ˈ(ɣ̞)w̝eso ˈfweɾa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Alude a que una vez finalizado un tema, debe dejarse de pensar en él, especialmente si ha resultado problemático o doloroso.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        },
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Pagar lo adquirido con rapidez, sin demora, sin crédito, no dejar a deber.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "aeromozo",
+      "pronunciation": "[aeɾoˈmoso]",
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definition": "Persona que atiende a los pasajeros en un avión.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "azafato",
+        "mozo"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "agua pasada no mueve molino",
+      "pronunciation": "[ˈaɣ̞wa paˈsað̞a ˈno ˈmweβ̞e moˈlino]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Refrán que significa que no sirve de nada lamentarse del pasado, que lo hecho, hecho está.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "agállara",
+      "pronunciation": "[aˈɣ̞aʝaɾa]",
+      "senses": [
+        {
+          "partOfSpeech": "verb",
+          "definition": "Protuberancia redonda que se forma en el roble.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        },
+        {
+          "partOfSpeech": "verb",
+          "definition": "Branquia del pez.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "gállara"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "al freír será el reír",
+      "pronunciation": "[al fɾeˈiɾ seˈɾa el reˈiɾ]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Úsase para reprobar a alguien el cometer un acto irresponsable o bien para pronosticar alguna desgracia. En particular, se usa para reprochar a alguien el excederse en algo, como en el gasto de dinero, sin tener en cuenta las consecuencias.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "al freír será el reír, y al pagar será el llorar",
+      "pronunciation": "[al fɾeˈiɾ seˈɾa el reˈiɾ &#124; i al paˈɣ̞aɾ seˈɾa el ʝoˈɾaɾ]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Úsase para reprobar a alguien el cometer un acto irresponsable o bien para pronosticar alguna desgracia. En particular, se usa para reprochar a alguien el excederse en algo, como en el gasto de dinero, sin tener en cuenta las consecuencias.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "al nopal solo lo visitan cuando tiene tunas",
+      "pronunciation": "[al noˈpal ˈsolo lo β̞iˈsit̪ãŋ ˈkwãn̪d̪o ˈt̪jene ˈt̪unas]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica el interés de las personas hacia otra solo cuando necesita algo.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "al perro más flaco se le cargan las pulgas",
+      "pronunciation": "[al ˈpero ˈmas ˈflako se le ˈkaɾɣ̞ãn las ˈpulɣ̞as]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Hace alusión en que si la persona es demasiado ingenua o cándida pudiera ser víctima de manipulaciones o abusos de personas inescrupulosas que se aprovechan de su candor para perjudicarle.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "al que da y quita, le sale una corcovita",
+      "pronunciation": "[al ke ˈð̞a i ˈkit̪a &#124; le ˈsale ˈuna koɾkoˈβ̞it̪a]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Refrán que fustiga a quien da o regala algo y luego se arrepiente y lo toma de vuelta.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "al que nace barrigón es al ñudo que lo fajen",
+      "pronunciation": "[al ke ˈnase β̞ariˈɣ̞õn ˈes al ˈɲuð̞o ke lo ˈfaxẽn]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Es imposible hacer nada para cambiar las cualidades que fueron adquiridas desde el nacimiento.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "al que nace barrigón, es al ñudo que lo fajen",
+      "pronunciation": "[al ke ˈnase β̞ariˈɣ̞õn &#124; ˈes al ˈɲuð̞o ke lo ˈfaxẽn]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Es imposible cambiar los atributos innatos de una persona.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "algo tendrá el agua cuando la bendicen",
+      "pronunciation": "[ˈalɣ̞o t̪ẽn̪ˈd̪ɾa el ˈaɣ̞wa ˈkwãn̪d̪o la β̞ẽn̪ˈd̪isẽn]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica la importancia que algo tiene, porque atrae el interés general, aunque su valor sea dudoso.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "algún culo sangrará",
+      "pronunciation": "[alˈɣ̞ũŋ ˈkulo sãŋgɾaˈɾa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica que no hay que tener preocupación por un asunto porque otra persona se encargará de ello.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "alpargata no es zapato ni que le pongan tacón",
+      "pronunciation": "[alpaɾˈɣ̞at̪a ˈno ˈes saˈpat̪o ni ke le ˈpõŋgãn̪ t̪aˈkõn]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Sentencia dirigida a las personas que se dan a la tarea de aparentar lo que en realidad no son y lo hacen simplemente por darse aires o ufanarse.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "amigo de la mujer, enemigo del marido",
+      "pronunciation": "[aˈmiɣ̞o ð̞e la muˈxeɾ &#124; eneˈmiɣ̞o ð̞el maˈɾið̞o]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Adagio que en lo antiguo pedía al varón desconfiar de los amigos de la mujer.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "amigo es ratón del queso y se lo come",
+      "pronunciation": "[aˈmiɣ̞o ˈes raˈt̪õn̪ d̪el ˈkeso i se lo ˈkome]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Hace alusión a la falsa \"amistad\" cuya relación se basa en hipocresía o interés malsano o bien al hecho en que un amigo se aprovecha y abusa de la confianza que se le brinda, de un modo especial si son de distinto sexo.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "anda a beberte tu agua donde te comiste tu pesca'o sala'o",
+      "pronunciation": "[ˈãn̪d̪a a β̞eˈβ̞eɾt̪e t̪u ˈaɣ̞wa ˈð̞õn̪d̪e t̪e koˈmist̪e t̪u pesˈkao saˈlao]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Sentencia dirigida a las personas para que resuelvan algún problema o conflicto que crearon por sí mismos.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "antes es la obligación que la devoción",
+      "pronunciation": "[ˈãn̪t̪es ˈes la oβ̞liɣ̞aˈsjõŋ ke la ð̞eβ̞oˈsjõn]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Hay que dar prioridad a las obligaciones y los deberes y dejar para cuando estos estén cumplidos las aficiones y cosas que nos gustan.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "arrimado ni un perol",
+      "pronunciation": "[ariˈmað̞o ni ũm peˈɾol]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Hace referencia al hecho de que cada quien debe tener su propia vivienda donde hacer su vida ya que vivir en una casa ajena (de arrimado) a la larga lo que hace es generar problemas y conflictos.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "aunque la mona se vista de seda, mona se queda",
+      "pronunciation": "[ˈãwŋke la ˈmona se ˈβ̞ist̪a ð̞e ˈseð̞a &#124; ˈmona se ˈkeð̞a]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Alude a la característica imitadora de los monos, e indica la banalidad de disfrazar la naturaleza de las personas ya que, a la larga, se descubre. Se aplica a los que tras mejorar en su condición humana e incluso ascender económica o socialmente, no por ello pueden ocultar sus defectos o sus orígenes humildes.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "boda en mayo, ¡qué fallo!",
+      "pronunciation": "[ˈboð̞a ẽn ˈmaʝo &#124; ˈke ˈfaʝo]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "En referencia a una creencia antigua de que casarse en mayo daba mala suerte.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "burla burlando, vase el lobo al asno",
+      "pronunciation": "[ˈbuɾla β̞uɾˈlãn̪d̪o &#124; ˈβ̞ase el ˈloβ̞o al ˈasno]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Cada uno va a lo suyo, a su interés beneficiosamente.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "báilame ese trompo en la uña",
+      "pronunciation": "[ˈbajlame ˈese ˈt̪ɾõmpo ẽn la ˈuɲa]",
+      "senses": [
+        {
+          "partOfSpeech": "phrase",
+          "definition": "Se dice para conminar a alguien a que demuestre que puede llevar a cabo aquello que asegura o de lo que se jacta por tratarse de algo poco probable o poco creíble.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "cachicamo diciéndole a morrocoy conchudo",
+      "pronunciation": "[kat͡ʃiˈkamo ð̞iˈsjẽn̪d̪ole a moroˈkoj kõnʲˈt͡ʃuð̞o]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica que una persona resalta en otra los defectos que la misma tiene o simplemente saca a la luz los mismos errores que comete.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "le dijo la sartén al cazo",
+        "le dijo la sartén al cazo ¡aparta que me tiznas!",
+        "el buey diciéndole cornudo al burro"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "cachicamo trabajando para lapa",
+      "pronunciation": "[kat͡ʃiˈkamo t̪ɾaβ̞aˈxãn̪d̪o ˈpaɾa ˈlapa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Denota que una persona trabaja y se esfuerza para que un tercero sea el que disfrute de los beneficios.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "café y cigarro, muñeco de barro",
+      "pronunciation": "[kaˈfe i siˈɣ̞aro &#124; muˈɲeko ð̞e ˈβ̞aro]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se usa para indicar que el consumo de un café y un cigarro promueven la evacuación intestinal.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "calavera no chilla",
+      "pronunciation": "[kalaˈβ̞eɾa ˈno ˈt͡ʃiʝa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Los cadáveres no pueden protestar ni reclamar nada.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "candil de la calle, oscuridad de su casa",
+      "pronunciation": "[kãn̪ˈd̪il̪ d̪e la ˈkaʝe &#124; oskuɾiˈð̞að̞ d̪e su ˈkasa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se dice del que se comporta bien con la gente de la calle, pero es arisco o insolidario con su propia familia.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "cascársela",
+      "pronunciation": "[kasˈkaɾsela]",
+      "senses": [
+        {
+          "partOfSpeech": "verb",
+          "definition": "Masturbarse el varón.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "cocodrilo que se duerme es cartera",
+      "pronunciation": "[kokoˈð̞ɾilo ke se ˈð̞weɾme ˈes kaɾˈt̪eɾa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica que uno debe estar atento para no ser engañado por cualquier embaucador.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "come avispa que cigarrón atora",
+      "pronunciation": "[ˈkome aˈβ̞ispa ke siɣ̞aˈrõn aˈt̪oɾa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Manera de conminar a una persona a que esté alerta, preste atención y no se distraiga.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "como a la prostituta, si no le pagas por adelantado no se mueve",
+      "pronunciation": "[ˈkomo a la pɾost̪iˈt̪ut̪a &#124; si ˈno le ˈpaɣ̞as poɾ að̞elãn̪ˈt̪að̞o ˈno se ˈmweβ̞e]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Frase que indica el interés de hacer un trabajo cuando haya un anticipo de por medio con el fin de complacer a un cliente.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "como el médico de Orgaz, que cataba el pulso en el hombro",
+      "pronunciation": "[ˈkomo el ˈmeð̞iko ð̞e oɾˈɣ̞as &#124; ke kaˈt̪aβ̞a el ˈpulso ẽn el ˈõmbɾo]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se aplica a todas aquellas personas que, para alcanzar un determinado fin, se valen de medios inadecuados.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "como muestra un botón",
+      "pronunciation": "[ˈkomo ˈmwest̪ɾa ũm boˈt̪õn]",
+      "senses": [
+        {
+          "partOfSpeech": "phrase",
+          "definition": "Indica que solo se ofrece un ejemplo, pero que puede haber muchos más.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "con perricas, chufletes",
+      "pronunciation": "[kõm peˈrikas &#124; t͡ʃuˈflet̪es]",
+      "senses": [
+        {
+          "partOfSpeech": "phrase",
+          "definition": "Indica que todo es más fácil cuando se tiene dinero.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "con qué culo se sienta la cucaracha",
+      "pronunciation": "[kõŋ ˈke ˈkulo se ˈsjẽn̪t̪a la kukaˈɾat͡ʃa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Dicho usado para denotar que una persona quiere hacer algo pero no tiene los recursos económicos (dinero) para ello.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "condición y figura hasta la muerte perduran",
+      "pronunciation": "[kõn̪d̪iˈsjõn i fiˈɣ̞uɾa ˈast̪a la ˈmweɾt̪e peɾˈð̞uɾãn]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Refrán que significa que las características de las personas duran toda la vida, que no es fácil cambiar.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "condición y figura hasta la muerte dura",
+        "condición y figura hasta la sepultura",
+        "genio y figura hasta la sepultura"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "cuando el gato no está, los ratones bailan",
+      "pronunciation": "[ˈkwãn̪d̪o el ˈɣ̞at̪o ˈno esˈt̪a &#124; los raˈt̪ones ˈβ̞ajlãn]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "En ausencia de un jefe o superior los subordinados se relajan y hacen cosas que normalmente no harían.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "cuando el gato no está los ratones están de fiesta"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "cuando el tonto coge la linde, la linde se acaba y el tonto sigue",
+      "pronunciation": "[ˈkwãn̪d̪o el̪ ˈt̪õn̪t̪o ˈkoxe la ˈlĩn̪d̪e &#124; la ˈlĩn̪d̪e se aˈkaβ̞a i el̪ ˈt̪õn̪t̪o ˈsiɣ̞e]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se usa para criticar al que se obstina en hacer algo que ya no tiene propósito o en proseguir con un argumento que ya se ha discutido.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "cuando estés en Roma, haz como los Romanos",
+      "pronunciation": "[ˈkwãn̪d̪o esˈt̪es ẽn ˈroma &#124; ˈas ˈkomo los roˈmanos]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Ajústate al entorno.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "a donde fueres, haz lo que vieres",
+        "allá donde fueres, haz lo que vieres",
+        "allí donde fueres, haz lo que vieres",
+        "donde fueres, haz lo que vieres",
+        "en Roma, haz como los Romanos"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "cuando la pelea es peleando zamuro come brincando",
+      "pronunciation": "[ˈkwãn̪d̪o la peˈlea ˈes peleˈãn̪d̪o saˈmuɾo ˈkome β̞ɾĩŋˈkãn̪d̪o]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Alude al hecho de no tener tiempo para comer tranquilamente por tener compromisos que atender. Suele suceder cuando se trabaja directamente con clientes en época de mayor demanda (temporada).",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "cuando tú vas con el maíz ya yo vengo con las cotufas",
+      "pronunciation": "[ˈkwãn̪d̪o ˈt̪u ˈβ̞as kõn el maˈis ˈʝa ˈʝo ˈβ̞ẽŋgo kõn las koˈt̪ufas]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Sentencia que se le aplica a una persona para darle a entender que no puede superar a quien le habla en experiencia o astucia.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "cuando una puerta se cierra, cientos se abren",
+      "pronunciation": "[ˈkwãn̪d̪o ˈuna ˈpweɾt̪a se ˈsjera &#124; ˈsjẽn̪t̪os se ˈaβ̞ɾẽn]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Que lo malo que sucede, también trae cosas buenas, o que se compensa con cosas buenas.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "cuando una puerta se cierra, otra se abre",
+        "no hay mal que por bien no venga",
+        "cuando una puerta se cierra, una ventana se abre",
+        "no hay daño que no tenga apaño",
+        "para todo hay remedio",
+        "para todo hay remedio menos para la muerte",
+        "perdiendo también se gana",
+        "por uno que se pierde, diez aparecen"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "cuando una puerta se cierra, otra se abre",
+      "pronunciation": "[ˈkwãn̪d̪o ˈuna ˈpweɾt̪a se ˈsjera &#124; ˈot̪ɾa se ˈaβ̞ɾe]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Que lo malo que sucede, también trae cosas buenas, o que se compensa con cosas buenas.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "no hay mal que por bien no venga",
+        "cuando una puerta se cierra, cientos se abren",
+        "cuando una puerta se cierra, una ventana se abre",
+        "no hay daño que no tenga apaño",
+        "para todo hay remedio",
+        "para todo hay remedio menos para la muerte",
+        "perdiendo también se gana",
+        "por uno que se pierde, diez aparecen"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "cuatro ojos ven más que dos",
+      "pronunciation": "[ˈkwat̪ɾo ˈoxos ˈβ̞ẽn ˈmas ke ˈð̞os]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Afirmación que se dice para señalar la importancia de aceptar ayuda.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "cuentas claras, amigos viejos",
+      "pronunciation": "[ˈkwẽn̪t̪as ˈklaɾas &#124; aˈmiɣ̞os ˈβ̞jexos]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Es similar al conocido refrán \"cuentas claras, amistades largas\"; y es que nos dice que si hacemos negocios con amigos todo debe estar muy claro pues las indefiniciones pueden generar desconfianza y lesionar la amistad.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "cuándo no es Pascua en diciembre",
+      "pronunciation": "[ˈkwãn̪d̪o ˈno ˈes ˈpaskwa ẽn̪ d̪iˈsjẽmbɾe]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Denota el hecho que una situación se repite con una frecuencia excesiva o se hace una costumbre.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "de aquellos polvos, estos lodos",
+      "pronunciation": "[d̪e aˈkeʝos ˈpolβ̞os &#124; ˈest̪os ˈloð̞os]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Úsase para afirmar que los efectos negativos han tenido previamente una causa de poca importancia.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "de granito en granito se llena la gallina el buche",
+      "pronunciation": "[d̪e ɣ̞ɾaˈnit̪o ẽŋ gɾaˈnit̪o se ˈʝena la ɣ̞aˈʝina el ˈβ̞ut͡ʃe]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Las acciones pequeñas continuadas pueden sumar y hacen un todo.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "de lejanas tierras, grandes mentiras",
+      "pronunciation": "[d̪e leˈxanas ˈt̪jeras &#124; ˈɣ̞ɾãn̪d̪es mẽn̪ˈt̪iɾas]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Aconseja prudencia ante lo que afirma gente que viene de lejos, por lo difícil que es comprobar la veracidad de lo que dicen.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "de tal palo, tal astilla",
+      "pronunciation": "[d̪e ˈt̪al ˈpalo &#124; ˈt̪al asˈt̪iʝa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "El hijo o hija de alguien tiene aspectos parecidos a su padre o madre. Se puede usar refiriéndose al físico, comportamiento, forma de actuar, gustos, entre otras.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "del apuro lo que queda es el cansancio",
+      "pronunciation": "[d̪el aˈpuɾo lo ke ˈkeð̞a ˈes el kãnˈsãnsjo]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Alude al hecho que las cosas que se hacen muy aceleradamente o de prisa cuando no es el momento oportuno siempre acaban mal hechas.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "del dicho al hecho hay mucho trecho",
+      "pronunciation": "[d̪el̪ ˈd̪it͡ʃo al ˈet͡ʃo ˈaj ˈmut͡ʃo ˈt̪ɾet͡ʃo]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Es más fácil proponer algo o hacer un plan de acción que ejecutar dicha acción en la realidad.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        },
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Hay diferencia entre cómo alguien dice que hay actuar y cómo se comporta realmente.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "della",
+      "pronunciation": "[ˈd̪eʝa]",
+      "senses": [
+        {
+          "partOfSpeech": "contraction",
+          "definition": "Contracción de la preposición de y el pronombre ella.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "desdel",
+      "pronunciation": "[d̪esˈð̞el]",
+      "senses": [
+        {
+          "partOfSpeech": "contraction",
+          "definition": "Contracción de la preposición desde y el artículo el.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "desta",
+      "pronunciation": "[ˈd̪est̪a]",
+      "senses": [
+        {
+          "partOfSpeech": "contraction",
+          "definition": "Contracción de el preposiciones de y el adjetivos esta.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "destas",
+      "pronunciation": "[ˈd̪est̪as]",
+      "senses": [
+        {
+          "partOfSpeech": "contraction",
+          "definition": "Contracción de de y estas.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "deste",
+      "pronunciation": "[ˈd̪est̪e]",
+      "senses": [
+        {
+          "partOfSpeech": "contraction",
+          "definition": "Contracción de la preposición de y el adjetivo este.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        },
+        {
+          "partOfSpeech": "contraction",
+          "definition": "Contracción de la preposición de y el pronombre este.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "desto",
+      "pronunciation": "[ˈd̪est̪o]",
+      "senses": [
+        {
+          "partOfSpeech": "contraction",
+          "definition": "Contracción de el preposiciones de y el pronombres esto.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "destos",
+      "pronunciation": "[ˈd̪est̪os]",
+      "senses": [
+        {
+          "partOfSpeech": "contraction",
+          "definition": "Contracción de de y estos.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "diablitos",
+      "pronunciation": "[d̪jaˈβ̞lit̪os]",
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definition": "Jamón endiablado",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "donde hay confianza, da asco",
+      "pronunciation": "[ˈd̪õn̪d̪e ˈaj kõɱˈfjãnsa &#124; ˈð̞a ˈasko]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica que cuando hay confianza con alguien, nos permitimos hacer ciertas cosas que no haríamos delante de desconocidos. También se usa para criticar a quien abusa de la confianza con alguien.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "donde manda capitán, no manda marinero",
+      "pronunciation": "[ˈd̪õn̪d̪e ˈmãn̪d̪a kapiˈt̪ãn &#124; ˈno ˈmãn̪d̪a maɾiˈneɾo]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Hace alusión al respeto que se ha de tener a las personas mayores o de mayor jerarquía.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "donde hay patrón no manda marinero"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "donde no hay harina todo es mohína",
+      "pronunciation": "[ˈd̪õn̪d̪e ˈno ˈaj aˈɾina ˈt̪oð̞o ˈes moˈina]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Cuando no hay dinero todo es mucho más difícil, lo que hace más probable estar triste",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "donde no hay mata, no hay patata",
+      "pronunciation": "[ˈd̪õn̪d̪e ˈno ˈaj ˈmat̪a &#124; ˈno ˈaj paˈt̪at̪a]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "No es posible hacer algo si no se tienen las habilidades, conocimientos o herramientas para ello.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "donde tengas la olla no metas la polla",
+      "pronunciation": "[ˈd̪õn̪d̪e ˈt̪ẽŋgas la ˈoʝa ˈno ˈmet̪as la ˈpoʝa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Desaconseja las relaciones románticas o sexuales con compañeros de trabajo",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "dondequiera que metamos la cabeza nos dan palo",
+      "pronunciation": "[d̪õn̪d̪eˈkjeɾa ke meˈt̪amos la kaˈβ̞esa nos ˈð̞ãn ˈpalo]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Da a entender que no se avizora una solución a un problema y que no existen posibles alternativas.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "dos que duermen en un colchón se vuelven de la misma condición",
+      "pronunciation": "[ˈd̪os ke ˈð̞weɾmẽn ẽn ũŋ kolʲˈt͡ʃõn se ˈβ̞welβ̞ẽn̪ d̪e la ˈmisma kõn̪d̪iˈsjõn]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Alude a que las parejas, a lo largo del tiempo, acaban teniendo caracteres parecidos.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "echando a perder se aprende",
+      "pronunciation": "[eˈt͡ʃãn̪d̪o a peɾˈð̞eɾ se aˈpɾẽn̪d̪e]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Alude al hecho de que de los errores que se cometen queda la experiencia.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el acomedido come de lo que está escondido",
+      "pronunciation": "[el akomeˈð̞ið̞o ˈkome ð̞e lo ke esˈt̪a eskõn̪ˈd̪ið̞o]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica que quien es servicial obtiene su recompensa, a menudo con un trato preferencial.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el amor es ciego",
+      "pronunciation": "[el aˈmoɾ ˈes ˈsjeɣ̞o]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica que quien está enamorado no percibe o minimiza las faltas, defectos o contradicciones de la persona amada.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el aragonés fino, después de comer tiene frío",
+      "pronunciation": "[el aɾaɣ̞oˈnes ˈfino &#124; d̪esˈpwes ð̞e koˈmeɾ ˈt̪jene ˈfɾio]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se dice en broma de quien se queja de frío o se abriga mucho tras una comilona.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el buey solo bien se lame",
+      "pronunciation": "[el ˈβ̞wej ˈsolo ˈβ̞jẽn se ˈlame]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Para laudar la libertad individual por sobre el compromiso con otra persona.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el camino al infierno está empedrado de buenas intenciones",
+      "pronunciation": "[el kaˈmino al ĩɱˈfjeɾno esˈt̪a ẽmpeˈð̞ɾað̞o ð̞e ˈβ̞wenas ĩn̪t̪ẽnˈsjones]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "De nada sirve justificar con \"buenas intenciones\" a los malos resultados.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el comer y el rascar, todo es empezar",
+      "pronunciation": "[el koˈmeɾ i el rasˈkaɾ &#124; ˈt̪oð̞o ˈes ẽmpeˈsaɾ]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se usa para animar a alguien a empezar una tarea costosa o desagradable, dando a entender que una vez hecho el primer esfuerzo, los posteriores serán más llevaderos.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el flojo trabaja dos veces",
+      "pronunciation": "[el ˈfloxo t̪ɾaˈβ̞axa ˈð̞os ˈβ̞eses]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Sentencia que da a entender que el que hace mal las cosas por pereza tiene que repetirlas.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el hombre es la medida de todas las cosas",
+      "pronunciation": "[el ˈõmbɾe ˈes la meˈð̞ið̞a ð̞e ˈt̪oð̞as las ˈkosas]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Lo verdadero lo es en tanto concuerde con lo adecuado o esperable desde las expectativas de la especie humana.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        },
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Lo verdadero lo es en tanto sea verdadero desde mi punto de vista.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el infierno está lleno de buenas intenciones",
+      "pronunciation": "[el ĩɱˈfjeɾno esˈt̪a ˈʝeno ð̞e ˈβ̞wenas ĩn̪t̪ẽnˈsjones]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "De nada sirve justificar con \"buenas intenciones\" a los malos resultados.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el miedo es cosa viva",
+      "pronunciation": "[el ˈmjeð̞o ˈes ˈkosa ˈβ̞iβ̞a]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Dicho o expresión que se usa para explicar o hacer resaltar las reacciones de la gente ante una situación que causa mucho miedo.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "el miedo es libre"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el muerto al hoyo y el vivo al bollo",
+      "pronunciation": "[el ˈmweɾt̪o al ˈoʝo i el ˈβ̞iβ̞o al ˈβ̞oʝo]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica que los familiares y allegados de un difunto tienen que seguir preocupándose de sus propios quehaceres y necesidades por muy tristes que estén.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el muerto y el arrimado a los tres días apestan",
+      "pronunciation": "[el ˈmweɾt̪o i el ariˈmað̞o a los ˈt̪ɾes ˈð̞ias aˈpest̪ãn]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Alude al hecho de que aun habiendo confianza, un huésped con el tiempo se convierte en un estorbo para quienes habitan en una casa.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "el pescado y el arrimado a los tres días hieden"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el mundo es pequeño",
+      "pronunciation": "[el ˈmũn̪d̪o ˈes peˈkeɲo]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Alude el hecho de que una persona que se acaba de conocer pudiera tener relación en común con algún amigo o persona conocida de hace mucho tiempo atrás.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el ojo del amo engorda al caballo",
+      "pronunciation": "[el ˈoxo ð̞el ˈamo ẽŋˈgoɾð̞a al kaˈβ̞aʝo]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Refrán que aconseja vigilar lo que se tiene de valor, en especial de un negocio en lugar de confiar en personas ajenas para ello.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el orden de los factores no altera el producto",
+      "pronunciation": "[el ˈoɾð̞ẽn̪ d̪e los fakˈt̪oɾes ˈno al̪ˈt̪eɾa el pɾoˈð̞ukt̪o]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Da igual el orden en el que se hagan las cosas, mientras se hagan todas.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el pescado y el arrimado a los tres días hieden",
+      "pronunciation": "[el pesˈkað̞o i el ariˈmað̞o a los ˈt̪ɾes ˈð̞ias ˈjeð̞ẽn]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Alude al hecho de que aun habiendo confianza, un huésped con el tiempo se convierte en un estorbo para quienes habitan en una casa.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "las visitas, como la pesca, a los tres días apestan"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el que avisa no es traidor",
+      "pronunciation": "[el ke aˈβ̞isa ˈno ˈes t̪ɾajˈð̞oɾ]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se usa para indicar a alguien que se tendrá que atener a las consecuencias si no cumple con algo que se le está diciendo.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el que juega con candela tarde o temprano se quema",
+      "pronunciation": "[el ke ˈxweɣ̞a kõŋ kãn̪ˈd̪ela ˈt̪aɾð̞e o t̪ẽmˈpɾano se ˈkema]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Sentencia para que las personas no cometan actos temerarios ni imprudencias graves que puedan causar desgracias o calamidades o poner en riesgo su vida o su integridad física.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el que juega con muchacho no pasa de primer grado",
+      "pronunciation": "[el ke ˈxweɣ̞a kõm muˈt͡ʃat͡ʃo ˈno ˈpasa ð̞e pɾiˈmeɾ ˈɣ̞ɾað̞o]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Hace alusión a las personas adultas que siempre se juntan con niños o personas de comportamiento inmaduro, advirtiéndoles que esa actitud puede ser contagiosa y hacerle adquirir malos hábitos.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el que lo picó macagua bejuco le para el pelo",
+      "pronunciation": "[el ke lo piˈko maˈkaɣ̞wa β̞eˈxuko le ˈpaɾa el ˈpelo]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Las malas experiencias dejan recelo de evitar que se repitan en el futuro.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el que menos corre, vuela",
+      "pronunciation": "[el ke ˈmenos ˈkore &#124; ˈβ̞wela]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Frase proverbial que da entender el disimulo con que obra alguno, afectando descuido o indiferencia al mismo tiempo que solicita las cosas con más eficacia.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el que mucho abarca, poco aprieta",
+      "pronunciation": "[el ke ˈmut͡ʃo aˈβ̞aɾka &#124; ˈpoko aˈpɾjet̪a]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se emplea para señalar que quien desea obtener demasiado puede terminar con menos de lo que se puede obtener con expectativas realistas. Se aplica en especial al deseo de emprender demasiadas cosas a un tiempo.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el que no baja a tomar agua del pozo seguro toma de la manguera",
+      "pronunciation": "[el ke ˈno ˈβ̞axa a t̪oˈmaɾ ˈaɣ̞wa ð̞el ˈposo seˈɣ̞uɾo ˈt̪oma ð̞e la mãŋˈgeɾa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se usa para poner en duda la heterosexualidad de un hombre.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el que no coge el hilo coge la calle",
+      "pronunciation": "[el ke ˈno ˈkoxe el ˈilo ˈkoxe la ˈkaʝe]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Sentencia para hacer ver que hay normas y reglas que se deben respetar so pena de ser expulsados o sancionados.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el que no conoce a Dios a cualquier santo le reza",
+      "pronunciation": "[el ke ˈno koˈnose a ˈð̞jos a kwalˈkjeɾ ˈsãn̪t̪o le ˈresa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se usa para burlarse de los que por ignorancia alaban cosas de poco valor cuando hay mejores alternativas disponibles.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el que pega primero, pega dos veces",
+      "pronunciation": "[el ke ˈpeɣ̞a pɾiˈmeɾo &#124; ˈpeɣ̞a ˈð̞os ˈβ̞eses]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Recalca que quien primero golpea lleva una ventaja.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el que primero lo huele, debajo lo tiene",
+      "pronunciation": "[el ke pɾiˈmeɾo lo ˈ(ɣ̞)w̝ele &#124; d̪eˈβ̞axo lo ˈt̪jene]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica que apresurarse a acusar a alguien puede hacer que el propio acusador se convierta en sospechoso de ser él el responsable de lo sucedido.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el que se mete a redentor termina crucificado",
+      "pronunciation": "[el ke se ˈmet̪e a reð̞ẽn̪ˈt̪oɾ t̪eɾˈmina kɾusifiˈkað̞o]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Sentencia dirigida a las personas que se entrometen a resolver líos ajenos o poner paz en asuntos que no son de su incumbencia.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        },
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Por extensión denota la sensación que se da cuando se ayuda a personas que al final resultan ser ingratas o malagradecidas.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el que se quema con leche ve una vaca y llora",
+      "pronunciation": "[el ke se ˈkema kõn ˈlet͡ʃe ˈβ̞e ˈuna ˈβ̞aka i ˈʝoɾa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Quien tuvo una mala experiencia con alguna situación que no lo aparenta para los demás hará todo lo posible para evitar dicha situación en el futuro.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "gato escaldado del agua fría huye"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el que tenga miedo a morir que no nazca",
+      "pronunciation": "[el ke ˈt̪ẽŋga ˈmjeð̞o a moˈɾiɾ ke ˈno ˈnaska]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se usa para animar a otra persona o a uno mismo antes de hacer algo arriesgado.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el que tiene boca se equivoca",
+      "pronunciation": "[el ke ˈt̪jene ˈβ̞oka se ekiˈβ̞oka]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica que cualquiera puede cometer un error; se usa especialmente para disculparse ante alguien.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el que tiene rabo de paja no se arrima a la candela",
+      "pronunciation": "[el ke ˈt̪jene ˈraβ̞o ð̞e ˈpaxa ˈno se aˈrima a la kãn̪ˈd̪ela]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Sentencia dirigida a las personas que son responsables de una situación desagradable para que no tomen parte porque pueden ser descubiertas o puestas en evidencia sus acciones. Es una forma de evitar el cinismo.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "el que vive de ilusiones muere de desengaños",
+      "pronunciation": "[el ke ˈβ̞iβ̞e ð̞e iluˈsjones ˈmweɾe ð̞e ð̞esẽŋˈgaɲos]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Sentencia dirigida a las personas ilusas o que no ven la realidad.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "en casa de herrero, azadón de palo",
+      "pronunciation": "[ẽŋ ˈkasa ð̞e eˈreɾo &#124; asaˈð̞õn̪ d̪e ˈpalo]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica que ciertas cosas o actitudes faltan precisamente allí donde serían más apropiadas o esperables.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "en casa de herrero, cuchillo de palo",
+      "pronunciation": "[ẽŋ ˈkasa ð̞e eˈreɾo &#124; kuˈt͡ʃiʝo ð̞e ˈpalo]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica que ciertas cosas o actitudes faltan precisamente allí donde serían más apropiadas o esperables.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "en casa del herrero, cuchillo de palo",
+      "pronunciation": "[ẽŋ ˈkasa ð̞el eˈreɾo &#124; kuˈt͡ʃiʝo ð̞e ˈpalo]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica que ciertas cosas o actitudes faltan precisamente allí donde serían más apropiadas o esperables.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "en el reino de los ciegos, el tuerto es el rey",
+      "pronunciation": "[ẽn el ˈrejno ð̞e los ˈsjeɣ̞os &#124; el̪ ˈt̪weɾt̪o ˈes el ˈrej]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica que allá donde abunda la falta de alguna virtud, aquel que posee un poco es sobrevalorado.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "en la cancha es adonde se ven los gallos",
+      "pronunciation": "[ẽn la ˈkãnʲt͡ʃa ˈes aˈð̞õn̪d̪e se ˈβ̞ẽn los ˈɣ̞aʝos]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "En la acción se ve lo que vale realmente una persona.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "en la cancha es donde se ven los gallos",
+      "pronunciation": "[ẽn la ˈkãnʲt͡ʃa ˈes ˈð̞õn̪d̪e se ˈβ̞ẽn los ˈɣ̞aʝos]",
+      "senses": [
+        {
+          "partOfSpeech": "phrase",
+          "definition": "En la acción se ve lo que vale realmente una persona.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "en tiempo de guerra, cualquier hueco es trinchera",
+      "pronunciation": "[ẽn̪ ˈt̪jẽmpo ð̞e ˈɣ̞era &#124; kwalˈkjeɾ ˈ(ɣ̞)w̝eko ˈes t̪ɾĩnʲˈt͡ʃeɾa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Si está difícil conseguir pareja, cualquiera sirve para pasar el momento.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "en tiempo de melones, cortos los sermones",
+      "pronunciation": "[ẽn̪ ˈt̪jẽmpo ð̞e meˈlones &#124; ˈkoɾt̪os los seɾˈmones]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Alude a que en momentos en los que hay mucho que hacer, no se debe entretener a la gente hablando.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "entrepuente",
+      "pronunciation": "[ẽn̪t̪ɾeˈpwẽn̪t̪e]",
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definition": "Espacio que hay entre las cubiertas de una embarcación.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "equipo que gana no se toca",
+      "pronunciation": "[eˈkipo ke ˈɣ̞ana ˈno se ˈt̪oka]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "No hay necesidad de modificar la formación o las estrategias si hasta ahora dieron buenos resultados.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "eres esclavo de lo que hablas, y amo de lo que callas",
+      "pronunciation": "[ˈeɾes esˈklaβ̞o ð̞e lo ke ˈaβ̞las &#124; i ˈamo ð̞e lo ke ˈkaʝas]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Hace referencia a que pierdes el control sobre aquello que compartes con los demás.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "estamos pagados",
+      "pronunciation": "[esˈt̪amos paˈɣ̞að̞os]",
+      "senses": [
+        {
+          "partOfSpeech": "phrase",
+          "definition": "Usada para dar a entender que se corresponde por una parte a lo que se merece de otra.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "gafería",
+      "pronunciation": "[gafeˈɾia]",
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definition": "Gafería es la cualidad de gafe de una persona, lugar u objeto. También es utilizado como descripción de una galería de gafas",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "gato escaldado del agua fría huye",
+      "pronunciation": "[ˈgat̪o eskal̪ˈd̪að̞o ð̞el ˈaɣ̞wa ˈfɾia ˈuʝe]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Quien ha sufrido un daño o percance, trata de huir de lo que le recuerda al mismo",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "el que lo picó macagua bejuco le para el pelo",
+        "el que se quema con leche ve una vaca y llora"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "genio y figura hasta la sepultura",
+      "pronunciation": "[ˈxenjo i fiˈɣ̞uɾa ˈast̪a la sepul̪ˈt̪uɾa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Refrán que significa que las características de las personas duran toda la vida, que no es fácil cambiar.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "condición y figura hasta la muerte dura",
+        "condición y figura hasta la muerte perduran",
+        "condición y figura hasta la sepultura"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "gente refranera, gente embustera",
+      "pronunciation": "[ˈxẽn̪t̪e refɾaˈneɾa &#124; ˈxẽn̪t̪e ẽmbusˈt̪eɾa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Hace referencia a la gente que para justificar su opinión usa siempre refranes.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "habló el buey y dijo mu",
+      "pronunciation": "[aˈβ̞lo el ˈβ̞wej i ˈð̞ixo ˈmu]",
+      "senses": [
+        {
+          "partOfSpeech": "phrase",
+          "definition": "Se aplica a las personas que sólo hablan para expresar dichos tontos, perogrulladas o banalidades sin sentido alguno.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "haz el bien y no mires a quién",
+      "pronunciation": "[ˈas el ˈβ̞jẽn i ˈno ˈmiɾes a ˈkjẽn]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Alude a ser bondadoso con todo el mundo sin prejuicios.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "hecha la ley, hecha la trampa",
+      "pronunciation": "[ˈet͡ʃa la ˈlej &#124; ˈet͡ʃa la ˈt̪ɾãmpa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Toda ley tiene su forma de ser corrompida.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "heterogonia",
+      "pronunciation": "[et̪eɾoˈɣ̞onja]",
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definition": "En los insectos: es la alternancia de partenogénesis con bisexualidad.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "hidrófita",
+      "pronunciation": "[iˈð̞ɾofit̪a]",
+      "senses": [
+        {
+          "partOfSpeech": "adj",
+          "definition": "Plantas que crecen sumergidas parcial o totalmente en agua.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "hoi",
+      "pronunciation": "[ˈoj]",
+      "senses": [
+        {
+          "partOfSpeech": "adv",
+          "definition": "Tiempo que transcurre actualmente.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "ahora",
+        "actualmente"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "hombre refranero, maricón y pilonero",
+      "pronunciation": "[ˈõmbɾe refɾaˈneɾo &#124; maɾiˈkõn i piloˈneɾo]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Refrán que hace escarnio de quien abusa de los refranes.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "juego de manos, juego de villanos",
+      "pronunciation": "[ˈxweɣ̞o ð̞e ˈmanos &#124; ˈxweɣ̞o ð̞e β̞iˈʝanos]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Dicho popular que sanciona por groseros o incultos los juegos de esfuerzo físico, donde la homeóptote refuerza el componente moral.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "la cabra siempre tira al monte",
+      "pronunciation": "[la ˈkaβ̞ɾa ˈsjẽmpɾe ˈt̪iɾa al ˈmõn̪t̪e]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Refrán castellano cuyo significado es que es difícil vencer la querencia, que al final siempre se vuelve al sitio donde uno ha nacido o a lo que ha aprendido de pequeño. Es difícil luchar contra la naturaleza de uno: lo que la naturaleza da, nada lo puede cambiar.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "el lobo muda los dientes, pero no las mientes",
+        "quien nace lechón muere cochino",
+        "los hijos de la gata cazan ratones"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "la confianza da asco",
+      "pronunciation": "[la kõɱˈfjãnsa ˈð̞a ˈasko]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica que cuando hay confianza con alguien, nos permitimos hacer ciertas cosas que no haríamos delante de desconocidos. También se usa para criticar a quien abusa de la confianza con alguien.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "la culpa no es del chancho, sino de quien le rasca el lomo",
+      "pronunciation": "[la ˈkulpa ˈno ˈes ð̞elʲ ˈt͡ʃãnʲt͡ʃo &#124; ˈsino ð̞e kjẽn le ˈraska el ˈlomo]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Dicho que recalca la responsabilidad de quien permite que se haga un mal.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "la culpa no es del chancho, sino del que le da el afrecho",
+      "pronunciation": "[la ˈkulpa ˈno ˈes ð̞elʲ ˈt͡ʃãnʲt͡ʃo &#124; ˈsino ð̞el ke le ˈð̞a el aˈfɾet͡ʃo]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Dicho que recalca la responsabilidad de quien permite que se haga un mal.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "la culpa no es del chancho, sino del que le rasca el lomo",
+      "pronunciation": "[la ˈkulpa ˈno ˈes ð̞elʲ ˈt͡ʃãnʲt͡ʃo &#124; ˈsino ð̞el ke le ˈraska el ˈlomo]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Dicho que recalca la responsabilidad de quien permite que se haga un mal.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "la culpa no es del ciego, sino de quien le da el garrote",
+      "pronunciation": "[la ˈkulpa ˈno ˈes ð̞el ˈsjeɣ̞o &#124; ˈsino ð̞e kjẽn le ˈð̞a el ɣ̞aˈrot̪e]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Dicho que recalca la responsabilidad de quien permite que se haga un mal.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "la culpa no es del indio, sino del que lo hace compadre",
+      "pronunciation": "[la ˈkulpa ˈno ˈes ð̞el ˈĩn̪d̪jo &#124; ˈsino ð̞el ke lo ˈase kõmˈpað̞ɾe]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Dicho que recalca la responsabilidad de quien permite que se haga un mal.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "la culpa no es del marrano, sino del que le da de comer",
+      "pronunciation": "[la ˈkulpa ˈno ˈes ð̞el maˈrano &#124; ˈsino ð̞el ke le ˈð̞a ð̞e koˈmeɾ]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Dicho que recalca la responsabilidad de quien permite que se haga un mal.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "la culpa no la tiene el cerdo, sino quien le da de comer",
+      "pronunciation": "[la ˈkulpa ˈno la ˈt̪jene el ˈseɾð̞o &#124; ˈsino kjẽn le ˈð̞a ð̞e koˈmeɾ]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Dicho que recalca la responsabilidad en quien permite que se haga un mal.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "la juncia de Alcalá, que llegó tres días después de la función",
+      "pronunciation": "[la ˈxũnsja ð̞e alkaˈla &#124; ke ʝeˈɣ̞o ˈt̪ɾes ˈð̞ias ð̞esˈpwes ð̞e la fũnˈsjõn]",
+      "senses": [
+        {
+          "partOfSpeech": "phrase",
+          "definition": "Expresión con que se moteja todo aquello que por retraso viene o se dice tarde o fuera de tiempo.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "la ley pareja no es dura",
+      "pronunciation": "[la ˈlej paˈɾexa ˈno ˈes ˈð̞uɾa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Es soportable la ley que se aplica a todos igualmente, con imparcialidad y sin favoritismo de personas.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "la mano que te da de comer no has de morder",
+      "pronunciation": "[la ˈmano ke t̪e ˈð̞a ð̞e koˈmeɾ ˈno ˈas ð̞e moɾˈð̞eɾ]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Insta a las personas a valorar lo que se hace por ellas y sobre todo a ser agradecido correspondiendo los favores que se reciben.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "la necesidad tiene cara de perro",
+      "pronunciation": "[la nesesiˈð̞að̞ ˈt̪jene ˈkaɾa ð̞e ˈpero]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Significa que cuando aprieta la necesidad no se puede reparar en pequeñeces.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "la que se viste de verde, o es guapa o se lo cree",
+      "pronunciation": "[la ke se ˈβ̞ist̪e ð̞e ˈβ̞eɾð̞e &#124; o ˈes ˈɣ̞wapa o se lo ˈkɾee]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "El color verde en el vestido resulta poco favorecedor para algunas teces.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "la unión hace la fuerza",
+      "pronunciation": "[la uˈnjõn ˈase la ˈfweɾsa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica que la gente obtiene más beneficios o mejores resultados al trabajar en grupo que individualmente.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "la vida da muchas vueltas",
+      "pronunciation": "[la ˈβ̞ið̞a ˈð̞a ˈmut͡ʃas ˈβ̞wel̪t̪as]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Alude el hecho de que en algún momento dado las circunstancias podrían cambiar y uno puede hacer cosas que jamás se imaginó que haría.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "las he visto más feas y se han casado",
+      "pronunciation": "[las ˈe ˈβ̞ist̪o ˈmas ˈfeas i se ˈãŋ kaˈsað̞o]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Explica que se debe tener cuidado con pensar que algo ha terminado aunque así lo parezca, que es necesario asegurarse bien y contar con la posibilidad de que ocurra lo improbable. También indica que no se debe subestimar algo considerado como insignificante porque podría dar sorpresas.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "lei",
+      "pronunciation": "[ˈlej]",
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definition": "Corona de flores que adorna el cuello y que se obsequia al llegar o marchar como símbolo de afecto.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "lo bueno, si breve, dos veces bueno",
+      "pronunciation": "[lo ˈβ̞weno &#124; si ˈβ̞ɾeβ̞e &#124; ˈð̞os ˈβ̞eses ˈβ̞weno]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Para recomendar no detenerse en explicaciones largas.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "lo cortés no quita lo valiente",
+      "pronunciation": "[lo koɾˈt̪es ˈno ˈkit̪a lo β̞aˈljẽn̪t̪e]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Refrán que significa que no se debe presuponer que un acto cortés implica cobardía.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "lo mejor es enemigo de lo bueno",
+      "pronunciation": "[lo meˈxoɾ ˈes eneˈmiɣ̞o ð̞e lo ˈβ̞weno]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Algunas veces es necesario sacrificar la búsqueda de la perfección para lograr una buena solución de forma más rápida.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "lo que se fue al real, para el pavo real",
+      "pronunciation": "[lo ke se ˈfwe al reˈal &#124; ˈpaɾa el ˈpaβ̞o reˈal]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Sugiere que lo que se ha perdido ya no tiene vuelta atrás, y ahora es de otro.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        },
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Habitualmente usado de manera humorística por personas que se benefician de lo que otros perdieron.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "loca es la oveja que al lobo se confiesa",
+      "pronunciation": "[ˈloka ˈes la oˈβ̞exa ke al ˈloβ̞o se kõɱˈfjesa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Hay que saber a quién se cuentan las cosas, no vaya a ser que nos acabemos arrepintiendo.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "mal de muchos, consuelo de tontos",
+      "pronunciation": "[ˈmal̪ d̪e ˈmut͡ʃos &#124; kõnˈswelo ð̞e ˈt̪õn̪t̪os]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se dice en contra de quien intenta usar como consuelo el hecho de que haya muchas personas padeciendo el mismo problema.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "manos que no dais, qué esperáis",
+      "pronunciation": "[ˈmanos ke ˈno ˈð̞ajs &#124; ˈke espeˈɾajs]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se usa para indicar que quien es egoísta o no colabora con los demás, no debe esperar que los otros sean generosos con él.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "manos que no dais, ¿qué esperáis?",
+      "pronunciation": "[ˈmanos ke ˈno ˈð̞ajs &#124; ˈke espeˈɾajs]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se usa para indicar que quien es egoísta o no colabora con los demás, no debe esperar que los otros sean generosos con él.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "menos da una piedra",
+      "pronunciation": "[ˈmenos ˈð̞a ˈuna ˈpjeð̞ɾa]",
+      "senses": [
+        {
+          "partOfSpeech": "phrase",
+          "definition": "Se dice a modo de consuelo por haber obtenido una ganancia menor a la esperada.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "menos es más",
+      "pronunciation": "[ˈmenos ˈes ˈmas]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "No siempre mejorará la situación por hacer o decir cosas de más.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "mepa",
+      "pronunciation": "[ˈmepa]",
+      "senses": [
+        {
+          "partOfSpeech": "contraction",
+          "definition": "Contracción de me y parece.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "mixtape",
+      "pronunciation": "[miksˈt̪ape]",
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definition": "Cinta de Mezclas que suelen hacer los DJs de rap para darse a conocer y \"demostrar\" los contactos que tienen, se usan bases conocidas que se mezclan y MCs que harán temas inéditos, freestyles, etc.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "morcilla sabrosa, picante y sosa",
+      "pronunciation": "[moɾˈsiʝa saˈβ̞ɾosa &#124; piˈkãn̪t̪e i ˈsosa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Alude a la manera en la que debe prepararse la morcilla para que tenga buen sabor.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "morrocoy no sube palo ni cachicamo se afeita",
+      "pronunciation": "[moroˈkoj ˈno ˈsuβ̞e ˈpalo ni kat͡ʃiˈkamo se aˈfejt̪a]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica que cada persona debe dedicarse a lo que le corresponde y a lo que esté bien capacitado, sin inmiscuirse en cosas que no sabe.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "zapatero, a tus zapatos"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "mucho ayuda quien no estorba",
+      "pronunciation": "[ˈmut͡ʃo aˈʝuð̞a kjẽn ˈno esˈt̪oɾβ̞a]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Manera de sentenciar a las personas cuya presencia es molesta o que pretenden meter mano en asuntos que no les incumben y estropean todo.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "mucho camisón pa' Petra",
+      "pronunciation": "[ˈmut͡ʃo kamiˈsõn ˈpa ˈpet̪ɾa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Denota que uno no es capaz de realizar una tarea específica por sí solo porque es de gran envergadura o supone un esfuerzo titánico.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "mucronata",
+      "pronunciation": "[mukɾoˈnat̪a]",
+      "senses": [
+        {
+          "partOfSpeech": "adj",
+          "definition": "Se aplica a la ternilla que hay en la boca del estómago.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "muda el lobo los dientes, mas no las mientes",
+      "pronunciation": "[ˈmuð̞a el ˈloβ̞o los ˈð̞jẽn̪t̪es &#124; mas ˈno las ˈmjẽn̪t̪es]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Alude a qué una persona malvada aunque intente cambiar de conducta, siempre será la misma persona malvada.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "más corre el galgo que el mastín; pero si el camino es largo, más corre el mastín que el galgo",
+      "pronunciation": "[ˈmas ˈkore el ˈɣ̞alɣ̞o ke el masˈt̪ĩn &#124; ˈpeɾo si el kaˈmino ˈes ˈlaɾɣ̞o &#124; ˈmas ˈkore el masˈt̪ĩŋ ke el ˈɣ̞alɣ̞o]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se usa para criticar a los que quieren hacer las cosas deprisa sin la debida planificación o paciencia o bien para mostrar la importancia de la perseverancia.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "más sabe el diablo por viejo que por diablo",
+      "pronunciation": "[ˈmas ˈsaβ̞e el̪ ˈd̪jaβ̞lo poɾ ˈβ̞jexo ke poɾ ˈð̞jaβ̞lo]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "La sabiduría viene con la edad.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "más vale demonio conocido que ángel por conocer",
+      "pronunciation": "[ˈmas ˈβ̞ale ð̞eˈmonjo konoˈsið̞o ke ˈãŋxel poɾ konoˈseɾ]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Es mejor no arriesgar lo que se tiene por algo supuestamente mejor, pero que no se tiene certeza de serlo realmente.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "más vale diablo conocido que ángel por conocer",
+        "más vale malo conocido que bueno por conocer"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "más vale diablo conocido que ángel por conocer",
+      "pronunciation": "[ˈmas ˈβ̞ale ˈð̞jaβ̞lo konoˈsið̞o ke ˈãŋxel poɾ konoˈseɾ]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Es mejor no arriesgar lo que se tiene por algo supuestamente mejor, pero que no se tiene certeza de serlo realmente.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "más vale malo conocido que bueno por conocer",
+        "más vale demonio conocido que ángel por conocer"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "más vale llegar a tiempo que rondar un año",
+      "pronunciation": "[ˈmas ˈβ̞ale ʝeˈɣ̞aɾ a ˈt̪jẽmpo ke rõn̪ˈd̪aɾ ũn ˈaɲo]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Alude a que, la mejor forma de que algo llegue a buen puerto es haciéndolo en el momento oportuno.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "más vale malo conocido que bueno por conocer",
+      "pronunciation": "[ˈmas ˈβ̞ale ˈmalo konoˈsið̞o ke ˈβ̞weno poɾ konoˈseɾ]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Es mejor no arriesgar lo que se tiene por algo supuestamente mejor, pero que no se tiene certeza de serlo realmente.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "más vale diablo conocido que ángel por conocer",
+        "más vale demonio conocido que ángel por conocer"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "más vale prevenir que lamentar",
+      "pronunciation": "[ˈmas ˈβ̞ale pɾeβ̞eˈniɾ ke lamẽn̪ˈt̪aɾ]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Es mejor incurrir en pequeños costos que conllevan tomar recaudos para evitar una catástrofe, en lugar de no hacer nada y tener que pagar las consecuencias de un daño mayor que podría haberse evitado.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "más vale tarde que nunca",
+      "pronunciation": "[ˈmas ˈβ̞ale ˈt̪aɾð̞e ke ˈnũŋka]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Es mejor hacer algo tarde que no hacerlo en absoluto. A menudo se usa cuando sucede algo que se llevaba tiempo esperando.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "tarde pero seguro"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "ni en invierno ni en verano, pongas en la piedra el ano",
+      "pronunciation": "[ni ẽn ĩmˈbjeɾno ni ẽm beˈɾano &#124; ˈpõŋgas ẽn la ˈpjeð̞ɾa el ˈano]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Advertencia de que los asientos de roca transmiten el frío y el calor.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "no aclares que oscureces",
+      "pronunciation": "[ˈno aˈklaɾes ke oskuˈɾeses]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Manera de decirle a una persona que enreda un asunto tratando de dar excusas para justificarse.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "no es más rico quien más tiene, sino quien menos necesita",
+      "pronunciation": "[ˈno ˈes ˈmas ˈriko kjẽn ˈmas ˈt̪jene &#124; ˈsino kjẽn ˈmenos neseˈsit̪a]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Alude a que el nivel de satisfacción y felicidad no está relacionado con la posesión de bienes, además de que no poseer demasiados también es liberador.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "no es oro todo lo que reluce",
+      "pronunciation": "[ˈno ˈes ˈoɾo ˈt̪oð̞o lo ke reˈluse]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se usa para indicar que no todo lo que parece valioso o agradable lo es en realidad.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "no es señor quien señor nace, sino el que lo sabe ser",
+      "pronunciation": "[ˈno ˈes seˈɲoɾ kjẽn seˈɲoɾ ˈnase &#124; ˈsino el ke lo ˈsaβ̞e ˈseɾ]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Es su propia conducta la que hace a una persona respetable, y no su nacimiento.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "no hay barbaridad que no esté apadrinada por algún sabio",
+      "pronunciation": "[ˈno ˈaj β̞aɾβ̞aɾiˈð̞að̞ ke ˈno esˈt̪e apað̞ɾiˈnað̞a poɾ alˈɣ̞ũn ˈsaβ̞jo]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Cualquier idea, por disparatada que sea, ha sido defendida o concebida por alguien inteligente.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "no hay mal que por bien no venga",
+      "pronunciation": "[ˈno ˈaj ˈmal ke poɾ ˈβ̞jẽn ˈno ˈβ̞ẽŋga]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Que lo malo que sucede, también trae cosas buenas, o que se compensa con cosas buenas.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "cuando una puerta se cierra, otra se abre",
+        "cuando una puerta se cierra, cientos se abren",
+        "cuando una puerta se cierra, una ventana se abre",
+        "no hay daño que no tenga apaño",
+        "para todo hay remedio",
+        "para todo hay remedio menos para la muerte",
+        "perdiendo también se gana",
+        "por uno que se pierde, diez aparecen"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "no hay más cera que la que arde",
+      "pronunciation": "[ˈno ˈaj ˈmas ˈseɾa ke la ke ˈaɾð̞e]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica que uno debe apañarse o conformarse con los recursos de que dispone, ya que no hay posibilidad de acceder a otros.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "no hay que mentar la soga en casa del ahorcado",
+      "pronunciation": "[ˈno ˈaj ke mẽn̪ˈt̪aɾ la ˈsoɣ̞a ẽŋ ˈkasa ð̞el aoɾˈkað̞o]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Da a entender que se debe ser cauteloso con lo que se dice, evitando proferir frases o palabras que puedan ofender o incomodar a los presentes. De un modo especial cuando se está de visita en una casa ajena.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "no llores sobre la leche derramada",
+      "pronunciation": "[ˈno ˈʝoɾes ˈsoβ̞ɾe la ˈlet͡ʃe ð̞eraˈmað̞a]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "No tiene sentido lamentarse por errores que ya se cometieron y no pueden remediarse.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "no por mucho madrugar amanece más temprano",
+      "pronunciation": "[ˈno poɾ ˈmut͡ʃo mað̞ɾuˈɣ̞aɾ amaˈnese ˈmas t̪ẽmˈpɾano]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "No conviene precipitarse en el objetivo, sino esperar a que los acontecimientos sigan su curso natural.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "no se ganó Zamora en una hora",
+      "pronunciation": "[ˈno se ɣ̞aˈno saˈmoɾa ẽn ˈuna ˈoɾa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Aconseja la constancia y perseverancia a la hora de afrontar una tarea costosa.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "Roma no se hizo en un día"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "no te arrugues cuero viejo que te quiero para tambor",
+      "pronunciation": "[ˈno t̪e aˈruɣ̞es ˈkweɾo ˈβ̞jexo ke t̪e ˈkjeɾo ˈpaɾa t̪ãmˈboɾ]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Frase que indica sobre la persistencia de las personas; que a pesar de ser insistentes, perseverantes y logran sus objetivos, no pueden bajar la presión ante asuntos bastante complicados o de gran dificultad.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "no te vistas que no vas",
+      "pronunciation": "[ˈno t̪e ˈβ̞ist̪as ke ˈno ˈβ̞as]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Manera enfática de excluir a una persona de un grupo, reunión o de impedirle su participación en algún evento.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "novia mojada, novia afortunada",
+      "pronunciation": "[ˈnoβ̞ja moˈxað̞a &#124; ˈnoβ̞ja afoɾt̪uˈnað̞a]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se usa para indicar que la lluvia en el día de boda es un buen augurio y también para consolar a las novias a las que les llueve en el día de su boda.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "nunca digas de esta agua no beberé",
+      "pronunciation": "[ˈnũŋka ˈð̞iɣ̞as ð̞e ˈest̪a ˈaɣ̞wa ˈno β̞eβ̞eˈɾe]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "No hay que descartar la posibilidad de tener que hacer algo muy desagradable, especialmente en caso de necesidad.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "nunca digas de esta agua no beberé, ni este cura no es mi padre",
+      "pronunciation": "[ˈnũŋka ˈð̞iɣ̞as ð̞e ˈest̪a ˈaɣ̞wa ˈno β̞eβ̞eˈɾe &#124; ni ˈest̪e ˈkuɾa ˈno ˈes mi ˈpað̞ɾe]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "No hay que descartar la posibilidad de tener que hacer algo muy desagradable, especialmente en caso de necesidad.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "nunca falta un roto para un descosido",
+      "pronunciation": "[ˈnũŋka ˈfal̪t̪a ũn ˈrot̪o ˈpaɾa ũn̪ d̪eskoˈsið̞o]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Si alguien es pobre o la está pasando mal, va a encontrar consuelo si ve otras personas que también la pasen mal.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        },
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Cualquiera puede encontrar a alguien similar con quien estar, sin importar las cualidades extrañas que se posean.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "o follamos todos o tiramos la puta al río",
+      "pronunciation": "[o foˈʝamos ˈt̪oð̞os o t̪iˈɾamos la ˈput̪a al ˈrio]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se usa para indicar que uno no está dispuesto a seguir colaborando en una actividad, a no ser que haya un reparto más equitativo (o al menos más beneficioso para el hablante) de los beneficios.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "o follamos todos, o la puta al río",
+      "pronunciation": "[o foˈʝamos ˈt̪oð̞os &#124; o la ˈput̪a al ˈrio]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se usa para indicar que uno no está dispuesto a seguir colaborando en una actividad, a no ser que haya un reparto más equitativo de los beneficios (o al menos más beneficioso para el hablante).",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "o todos coludos, o todos rabones",
+      "pronunciation": "[o ˈt̪oð̞os koˈluð̞os &#124; o ˈt̪oð̞os raˈβ̞ones]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "En una situación todos deberían tener lo mismo o en equivalencia, nadie más, ni nadie menos.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "o todos moros o todos cristianos"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "o todos moros o todos cristianos",
+      "pronunciation": "[o ˈt̪oð̞os ˈmoɾos o ˈt̪oð̞os kɾisˈt̪janos]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "En una situación todos deberían tener lo mismo o en equivalencia, nadie más, ni nadie menos.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "o todos coludos, o todos rabones"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "pa'l",
+      "pronunciation": "[ˈpal]",
+      "senses": [
+        {
+          "partOfSpeech": "contraction",
+          "definition": "Contracción de la preposición para y el artículo el.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "padre mercader, hijo caballero, nieto pordiosero",
+      "pronunciation": "[ˈpað̞ɾe meɾkaˈð̞eɾ &#124; ˈixo kaβ̞aˈʝeɾo &#124; ˈnjet̪o poɾð̞joˈseɾo]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Dicho que habal que cuando una generación alcanza el éxito, la siguiente suele desperdiciarlo, no pudiendo legarlo.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "palante",
+      "pronunciation": "[paˈlãn̪t̪e]",
+      "senses": [
+        {
+          "partOfSpeech": "contraction",
+          "definition": "Contracción de para y adelante.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "para gustos colores",
+      "pronunciation": "[ˈpaɾa ˈɣ̞ust̪os koˈloɾes]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Cada persona tiene sus propios gustos, por lo que objetivamente no tiene sentido discutirlos.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "para gustos, colores",
+        "para gustos, los colores"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "para gustos, colores",
+      "pronunciation": "[ˈpaɾa ˈɣ̞ust̪os &#124; koˈloɾes]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Cada persona tiene sus propios gustos, por lo que no tiene sentido discutirlos.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "para gustos, los colores"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "para gustos, los colores",
+      "pronunciation": "[ˈpaɾa ˈɣ̞ust̪os &#124; los koˈloɾes]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Cada persona tiene sus propios gustos, por lo que objetivamente no tiene sentido discutirlos.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "para gustos, colores",
+        "para gustos colores"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "pararlas",
+      "pronunciation": "[paˈɾaɾlas]",
+      "senses": [
+        {
+          "partOfSpeech": "verb",
+          "definition": "Adivinar, maliciar, presumir algo que no es evidente, generalmente una intención oculta en lo que se dice o hace.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "patrás",
+      "pronunciation": "[paˈt̪ɾas]",
+      "senses": [
+        {
+          "partOfSpeech": "contraction",
+          "definition": "Contracción de para y atrás.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "pedrada contada, nunca ganada",
+      "pronunciation": "[peˈð̞ɾað̞a kõn̪ˈt̪að̞a &#124; ˈnũŋka ɣ̞aˈnað̞a]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Enseña que la jactancia en las cosas, regularmente arguye que no son ciertas ni seguras.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "perdiendo también se gana",
+      "pronunciation": "[peɾˈð̞jẽn̪d̪o t̪ãmˈbjẽn se ˈɣ̞ana]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Que lo malo que sucede, también trae cosas buenas, o que se compensa con cosas buenas.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "cuando una puerta se cierra, otra se abre",
+        "cuando una puerta se cierra, cientos se abren",
+        "cuando una puerta se cierra, una ventana se abre",
+        "no hay daño que no tenga apaño",
+        "para todo hay remedio",
+        "para todo hay remedio menos para la muerte",
+        "no hay mal que por bien no venga",
+        "por uno que se pierde, diez aparecen"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "perro con dinero, Don Perro",
+      "pronunciation": "[ˈpero kõn̪ d̪iˈneɾo &#124; ˈð̞õn ˈpero]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Úsase para enfatizar la importancia de la riqueza",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "poco a poco hila la vieja el copo",
+      "pronunciation": "[ˈpoko a ˈpoko ˈila la ˈβ̞jexa el ˈkopo]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Cualquiera, por humilde que sea, en la medida de sus posibilidades, con perseverancia, logra grandes metas.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "pooja",
+      "pronunciation": "[poˈoxa]",
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definition": "Pooja en la religion hinduista, es hacer honores a los dioses.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "por dinero baila el perro",
+      "pronunciation": "[poɾ ð̞iˈneɾo ˈβ̞ajla el ˈpero]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Por dinero, las personas hacen lo que sea. El refrán alude a la influencia del dinero en la conducta y el accionar de las personas.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "por el culo te la hinco",
+      "pronunciation": "[poɾ el ˈkulo t̪e la ˈĩŋko]",
+      "senses": [
+        {
+          "partOfSpeech": "phrase",
+          "definition": "Se usa en broma como rima para responder cuando alguien dice el número cinco u otros números acabados con ese sonido (veinticinco, treinta y cinco, etc.)",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "por la paz, un avemaría",
+      "pronunciation": "[poɾ la ˈpas &#124; ũn aβ̞emaˈɾia]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Hace referencia a la necesidad de ceder para mantener el ambiente en calma.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "por la plata baila el mono",
+      "pronunciation": "[poɾ la ˈplat̪a ˈβ̞ajla el ˈmono]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Denota que algunas personas pueden cambiar de opinión o parecer o ser capaces de cualquier cosa simplemente por lucro económico. Cuando es algo bochornoso o vituperable ya se considera una forma de prostitución.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "por mejoría mi casa dejaría",
+      "pronunciation": "[poɾ mexoˈɾia mi ˈkasa ð̞exaˈɾia]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Refrán que denota la inclinación y deseo que tenemos de mejorar de fortuna.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "por más que te tongonees siempre se te ve el bojote",
+      "pronunciation": "[poɾ ˈmas ke t̪e t̪õŋgoˈnees ˈsjẽmpɾe se t̪e ˈβ̞e el β̞oˈxot̪e]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Manera de decir a una persona que no trate de engañar por ser muy evidente.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "por un perro que maté, mataperros me llamaron",
+      "pronunciation": "[poɾ ũn ˈpero ke maˈt̪e &#124; mat̪aˈperos me ʝaˈmaɾõn]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se usa para indicar que a veces basta con haber hecho una cosa mal una vez para labrarse una mala reputación. También para quejarse de una generalización injusta.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "porfis",
+      "pronunciation": "[ˈpoɾfis]",
+      "senses": [
+        {
+          "partOfSpeech": "contraction",
+          "definition": "Manera de decir por favor a modo de contracción. Variante de porfa.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "primero hay que empezar por casa",
+      "pronunciation": "[pɾiˈmeɾo ˈaj ke ẽmpeˈsaɾ poɾ ˈkasa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Para estar y llevarse bien con los demás, primero tenemos que sentirnos a gusto con nosotros mismos.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "pueblo chico, infierno grande",
+      "pronunciation": "[ˈpweβ̞lo ˈt͡ʃiko &#124; ĩɱˈfjeɾno ˈɣ̞ɾãn̪d̪e]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica que en los pueblos o en los sitios pequeños donde todos se conocen circulan con más rapidez los cotilleos.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "punto fijo playa seca",
+      "pronunciation": "[ˈpũn̪t̪o ˈfixo ˈplaʝa ˈseka]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Forma sarcástica de decir que en época de asueto una persona no viajará a ningún destino y preferirá quedarse en casa.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "que Dios nos agarre confesados",
+      "pronunciation": "[ke ˈð̞jos nos aˈɣ̞are kõɱfeˈsað̞os]",
+      "senses": [
+        {
+          "partOfSpeech": "phrase",
+          "definition": "Frase empleada para denotar que lo que se aproxima o pudiera aproximarse es extremadamente grave o peligroso.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "que Dios nos coja confesados",
+      "pronunciation": "[ke ˈð̞jos nos ˈkoxa kõɱfeˈsað̞os]",
+      "senses": [
+        {
+          "partOfSpeech": "phrase",
+          "definition": "Frase empleada para denotar que lo que se aproxima es extremadamente grave o peligroso.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "que Dios nos pille confesados",
+      "pronunciation": "[ke ˈð̞jos nos ˈpiʝe kõɱfeˈsað̞os]",
+      "senses": [
+        {
+          "partOfSpeech": "phrase",
+          "definition": "Frase empleada para denotar que lo que se aproxima es extremadamente grave o peligroso.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "querer es poder",
+      "pronunciation": "[keˈɾeɾ ˈes poˈð̞eɾ]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Refrán que afirma que quien quiere algo con mucho empeño, siempre encuentra un modo de conseguirlo o llevarlo a cabo.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "queriendo hacer una gracia le salió una morisqueta",
+      "pronunciation": "[keˈɾjẽn̪d̪o aˈseɾ ˈuna ˈɣ̞ɾasja le saˈljo ˈuna moɾisˈket̪a]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Aplica a las personas que pretendiendo ejecutar algo planeado o improvisado le salen las cosas al revés de lo que esperaban o simplemente les acarrea consecuencias negativas.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "quicir",
+      "pronunciation": "[kiˈsiɾ]",
+      "senses": [
+        {
+          "partOfSpeech": "contraction",
+          "definition": "Contracción de quiero y decir.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "quien a hierro mata, a hierro muere",
+      "pronunciation": "[kjẽn a ˈjero ˈmat̪a &#124; a ˈjero ˈmweɾe]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica que si alguien castigó con las armas recibirá castigo con las mismas.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        },
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Por extensión indica que alguien recibirá represalias consecuentes con su forma de obrar.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "quien calla, otorga",
+      "pronunciation": "[kjẽŋ ˈkaʝa &#124; oˈt̪oɾɣ̞a]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Enseña que quien no contradice en manera conveniente, da a entender que aprueba.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "quien de lejanas tierras viene miente como quiere",
+      "pronunciation": "[kjẽn̪ d̪e leˈxanas ˈt̪jeras ˈβ̞jene ˈmjẽn̪t̪e ˈkomo ˈkjeɾe]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Aconseja prudencia ante lo que afirma gente que viene de lejos, por lo difícil que es comprobar la veracidad de lo que dicen.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "quien llega sano a su destino, se ríe de los porrazos del camino",
+      "pronunciation": "[kjẽɲ ˈʝeɣ̞a ˈsano a su ð̞esˈt̪ino &#124; se ˈrie ð̞e los poˈrasos ð̞el kaˈmino]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica que importa más llegar o conseguir su objetivo o destino, que preocuparse de las dificultades o vicisitudes que se tuvo para ello.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "quien mucho abarca, poco aprieta",
+      "pronunciation": "[kjẽn ˈmut͡ʃo aˈβ̞aɾka &#124; ˈpoko aˈpɾjet̪a]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se emplea para señalar que quien desea obtener demasiado puede terminar con menos de lo que se puede obtener con expectativas realistas. Se aplica en especial al deseo de emprender demasiadas cosas a un tiempo.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "quien no llora no mama",
+      "pronunciation": "[kjẽn ˈno ˈʝoɾa ˈno ˈmama]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "A veces es necesario pedir e insistir con ahínco para obtener lo que se desea.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "quien nombre no tenía, García se ponía",
+      "pronunciation": "[kjẽn ˈnõmbɾe ˈno t̪eˈnia &#124; gaɾˈsia se poˈnia]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Hace referencia al gran número de personas llamadas García.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "quien quiera peces que se moje el culo",
+      "pronunciation": "[kjẽŋ ˈkjeɾa ˈpeses ke se ˈmoxe el ˈkulo]",
+      "senses": [
+        {
+          "partOfSpeech": "phrase",
+          "definition": "Para obtener beneficios hay que estar dispuesto a hacer sacrificios.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "quien ríe solo, de sus picardías se acuerda",
+      "pronunciation": "[kjẽn ˈrie ˈsolo &#124; d̪e sus pikaɾˈð̞ias se aˈkweɾð̞a]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Puede ser considerado de mala educación reírse delante del resto sin explicar el motivo.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "quien se fue a Sevilla, perdió su silla",
+      "pronunciation": "[kjẽn se ˈfwe a seˈβ̞iʝa &#124; peɾˈð̞jo su ˈsiʝa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Dicho para indicar que cuando alguien se va de su sitio privilegiado un momento (normalmente si está sentado mientras hay otros de pie), lo normal es perderlo.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "quien se fue a la villa, perdió su silla",
+      "pronunciation": "[kjẽn se ˈfwe a la ˈβ̞iʝa &#124; peɾˈð̞jo su ˈsiʝa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Dicho para indicar que cuando alguien se va de su sitio privilegiado un momento (normalmente si está sentado mientras hay otros de pie), lo normal es perderlo.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "quien se fue de Sevilla, perdió su silla",
+      "pronunciation": "[kjẽn se ˈfwe ð̞e seˈβ̞iʝa &#124; peɾˈð̞jo su ˈsiʝa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Dicho para indicar que cuando alguien se va de su sitio privilegiado un momento (normalmente si está sentado mientras hay otros de pie), lo normal es perderlo.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "quien se fue de la villa, perdió su silla",
+      "pronunciation": "[kjẽn se ˈfwe ð̞e la ˈβ̞iʝa &#124; peɾˈð̞jo su ˈsiʝa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Dicho para indicar que cuando alguien se va de su sitio privilegiado un momento (normalmente si está sentado mientras hay otros de pie), lo normal es perderlo.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "quien se va sin que lo echen vuelve sin que lo llamen",
+      "pronunciation": "[kjẽn se ˈβ̞a sĩŋ ke lo ˈet͡ʃẽn ˈbwelβ̞e sĩŋ ke lo ˈʝamẽn]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Quien abandona voluntariamente un lugar no debe volver pensando en que será bien recibido.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "quien siembra vientos, recoge tempestades",
+      "pronunciation": "[kjẽn ˈsjẽmbɾa ˈβ̞jẽn̪t̪os &#124; reˈkoxe t̪ẽmpesˈt̪að̞es]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Advierte de las consecuencias desastrosas que puede tener comportarse mal o dar malos consejos.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "quien te quiere te aporrea",
+      "pronunciation": "[kjẽn̪ t̪e ˈkjeɾe t̪e apoˈrea]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Refrán que asegura que las personas que más te aprecian, son también quienes más te castigan.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "qué esperanza para el que siembra coco",
+      "pronunciation": "[ˈke espeˈɾãnsa ˈpaɾa el ke ˈsjẽmbɾa ˈkoko]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Alude el hecho de algún plan o proyecto cuyos resultados no se podrán ver o que simplemente no son viables.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "qué pequeño es el mundo",
+      "pronunciation": "[ˈke peˈkeɲo ˈes el ˈmũn̪d̪o]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Manera de expresarse cuando se le presenta alguien conocido de hace mucho tiempo atrás sin sospechar que hay relación en común o bien cuando no se imaginaba que se la encontraría en un lugar específico.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "respeta para que te respeten",
+      "pronunciation": "[resˈpet̪a ˈpaɾa ke t̪e resˈpet̪ẽn]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Sentencia que indica que el respeto es un valor que no se exige arbitrariamente sino que cada quien debe ganárselo por méritos propios y buenas acciones.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "sarna con gusto no pica",
+      "pronunciation": "[ˈsaɾna kõŋ ˈgust̪o ˈno ˈpika]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Quien que va tras algo por libre albedrío, no debe desistir por los eventuales estorbos que se presenten.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "se dice el pecado pero no el pecador",
+      "pronunciation": "[se ˈð̞ise el peˈkað̞o ˈpeɾo ˈno el pekaˈð̞oɾ]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se dice cuando se cuenta una falta o mala acción de alguien, pero sin revelar quién es el culpable de la misma.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "se han visto muertos cargando adobes",
+      "pronunciation": "[se ˈãn ˈbist̪o ˈmweɾt̪os kaɾˈɣ̞ãn̪d̪o aˈð̞oβ̞es]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Explica que se debe tener cuidado con pensar que algo ha terminado aunque así lo parezca, que es necesario asegurarse bien y contar con la posibilidad de que ocurra lo improbable.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "las he visto más feas y se han casado"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "se partió la galleta de soda",
+      "pronunciation": "[se paɾˈt̪jo la ɣ̞aˈʝet̪a ð̞e ˈsoð̞a]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Frase dirigida a los hombres afeminados u homosexuales",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "secretitos en reunión, es falta de educación",
+      "pronunciation": "[sekɾeˈt̪it̪os ẽn rewˈnjõn &#124; ˈes ˈfal̪t̪a ð̞e eð̞ukaˈsjõn]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica que dos o más personas no deben hablar, susurrar o cuchichear aparte cuando están en compañía de más gente, por ejemplo en una comida.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "si no sabe nadar no se meta para lo hondo",
+      "pronunciation": "[si ˈno ˈsaβ̞e naˈð̞aɾ ˈno se ˈmet̪a ˈpaɾa lo ˈõn̪d̪o]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Sentencia que se aplica a las personas que acostumbran hablar de cosas que no saben o que se aventuran en negocios o trabajos para los cuales no están lo suficientemente capacitados.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "si te gusta el durazno, bancate la pelusa",
+      "pronunciation": "[si t̪e ˈɣ̞ust̪a el̪ d̪uˈɾasno &#124; bãŋˈkat̪e la peˈlusa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Todo tiene su parte buena y su parte mala, y es imposible evitar la parte mala.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "si te he visto no me acuerdo",
+      "pronunciation": "[si t̪e ˈe ˈβ̞ist̪o ˈno me aˈkweɾð̞o]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Denota la actitud de personas ingratas o malagradecidas.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        },
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Frase usada por los \"amigos\" que luego que obtuvieron un beneficio se olvidan de quien los ayudó, es decir, son interesados.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "si te he visto, no me acuerdo",
+      "pronunciation": "[si t̪e ˈe ˈβ̞ist̪o &#124; ˈno me aˈkweɾð̞o]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Manera de denotar ingratitud.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        },
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Forma enfática de deshacerse de una persona cuya presencia es estorbosa aun cuando en el pasado se hayan llevado bien.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        },
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Por extensión, manera de desvincularse de alguien de modo de no volver a saber de la misma.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "sobre gustos no hay nada escrito",
+      "pronunciation": "[ˈsoβ̞ɾe ˈɣ̞ust̪os ˈno ˈaj ˈnað̞a esˈkɾit̪o]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "En cuestiones subjetivas la gente puede tener opiniones muy variadas, ya que no hay forma de resolverlas objetivamente.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "soplar y sorber, no puede ser",
+      "pronunciation": "[soˈplaɾ i soɾˈβ̞eɾ &#124; ˈno ˈpweð̞e ˈseɾ]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Expresa que no es posible hacer dos cosas contradictorias, se usa para criticar a quien defiende ideas opuestas según le conviene.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "sírvate",
+      "pronunciation": "[ˈsiɾβ̞at̪e]",
+      "senses": [
+        {
+          "partOfSpeech": "verb",
+          "definition": "Que te sirva; haz uso de.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "tanto monta, monta tanto, Isabel como Fernando",
+      "pronunciation": "[ˈt̪ãn̪t̪o ˈmõn̪t̪a &#124; ˈmõn̪t̪a ˈt̪ãn̪t̪o &#124; isaˈβ̞el ˈkomo feɾˈnãn̪d̪o]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Vale tanto una cosa como la otra.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "tanto va el cántaro a la fuente que al final se rompe",
+      "pronunciation": "[ˈt̪ãn̪t̪o ˈβ̞a el ˈkãn̪t̪aɾo a la ˈfwẽn̪t̪e ke al fiˈnal se ˈrõmpe]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica que si alguien se expone a menudo a situaciones de peligro, acabará teniendo que sufrir las consecuencias negativas de las mismas.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "tanto va el cántaro al agua, que al final se rompe",
+      "pronunciation": "[ˈt̪ãn̪t̪o ˈβ̞a el ˈkãn̪t̪aɾo al ˈaɣ̞wa &#124; ke al fiˈnal se ˈrõmpe]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica que si alguien se expone a menudo a situaciones de peligro, acabará teniendo que sufrir las consecuencias negativas de las mismas.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "tantos años de marqués y todavía no mueves el abanico",
+      "pronunciation": "[ˈt̪ãn̪t̪os ˈaɲos ð̞e maɾˈkes i t̪oð̞aˈβ̞ia ˈno ˈmweβ̞es el aβ̞aˈniko]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Hace alusión a la experiencia de una persona, que a pesar de haber trabajado muchos años en el mismo rubro de un oficio o profesión, aun sigue teniendo fallas técnicas. También se refiere a las personas que han trabajado muchos años y aún no se les observa un crecimiento económico, a causa de una mala administración del dinero.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "tarde piaste, pajarito",
+      "pronunciation": "[ˈt̪aɾð̞e ˈpjast̪e &#124; paxaˈɾit̪o]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Hace alusión al hecho de que no es posible revertir o enmendar un daño hecho o error cometido por una persona aunque esta se arrepienta de ello.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "el daño está hecho"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "te casaste, la cagaste",
+      "pronunciation": "[t̪e kaˈsast̪e &#124; la kaˈɣ̞ast̪e]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Desaconseja el matrimonio.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "te metiste a soldado y ahora tienes que aprender",
+      "pronunciation": "[t̪e meˈt̪ist̪e a sol̪ˈd̪að̞o i aˈoɾa ˈt̪jenes ke apɾẽn̪ˈd̪eɾ]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Frase para sentenciar a aquellas personas que sufren las consecuencias de sus malas decisiones",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "tiran más dos tetas que dos carretas",
+      "pronunciation": "[ˈt̪iɾãn ˈmas ˈð̞os ˈt̪et̪as ke ˈð̞os kaˈret̪as]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se usa para indicar que a menudo el atractivo de una mujer pesa más que ninguna otra consideración.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "todos los caminos llevan a Roma",
+      "pronunciation": "[ˈt̪oð̞os los kaˈminos ˈʝeβ̞ãn a ˈroma]",
+      "senses": [
+        {
+          "partOfSpeech": "phrase",
+          "definition": "Se usa para expresar la posibilidad de llegar al mismo fin independientemente del medio que se elija emplear.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "todos los días se aprende algo nuevo",
+      "pronunciation": "[ˈt̪oð̞os los ˈð̞ias se aˈpɾẽn̪d̪e ˈalɣ̞o ˈnweβ̞o]",
+      "senses": [
+        {
+          "partOfSpeech": "phrase",
+          "definition": "Se pronuncia tras haber adquirido conocimiento nuevo, en general cuando es de forma inesperada.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "tololo",
+      "pronunciation": "[t̪oˈlolo]",
+      "senses": [
+        {
+          "partOfSpeech": "adj",
+          "definition": "Adjetivo usado para referirse amigablemente a una persona cercana, ya sea familiar o simplemente conocida. Tonto, con poca lucidez.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "tómate un armonil",
+      "pronunciation": "[ˈt̪omat̪e ũn aɾmoˈnil]",
+      "senses": [
+        {
+          "partOfSpeech": "phrase",
+          "definition": "Se usa para llamar a la calma a una persona a la que se tutea: No te sulfures, recupera la compostura, cálmate.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "tómatelo con andina"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "un médico cura, dos dudan y tres muerte segura",
+      "pronunciation": "[ũn ˈmeð̞iko ˈkuɾa &#124; ˈð̞os ˈð̞uð̞ãn i ˈt̪ɾes ˈmweɾt̪e seˈɣ̞uɾa]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Desaconseja ir demasiado al médico.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        },
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Indica que el exceso de opiniones y puntos de vista puede llevar a paralizarnos y no ser capaces de tomar una decisión.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "un reloj roto da la hora correcta dos veces al día",
+      "pronunciation": "[ũn reˈlox ˈrot̪o ˈð̞a la ˈoɾa koˈrekt̪a ˈð̞os ˈβ̞eses al̪ ˈd̪ia]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Incluso una persona que siempre se equivoca o que no tiene capacidad puede acertar alguna vez por pura casualidad, sin que eso signifique que sea experta o que tenga la razón de forma constante.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "un tropezón no es caída",
+      "pronunciation": "[ũn̪ t̪ɾopeˈsõn ˈno ˈes kaˈið̞a]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Se usa para alentar a alguien a que siga intentando a pesar de los malos resultados.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "una golondrina no hace verano",
+      "pronunciation": "[ˈuna ɣ̞olõn̪ˈd̪ɾina ˈno ˈase β̞eˈɾano]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Úsase para señalar que un evento cualquiera no es necesariamente representativo de la tendencia general",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "win-win",
+      "pronunciation": "[ˈ(ɣ̞)w̝ĩn ˈ(ɣ̞)w̝ĩn]",
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definition": "Situación en la que todas las partes salen ganando o que obtienen distintos beneficios",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "yalo",
+      "pronunciation": "[ˈʝalo]",
+      "senses": [
+        {
+          "partOfSpeech": "contraction",
+          "definition": "Ya lo creo.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "zamuro cuidando carne",
+      "pronunciation": "[saˈmuɾo kwiˈð̞ãn̪d̪o ˈkaɾne]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Sentencia aplicada a quien se le confían o encargan asuntos que no es capaz de resolver o de lo que podría aprovecharse y abusar de la confianza.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [
+        "borracho cuidando bodega",
+        "chivo cuidando jardín",
+        "corrupto cuidando oro",
+        "lobo cuidando rebaño",
+        "zamuro cuidando presa"
+      ],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "zoolojía",
+      "pronunciation": "[sooloˈxia]",
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definition": "Rama de la biología que estudia los animales.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "¿cómo sabes tú que La Guaira es lejos?",
+      "pronunciation": "[ˈkomo ˈsaβ̞es ˈt̪u ke la ˈɣ̞wajɾa ˈes ˈlexos]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Dicho aplicado a personas que están excesivamente seguras y confiadas de algo o a quienes saben cosas que supuestamente no deberían saber, generalmente cuando son secretos.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "¿de qué color era el caballo blanco de Santiago?",
+      "pronunciation": "[d̪e ˈke koˈloɾ ˈeɾa el kaˈβ̞aʝo ˈβ̞lãŋko ð̞e sãn̪ˈt̪jaɣ̞o]",
+      "senses": [
+        {
+          "partOfSpeech": "phrase",
+          "definition": "Se dice para burlarse de los que hacen preguntas cuya respuesta es obvia.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "¿de qué color es el caballo blanco de Santiago?",
+      "pronunciation": "[d̪e ˈke koˈloɾ ˈes el kaˈβ̞aʝo ˈβ̞lãŋko ð̞e sãn̪ˈt̪jaɣ̞o]",
+      "senses": [
+        {
+          "partOfSpeech": "phrase",
+          "definition": "Se dice para burlarse de los que hacen preguntas cuya respuesta es obvia.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    },
+    {
+      "word": "¿vas a llevar chivos pa' Coro?",
+      "pronunciation": "[ˈbas a ʝeˈβ̞aɾ ˈt͡ʃiβ̞os ˈpa ˈkoɾo]",
+      "senses": [
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Sentencia aplicada a quienes hacen cosas absurdas o carentes de lógica o sentido.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        },
+        {
+          "partOfSpeech": "proverb",
+          "definition": "Expresión utilizada para señalar que carece de sentido ir a un sitio y llevar para ese lugar cualquier presente, alimento, bebida, u otra cosa, que allí abunda. Por ejemplo, ir a Italia, y al visitar tus amigos llevarles pizza o una pasta, o visitar una amiga que es repostera y llevarle un postre.",
+          "sourceIds": [
+            "es-wiktionary"
+          ]
+        }
+      ],
+      "related": [],
+      "sourceIds": [
+        "es-wiktionary"
+      ]
+    }
+  ]
+}

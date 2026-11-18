@@ -3,6 +3,8 @@ package com.maxfluency.core
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
 import java.time.LocalDate
+import java.text.Normalizer
+import java.util.Locale
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
@@ -22,7 +24,42 @@ enum class Language(val code: String, val nativeName: String) {
 }
 
 @Serializable
-data class Sense(val partOfSpeech: String, val definition: String, val sourceIds: List<String> = emptyList())
+data class Sense(
+    val partOfSpeech: String,
+    val definition: String,
+    val sourceIds: List<String> = emptyList(),
+    val examples: List<String> = emptyList(),
+)
+
+fun mergeSenses(senses: Iterable<Sense>): List<Sense> =
+    senses.groupBy { it.partOfSpeech to it.definition }.values.map { same ->
+        same.first().copy(sourceIds = same.flatMap { it.sourceIds }.distinct(),
+            examples = DictionaryText.examples(same.flatMap { it.examples }))
+    }
+
+private val leadingSenseLabels = Regex("^(?:\\([^()]*\\)\\s*)+")
+private fun Sense.exampleKey(): Pair<String, String> = partOfSpeech to
+    DictionaryText.definition(definition).replace(leadingSenseLabels, "")
+        .replace('\u2019', '\'').lowercase(Locale.ROOT).replace(Regex("\\s+"), " ").trim()
+
+fun WordEntry.withUsageExamples(bundled: WordEntry?): WordEntry {
+    if (bundled == null || id != bundled.id || language != bundled.language || word != bundled.word) return this
+    val contributed = linkedSetOf<String>()
+    val candidates = bundled.senses.groupBy { it.exampleKey() }
+    val enriched = senses.map { sense ->
+        val key = sense.exampleKey()
+        val matching = if (key.second.isBlank()) null else candidates[key]?.singleOrNull()
+        if (matching == null || matching.examples.isEmpty()) sense.copy(examples = DictionaryText.examples(sense.examples)) else {
+            contributed.addAll(matching.sourceIds)
+            sense.copy(
+                examples = DictionaryText.examples(sense.examples + matching.examples),
+                sourceIds = (sense.sourceIds.ifEmpty { sources.map { it.id } } + matching.sourceIds).distinct(),
+            )
+        }
+    }
+    return if (enriched == senses) this else copy(senses = enriched,
+        sources = (sources + bundled.sources.filter { it.id in contributed }).distinctBy { it.id })
+}
 
 @Serializable
 data class DictionarySource(val id: String, val edition: String, val title: String, val license: String)
@@ -37,6 +74,7 @@ data class WordEntry(
     val related: List<String>,
     val sourceEdition: String,
     val sources: List<DictionarySource> = emptyList(),
+    val pronunciationGuide: String = "",
 ) {
     val sourceUrl: String
         get() = "https://$sourceEdition.wiktionary.org/wiki/" +
@@ -50,7 +88,7 @@ data class WordEntry(
                 URLEncoder.encode(word, StandardCharsets.UTF_8.name()).replace("+", "%20")
             if (source.id == "reader-dict") listOf(wiki, "reader.dict" to "https://www.reader-dict.com/download/${language.code}")
             else listOf(wiki)
-        }
+        }.distinctBy { it.second }
 }
 
 data class DailyWords(
@@ -59,6 +97,7 @@ data class DailyWords(
     val grid: List<WordEntry>,
     val explored: Set<String> = emptySet(),
     val round: Int = 0,
+    val featuredMeaningCount: Int = featured.senses.size,
 )
 
 data class SavedWord(val entry: WordEntry, val favorite: Boolean, val lastViewed: Long)

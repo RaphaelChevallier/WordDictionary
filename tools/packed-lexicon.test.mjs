@@ -24,6 +24,7 @@ async function fixture(t) {
       senses: [{ partOfSpeech: "noun", definition: `Définition ${i} avec « accents », apostrophe ' et \n une ligne.`, sourceIds: ["fr-main", "fr-extra"] }],
       related: ["cœur", "côté"], sourceIds: ["fr-main", "fr-extra"],
     };
+    if (i % 5 === 0) row.senses[0].examples = [`Premier exemple ${i}.`, `Deuxième exemple ${i}.`];
     expected.push(row);
     insert.run(key, "mot", row.pronunciation, JSON.stringify(row.senses), JSON.stringify(row.related), JSON.stringify(row.sourceIds));
     if (i % 3 === 0) db.prepare("INSERT INTO daily_words VALUES (?,?)").run(i / 3, key);
@@ -67,6 +68,19 @@ test("invalid header, truncated data, and corrupt compressed frames are rejected
     const reader = new PackedLexicon(payload);
     assert.throws(() => reader.entry(1099), /corrupt|check|frame/i);
     await writeFile(join(data.directory, "corrupt.mflx"), payload);
+  } finally { data.db.close(); }
+});
+
+test("malformed usage examples fail the pack build instead of being silently dropped", async (t) => {
+  const data = await fixture(t);
+  try {
+    const update = data.db.prepare("UPDATE entries SET senses=? WHERE lookup_key=?");
+    for (const [index, examples] of [{ text: "Not an array." }, [""]].entries()) {
+      update.run(JSON.stringify([{ ...data.expected[0].senses[0], examples }]), data.expected[0].key);
+      await assert.rejects(writePackedLexicon(data.db, `${data.output}-${index}`, {
+        language: "fr", sources: data.sources,
+      }), /usage examples/i);
+    }
   } finally { data.db.close(); }
 });
 

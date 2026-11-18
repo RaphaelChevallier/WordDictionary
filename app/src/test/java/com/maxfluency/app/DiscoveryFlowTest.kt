@@ -6,6 +6,7 @@ import androidx.compose.ui.test.assertIsEnabled
 import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.assertIsSelected
 import androidx.compose.ui.test.assertTextContains
+import androidx.compose.ui.test.click
 import androidx.compose.ui.test.hasAnyAncestor
 import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.hasText
@@ -13,7 +14,11 @@ import androidx.compose.ui.test.isPopup
 import com.maxfluency.app.data.VocabularyLevel
 import com.maxfluency.app.data.SettingsStore
 import com.maxfluency.app.data.HomeView
+import com.maxfluency.app.data.LexiconRepository
+import com.maxfluency.app.data.PersonalStore
 import com.maxfluency.core.Language
+import com.maxfluency.core.SearchPlan
+import com.maxfluency.core.discoveryPreview
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.flow.first
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
@@ -28,10 +33,12 @@ import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.performScrollToIndex
 import androidx.compose.ui.test.performTextInput
+import androidx.compose.ui.test.performTouchInput
 import androidx.lifecycle.ViewModelProvider
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.semantics.SemanticsProperties
 import org.junit.Assert.assertTrue
+import org.junit.Assert.assertEquals
 import kotlin.math.abs
 import org.junit.Rule
 import org.junit.Test
@@ -197,6 +204,54 @@ class DiscoveryFlowTest {
         compose.onNodeWithTag("nav-today").performClick()
         compose.onNodeWithTag("daily-grid").assertIsDisplayed()
         org.junit.Assert.assertEquals(daily, model.state.value.daily)
+    }
+
+    @Test
+    fun moreMeaningsHintOpensEveryMeaningOnTheFullCard() {
+        compose.waitUntil(30_000) {
+            compose.onAllNodesWithTag("daily-grid").fetchSemanticsNodes().isNotEmpty()
+        }
+        val model = ViewModelProvider(compose.activity)[MaxFluencyViewModel::class.java]
+        val originalLanguage = model.state.value.settings.language
+        val date = requireNotNull(model.state.value.daily).date
+        val level = model.state.value.settings.levels.getValue(Language.FRENCH)
+        val word = runBlocking {
+            val lexicon = LexiconRepository(compose.activity)
+            val personal = PersonalStore(compose.activity)
+            try {
+                val entry = requireNotNull(lexicon.entry("fr:abjurer"))
+                val preview = requireNotNull(discoveryPreview(entry, lexicon.manifest().discovery))
+                val grid = lexicon.search(Language.FRENCH, SearchPlan.Prefix("ecole")).single { it.word == "école" }
+                personal.saveDaily("$date:fr:${level.name}", listOf(preview, grid),
+                    date.minusDays(7).toString(), entry)
+                entry
+            } finally { lexicon.close(); personal.close() }
+        }
+        try {
+            compose.runOnIdle { model.language(Language.FRENCH) }
+            compose.waitUntil(30_000) {
+                compose.waitForIdle()
+                model.state.value.let { !it.loading && it.daily?.featured?.id == word.id }
+            }
+            compose.onNodeWithTag("nav-alternate").performClick()
+            compose.onNodeWithText("1 more meaning").assertIsDisplayed()
+            compose.onNodeWithTag("more-meanings", useUnmergedTree = true).performTouchInput { click() }
+            compose.onNodeWithTag("entry-screen").assertIsDisplayed()
+            assertEquals(word.id, model.state.value.entry?.id)
+            assertEquals(word.senses, model.state.value.entry?.senses)
+            word.senses.forEach { sense ->
+                compose.onNodeWithTag("entry-screen").performScrollToNode(hasText(sense.definition))
+                compose.onNodeWithText(sense.definition, useUnmergedTree = true).assertIsDisplayed()
+            }
+            compose.onNodeWithContentDescription("Back").performClick()
+            compose.onNodeWithText("1 more meaning").assertIsDisplayed()
+        } finally {
+            compose.runOnIdle { model.language(originalLanguage) }
+            compose.waitUntil(30_000) {
+                compose.waitForIdle()
+                model.state.value.let { !it.loading && it.settings.language == originalLanguage }
+            }
+        }
     }
 
     @Test

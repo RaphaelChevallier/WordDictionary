@@ -1,5 +1,8 @@
 package com.maxfluency.app.ui
 
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -7,11 +10,14 @@ import androidx.compose.foundation.text.BasicText
 import androidx.compose.foundation.text.TextAutoSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.key
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -28,11 +34,20 @@ import com.maxfluency.core.WordEntry
 import kotlin.math.roundToInt
 
 @Composable
-internal fun WordGarden(words: List<WordEntry>, onWord: (String) -> Unit, viewportHeight: Dp) {
+internal fun WordGarden(words: List<WordEntry>, onWord: (String) -> Unit, viewportHeight: Dp, refreshRound: Int = 0) {
+    val initialRound = remember { refreshRound }
+    val reveal = remember(refreshRound) { Animatable(if (refreshRound == initialRound) 1f else 0f) }
+    val movement = with(LocalDensity.current) { 4.dp.toPx() }
+    LaunchedEffect(reveal) {
+        if (reveal.value < 1f) reveal.animateTo(1f, tween(220, easing = FastOutSlowInEasing))
+    }
     BoxWithConstraints(Modifier.fillMaxWidth()) {
         val scale = minOf(maxWidth.value / 350f, viewportHeight.value / 460f).coerceIn(0.85f, 1.6f)
         Layout(
-            modifier = Modifier.fillMaxWidth().testTag("daily-grid"),
+            modifier = Modifier.fillMaxWidth().testTag("daily-grid").graphicsLayer {
+                alpha = 0.55f + 0.45f * reveal.value
+                translationY = movement * (1f - reveal.value)
+            },
             content = {
                 words.forEachIndexed { index, word ->
                     key(word.id) { GardenWord(word, index, scale, onWord) }

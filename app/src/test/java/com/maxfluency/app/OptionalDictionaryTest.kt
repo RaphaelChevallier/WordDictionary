@@ -106,6 +106,32 @@ class OptionalDictionaryTest {
     }
 
     @Test
+    fun fullFrenchDictionaryRetainsAllMeaningsAndBundledExamples() = runBlocking {
+        Assume.assumeTrue(System.getProperty("maxfluency.publicDictionaryIntegration") == "true")
+        val context = ApplicationProvider.getApplicationContext<Context>()
+        val lexicon = LexiconRepository(context)
+        val store = FullDictionaryStore.get(context)
+        val manifest = lexicon.manifest()
+        val zip = File(File(File(System.getProperty("maxfluency.projectDir"), ".cache"), "public-dictionaries"), "fr.zip")
+        assertTrue("This opt-in test needs the cached public French archive", zip.isFile)
+        try {
+            val sha = MessageDigest.getInstance("SHA-256").digest(zip.readBytes()).joinToString("") { "%02x".format(it) }
+            store.install(Language.FRENCH, zip, sha, manifest.discovery, {}, {})
+            val raw = requireNotNull(store.entry(Language.FRENCH, "abjurer"))
+            assertEquals(2, raw.senses.size)
+            assertTrue(raw.senses.all { it.examples.isEmpty() })
+            val enriched = requireNotNull(lexicon.entry("fr:abjurer"))
+            assertEquals(raw.senses.map { it.definition }, enriched.senses.map { it.definition })
+            assertEquals(2, enriched.senses[1].examples.size)
+            assertTrue(enriched.senses[0].examples.isEmpty())
+            val matches = lexicon.search(Language.FRENCH, SearchPlan.Prefix("abjurer")).filter { it.word == "abjurer" }
+            assertEquals(1, matches.size)
+            assertEquals(enriched, matches.single())
+            assertTrue(enriched.sourceLinks.any { it.second == "https://fr.wiktionary.org/wiki/abjurer" })
+        } finally { lexicon.close(); store.remove(Language.FRENCH); store.close() }
+    }
+
+    @Test
     fun fullPackPreparesVisibleDefinitions() = runBlocking {
         Assume.assumeTrue(System.getProperty("maxfluency.publicDictionaryIntegration") == "true")
         val context = ApplicationProvider.getApplicationContext<Context>()
@@ -119,6 +145,10 @@ class OptionalDictionaryTest {
         try {
             val sha = MessageDigest.getInstance("SHA-256").digest(zip.readBytes()).joinToString("") { "%02x".format(it) }
             store.install(language, zip, sha, manifest.discovery, {}, {})
+            assertNull("This spelling was verified absent from the source archive", store.entry(language, "aeromozo"))
+            val added = requireNotNull(lexicon.entry("es:aeromozo"))
+            assertTrue(added.senses.any { it.definition == "Persona que atiende a los pasajeros en un avión." })
+            assertEquals(1, lexicon.search(language, SearchPlan.Prefix("aeromozo")).count { it.word == "aeromozo" })
             val date = java.time.LocalDate.of(2026, 11, 13)
             val started = System.nanoTime()
             val daily = lexicon.daily(language, date)
@@ -131,7 +161,11 @@ class OptionalDictionaryTest {
                 assertFalse(prepared.archived)
                 val downloaded = store.entry(language, word.word)
                 if (downloaded != null) {
-                    assertEquals(downloaded, prepared.entry)
+                    assertEquals("Examples must not replace or reorder the full dictionary's meanings",
+                        downloaded.senses.map { it.partOfSpeech to it.definition },
+                        prepared.entry.senses.map { it.partOfSpeech to it.definition })
+                    assertEquals(downloaded, prepared.entry.copy(senses = downloaded.senses, sources = downloaded.sources))
+                    assertTrue(prepared.entry.sources.containsAll(downloaded.sources))
                     downloadedDefinitions++
                 }
             }

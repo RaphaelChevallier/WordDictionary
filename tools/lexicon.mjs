@@ -8,6 +8,7 @@ import { pipeline } from "node:stream/promises";
 import { fileURLToPath } from "node:url";
 import { createGunzip, createZstdDecompress } from "node:zlib";
 import { PackedLexicon, writePackedLexicon } from "./packed-lexicon.mjs";
+import { cleanDefinition, selectUsageExamples, sourceLabels } from "./content-quality.mjs";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
 const content = join(root, "content");
@@ -50,13 +51,24 @@ function sourceId(language, word) {
   return `${language}:${word.normalize("NFC")}`;
 }
 
-function definitions(record) {
+export function sourceSenses(record) {
+  if (!allowedParts.has(record.pos)) return [];
   return (record.senses ?? []).flatMap((sense) => {
     if (sense.form_of?.length || sense.tags?.includes("form-of")) return [];
-    return (sense.glosses ?? []).map(clean).filter(Boolean).map((definition) => ({
-      partOfSpeech: record.pos,
-      definition,
-    }));
+    const examples = selectUsageExamples((sense.examples ?? [])
+      .filter((example) => (example.type == null || example.type === "example") &&
+        (example.ref == null || (typeof example.ref === "string" && !example.ref.trim())))
+      .map((example) => example.text));
+    const glosses = (sense.glosses ?? []).map(cleanDefinition);
+    const labels = sourceLabels([...(record.tags ?? []), ...(sense.tags ?? [])], record.lang_code);
+    return glosses.flatMap((definition, index) => {
+      if (!definition || (index < glosses.length - 1 && /^Terms? relating to .+\.$/u.test(definition))) return [];
+      return [{
+        partOfSpeech: record.pos,
+        definition: labels.length ? `(${labels.join(", ")}) ${definition}` : definition,
+        ...(index === glosses.length - 1 && examples.length ? { examples } : {}),
+      }];
+    });
   });
 }
 
@@ -68,8 +80,10 @@ function relatedWords(record) {
   ].map((item) => clean(item.word)).filter(Boolean))].slice(0, 16);
 }
 
-async function* jsonLines(path) {
+export async function* jsonLines(path, expectedSha256) {
   const source = createReadStream(path);
+  const digest = expectedSha256 ? createHash("sha256") : null;
+  if (digest) source.on("data", (chunk) => digest.update(chunk));
   const gzip = createGunzip();
   source.on("error", (error) => gzip.destroy(error));
   source.pipe(gzip);
@@ -89,6 +103,7 @@ async function* jsonLines(path) {
       if (pending.length > 64 * 1024 * 1024) throw new Error("Source JSONL record exceeds the 64 MB safety limit");
     }
     if (pending) yield pending;
+    if (digest && digest.digest("hex") !== expectedSha256) throw new Error("Source archive checksum mismatch");
   } finally {
     source.destroy();
     gzip.destroy();
@@ -120,7 +135,7 @@ function compactStorage(db) {
   `);
 }
 
-export async function buildPack({ input, output, source, inputs, release, maximumSenses = 8 }) {
+export async function buildPack({ input, output, source, inputs, release, maximumSenses = 64 }) {
   const contributions = (inputs ?? [{ input, source }]).map(({ input, source }) => ({
     input, source: { ...source, id: source.id ?? `${source.edition}-wiktionary`, priority: source.priority ?? 10 },
   })).sort((a, b) => a.source.priority - b.source.priority || a.source.id.localeCompare(b.source.id, "en"));
@@ -182,7 +197,7 @@ export async function buildPack({ input, output, source, inputs, release, maximu
       }
       const word = record.word.normalize("NFC").trim();
       if (!allowedParts.has(record.pos) || word.length > 100 || !word || /[\u0000-\u001f]/u.test(word)) continue;
-      const incomingSenses = definitions(record);
+      const incomingSenses = sourceSenses(record);
       if (!incomingSenses.length) continue;
       const id = sourceId(source.language, word);
       const previous = find.get(id);
@@ -193,6 +208,8 @@ export async function buildPack({ input, output, source, inputs, release, maximu
           item.partOfSpeech === sense.partOfSpeech && item.definition.normalize("NFC") === definition);
         if (existing) {
           if (!existing.sourceIds.includes(source.id)) existing.sourceIds.push(source.id);
+          const examples = [...new Set([...(existing.examples ?? []), ...(sense.examples ?? [])])].slice(0, 3);
+          if (examples.length) existing.examples = examples;
         } else if (senses.length < maximumSenses) {
           senses.push({ ...sense, sourceIds: [source.id] });
         }
@@ -603,7 +620,7 @@ async function sync(release, allowLargeRemovals) {
       builtAt: new Date().toISOString(),
       license: "CC-BY-SA-4.0",
       attribution: "Wiktionary and Simple English Wiktionary contributors; machine-readable extraction by Kaikki.org / Wiktextract.",
-      modifications: "Native-language lexical entries selected; form-only entries and proper names omitted; source union deduplicated by language and NFC spelling; identical same-part-of-speech definitions merged with source attribution; up to 8 senses and 16 related terms retained; front-coded word index and independently compressed binary blocks added. Quotations, audio and images are not redistributed.",
+      modifications: `Native-language lexical entries selected; form-only entries and proper names omitted; source union deduplicated by language and NFC spelling; identical same-part-of-speech definitions merged with source attribution; up to ${configuration.maximumSensesPerWord} senses, 3 unreferenced usage examples per sense and 16 related terms retained; front-coded word index and independently compressed binary blocks added. Attributed quotations, audio and images are not redistributed.`,
       sizeTargetBytes: configuration.targetReleaseApkBytes,
       discovery: configuration.discovery,
       languages,

@@ -1,0 +1,29 @@
+Optional definition translation uses the installed Android on-device translation
+service when a ready language pair is available. The optional fallback uses
+Google Translate through the ML Kit on-device Translation API.
+
+Definition text is translated on the device. Language model downloads contact
+Google. Automatic translations may be inaccurate; the original dictionary
+definition remains available.
+
+ML Kit sends SDK performance, usage, device and per-installation diagnostics,
+including configured source and target languages, to Google. It may also contact
+Google for SDK configuration and compatibility information. Google states that
+input text and translated results are processed on-device and are not sent to
+Google servers.
+
+THIS SERVICE MAY CONTAIN TRANSLATIONS POWERED BY GOOGLE. GOOGLE DISCLAIMS ALL
+WARRANTIES RELATED TO THE TRANSLATIONS, EXPRESS OR IMPLIED, INCLUDING ANY
+WARRANTIES OF ACCURACY, RELIABILITY, AND ANY IMPLIED WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+
+https://developers.google.com/ml-kit/language/translation
+https://developers.google.com/ml-kit/language/translation/translation-terms
+https://cloud.google.com/translate/attribution
+https://developers.google.com/ml-kit/terms
+https://developers.google.com/ml-kit/android-data-disclosure
+https://translate.google.com/
+
+The supplied monochrome attribution badge is selected intact from Google's
+published attribution-styles graphic. Google and Google Translate are trademarks
+of Google LLC.

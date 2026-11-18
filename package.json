@@ -13,6 +13,9 @@
     "test:android": "node tools/android.mjs :core:test :app:testDebugUnitTest",
     "content:sync": "node tools/lexicon.mjs sync",
     "content:verify": "node tools/starter.mjs verify",
-    "content:prepare": "node tools/starter.mjs prepare"
+    "content:prepare": "node tools/starter.mjs prepare",
+    "examples:generate": "node tools/usage-examples.mjs generate",
+    "pronunciation:generate": "node tools/pronunciation.mjs generate",
+    "pronunciation:verify": "node tools/pronunciation.mjs prepare"
   }
 }

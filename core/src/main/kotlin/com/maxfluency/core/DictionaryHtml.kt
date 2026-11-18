@@ -34,9 +34,32 @@ object DictionaryHtml {
         }
     }
 
-    private fun definition(element: Element): String = element.clone().apply {
-        select("ol, ul, dl, table, script, style, .reference, .citation, .h-quotation, .mw-editsection").remove()
-    }.text().replace(Regex("\\s+"), " ").trim()
+    private fun definition(element: Element): String = DictionaryText.definition(element.clone().apply {
+        select("ol, ul, dl, table, script, style, .reference, .citation, .h-quotation, .mw-editsection, " +
+            ".example, .usage-example, .h-usage-example, .e-example").remove()
+    }.text())
+
+    private fun exampleLabel(element: Element): Element? = element.children().firstOrNull()?.takeIf {
+        it.normalName() in setOf("b", "strong") &&
+            normalizeSearch(it.text()) in setOf("ejemplo:", "example:", "exemple :", "exemple:")
+    }
+
+    private fun examples(element: Element): List<String> = DictionaryText.examples(
+        element.select(".example, .usage-example, .h-usage-example, .e-example, li").filter { example ->
+            (example.normalName() != "li" || example.classNames().any {
+                it in setOf("example", "usage-example", "h-usage-example", "e-example")
+            } || exampleLabel(example) != null) &&
+            example.parents().takeWhile { it != element }.none {
+                it.normalName() in setOf("ol", "blockquote") || it.hasClass("h-quotation") || it.hasClass("citation") ||
+                    it.classNames().any { name -> name in setOf("example", "usage-example", "h-usage-example", "e-example") } ||
+                    exampleLabel(it) != null
+            } && example.selectFirst(".sources, .source, .reference, cite, .citation, .h-quotation, blockquote, .cita, .ref") == null
+        }.map { example ->
+            (example.selectFirst(".e-example") ?: example).clone().apply {
+                exampleLabel(this)?.remove()
+                select(".e-translation, .translation, rt, script, style, .mw-editsection").remove()
+            }.text().replace(Regex("\\s+"), " ").trim()
+        })
 
     fun wiki(language: Language, word: String, html: String): WordEntry? {
         val body = Jsoup.parseBodyFragment(html).body()
@@ -85,14 +108,14 @@ object DictionaryHtml {
                     element.parents().none { it.normalName() == "ol" || it.normalName() == "ul" } -> {
                     element.select("li").filter { it.parent()?.normalName() == "ol" }.forEach { item ->
                         val text = definition(item)
-                        if (text.isNotBlank()) senses += Sense(checkNotNull(currentPart), text)
+                        if (text.isNotBlank()) senses += Sense(checkNotNull(currentPart), text, examples = examples(item))
                     }
                 }
                 currentPart != null && language == Language.SPANISH && element.normalName() == "dl" &&
                     element.children().any { it.normalName() == "dt" && it.text().firstOrNull()?.isDigit() == true } -> {
                     element.children().filter { it.normalName() == "dd" }.forEach {
                         val text = definition(it)
-                        if (text.isNotBlank()) senses += Sense(checkNotNull(currentPart), text)
+                        if (text.isNotBlank()) senses += Sense(checkNotNull(currentPart), text, examples = examples(it))
                     }
                 }
             }
@@ -116,11 +139,11 @@ object DictionaryHtml {
                     }
                     currentPart = if (label.isBlank() || synonyms) null else part(label) ?: "other:$label"
                 }
-                "ol" -> element.select("li").forEach { item ->
+                "ol" -> element.select("li").filter { it.parent()?.normalName() == "ol" }.forEach { item ->
                     val text = definition(item)
                     if (text.isNotBlank()) {
                         if (synonyms) related += text
-                        else currentPart?.let { senses += Sense(it, text) }
+                        else currentPart?.let { senses += Sense(it, text, examples = examples(item)) }
                     }
                 }
             }
@@ -136,6 +159,6 @@ object DictionaryHtml {
         val source = DictionarySource(if (downloaded) "reader-dict" else "wiktionary",
             language.code, if (downloaded) "Wiktionary / reader.dict" else "Wiktionary", "CC-BY-SA-4.0")
         return WordEntry("${language.code}:$word", language, word, pronunciation,
-            senses.distinctBy { it.partOfSpeech to it.definition }, related.take(16), language.code, listOf(source))
+            mergeSenses(senses), related.take(16), language.code, listOf(source))
     }
 }

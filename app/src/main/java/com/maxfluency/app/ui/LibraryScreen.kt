@@ -10,6 +10,7 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.PrimaryTabRow
 import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -23,7 +24,8 @@ import com.maxfluency.app.R
 import com.maxfluency.core.WordEntry
 
 @Composable
-fun LibraryScreen(state: AppUiState, onWord: (String) -> Unit, onFavorite: (WordEntry) -> Unit) {
+fun LibraryScreen(state: AppUiState, onWord: (String) -> Unit, onFavorite: (WordEntry) -> Unit,
+    onAnkiExport: (List<WordEntry>) -> Unit = {}) {
     var tab by rememberSaveable { mutableIntStateOf(0) }
     val words = if (tab == 0) state.saved.filter { it.favorite } else state.saved.take(100)
     Column(Modifier.fillMaxSize()) {
@@ -32,6 +34,10 @@ fun LibraryScreen(state: AppUiState, onWord: (String) -> Unit, onFavorite: (Word
                 Tab(selected = tab == index, onClick = { tab = index }, text = { Text(stringResource(label)) })
             }
         }
+        if (tab == 0 && words.isNotEmpty()) TextButton(
+            onClick = { onAnkiExport(words.map { it.entry }) },
+            enabled = state.ankiExport?.busy != true,
+        ) { Text(stringResource(R.string.anki_export_saved)) }
         LazyColumn(contentPadding = PaddingValues(horizontal = 20.dp, vertical = 16.dp)) {
             if (words.isEmpty()) item {
                 Text(stringResource(if (tab == 0) R.string.empty_favorites else R.string.empty_history),

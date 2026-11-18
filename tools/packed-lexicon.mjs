@@ -92,7 +92,14 @@ function encodeEntry(row, sources) {
   const definitions = senses.map((sense) => {
     const part = parts.indexOf(sense.partOfSpeech);
     if (part < 0) throw new Error(`Unsupported part of speech: ${sense.partOfSpeech}`);
-    return [part, sourceMask(sense.sourceIds ?? ids, sources), sense.definition];
+    const result = [part, sourceMask(sense.sourceIds ?? ids, sources), sense.definition];
+    const examples = sense.examples ?? [];
+    if (!Array.isArray(examples) || examples.length > 3 ||
+        examples.some((text) => typeof text !== "string" || !text.trim() || text.length > 600)) {
+      throw new Error("Invalid dictionary usage examples");
+    }
+    if (examples.length) result.push(examples);
+    return result;
   });
   const related = JSON.parse(row.related);
   if (related.length > 64) throw new Error("Too many related terms");
@@ -353,10 +360,19 @@ export class PackedLexicon {
     const sourceIds = decodeSources(record[0]);
     const pronunciation = record[1];
     const senses = record[2].map((sense) => {
-      if (!Array.isArray(sense) || sense.length !== 3 || typeof sense[2] !== "string") throw new Error("Invalid dictionary sense");
+      if (!Array.isArray(sense) || (sense.length !== 3 && sense.length !== 4) ||
+          typeof sense[2] !== "string") throw new Error("Invalid dictionary sense");
       const part = parts[sense[0]];
       if (!part || !Number.isInteger(sense[0])) throw new Error("Invalid dictionary part of speech");
-      return { partOfSpeech: part, sourceIds: decodeSources(sense[1]), definition: sense[2] };
+      const result = { partOfSpeech: part, sourceIds: decodeSources(sense[1]), definition: sense[2] };
+      if (sense.length === 4) {
+        if (!Array.isArray(sense[3]) || sense[3].length > 3 ||
+            sense[3].some((text) => typeof text !== "string" || !text.trim() || text.length > 600)) {
+          throw new Error("Invalid dictionary usage examples");
+        }
+        result.examples = sense[3];
+      }
+      return result;
     });
     const related = record[3];
     return { key, word: key.substring(key.indexOf("\x1f") + 1), pronunciation, senses, related, sourceIds };

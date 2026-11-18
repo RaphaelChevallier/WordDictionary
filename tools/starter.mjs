@@ -4,21 +4,37 @@ import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { DatabaseSync } from "node:sqlite";
 import { PackedLexicon, writePackedLexicon } from "./packed-lexicon.mjs";
-import { anagramKey } from "./lexicon.mjs";
+import { anagramKey, normalizeSearch } from "./lexicon.mjs";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
 const target = join(root, "content", "starter");
 const version = (await readFile(join(root, "version.properties"), "utf8")).match(/^versionName=(.+)$/m)[1].trim();
 const verifyOnly = process.argv[2] === "verify";
 const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");
-const builderSha256 = hash(await readFile(fileURLToPath(import.meta.url)));
+const builderSha256 = hash(Buffer.concat([await readFile(fileURLToPath(import.meta.url)),
+  await readFile(join(root, "tools", "packed-lexicon.mjs"))]));
+const supplementPath = join(root, "content", "supplements", "es-coverage.json");
+const supplement = JSON.parse(await readFile(supplementPath, "utf8"));
+if (supplement.schemaVersion !== 1 || supplement.language !== "es" || !Array.isArray(supplement.entries)) {
+  throw new Error("Invalid Spanish coverage supplement");
+}
+const examplesPath = join(root, "content", "supplements", "usage-examples.json");
+const usage = JSON.parse(await readFile(examplesPath, "utf8"));
+const contentBuilderSha256 = hash(Buffer.concat(await Promise.all(
+  ["usage-examples.mjs", "lexicon.mjs", "content-quality.mjs"].map((file) => readFile(join(root, "tools", file))))));
+if (usage.schemaVersion !== 2 || usage.builderSha256 !== contentBuilderSha256 || !Array.isArray(usage.languages)) {
+  throw new Error("Content polish needs regeneration: npm run examples:generate");
+}
+const supplementHashes = { es: hash(await readFile(supplementPath)), examples: hash(await readFile(examplesPath)) };
 async function exists(path) {
   try { await access(path); return true; }
   catch (error) { if (error.code !== "ENOENT") throw error; return false; }
 }
 if (await exists(join(target, "manifest.json"))) {
   const manifest = JSON.parse(await readFile(join(target, "manifest.json"), "utf8"));
-  if (manifest.releaseVersion === version && manifest.builderSha256 === builderSha256) {
+  if (manifest.releaseVersion === version && manifest.builderSha256 === builderSha256 &&
+      manifest.supplementHashes?.es === supplementHashes.es &&
+      manifest.supplementHashes?.examples === supplementHashes.examples) {
     for (const pack of manifest.languages) {
       if (hash(await readFile(join(target, "packs", pack.file))) !== pack.sha256) throw new Error("Starter pack hash mismatch");
       if (hash(await readFile(join(target, "ranks", `${pack.language}.txt`))) !== manifest.rankHashes?.[pack.language]) {
@@ -81,6 +97,42 @@ for (const original of source.languages) {
         JSON.stringify(entry.related), JSON.stringify(entry.sourceIds));
       if (eligible.has(ordinal)) daily.run(index, entry.key);
     });
+    const exampleEntries = usage.languages.find((item) => item.language === language)?.entries;
+    if (!exampleEntries) throw new Error(`Missing ${language} usage example supplement`);
+    const additions = [...(language === "es" ? supplement.entries : []), ...exampleEntries];
+    if (additions.length) {
+      const find = db.prepare("SELECT * FROM entries WHERE lookup_key=?");
+      const update = db.prepare("UPDATE entries SET senses=?,related=?,sources=? WHERE lookup_key=?");
+      for (const entry of additions) {
+        const key = normalizeSearch(entry.word) + "\x1f" + entry.word.normalize("NFC");
+        const previous = find.get(key);
+        if (previous) {
+          const senses = entry.replaceSenses ? entry.senses : JSON.parse(previous.senses);
+          for (const sense of entry.replaceSenses ? [] : entry.senses) {
+            const existing = senses.find((old) => old.partOfSpeech === sense.partOfSpeech && old.definition === sense.definition);
+            if (existing) {
+              const examples = [...new Set([...(existing.examples ?? []), ...(sense.examples ?? [])])].slice(0, 3);
+              if (examples.length) existing.examples = examples;
+              existing.sourceIds = [...new Set([...(existing.sourceIds ?? []), ...(sense.sourceIds ?? [])])];
+            } else senses.push(sense);
+          }
+          if (senses.length > 64) throw new Error("Merged entry exceeds the supported sense count");
+          update.run(JSON.stringify(senses), JSON.stringify([...new Set([...JSON.parse(previous.related), ...entry.related])]),
+            JSON.stringify([...new Set([...JSON.parse(previous.sources), ...entry.sourceIds])]), key);
+        } else {
+          insert.run(key, anagramKey(entry.word), entry.pronunciation, JSON.stringify(entry.senses),
+            JSON.stringify(entry.related), JSON.stringify(entry.sourceIds));
+        }
+      }
+    }
+    const exclusions = usage.languages.find((item) => item.language === language).excludedHeadwords ?? [];
+    for (const { word } of exclusions) {
+      const key = normalizeSearch(word) + "\x1f" + word.normalize("NFC");
+      db.prepare("DELETE FROM daily_words WHERE entry_key=?").run(key);
+      if (db.prepare("DELETE FROM entries WHERE lookup_key=?").run(key).changes !== 1) {
+        throw new Error(`Undefined source placeholder ${word} did not match the starter bank`);
+      }
+    }
     const file = join(target, `${language}.partial.mflx`);
     if (await exists(file)) await rm(file);
     const metadata = await writePackedLexicon(db, file, full.metadata, { discovery: source.discovery, blockEntries: 512 });
@@ -98,6 +150,6 @@ for (const name of await readdir(join(target, "packs"))) {
 await writeFile(join(target, "manifest.json"), JSON.stringify({
   schemaVersion: 3, compression: "zstd-blocks", releaseVersion: version, builderSha256, builtAt: new Date().toISOString(),
   license: "CC-BY-SA-4.0", attribution: `${source.attribution} Vocabulary frequency bands: FrequencyWords / OpenSubtitles.`,
-  modifications: "Small native-language starter bank selected by frequency bands. Full dictionaries are optional public downloads.",
-  languages, rankHashes, discovery: source.discovery,
+  modifications: "Small native-language starter bank selected by frequency bands, audited Spanish lookup additions and pinned source meanings/examples. Detached footnotes and broken wiki markup removed; quality warnings and source usage qualifiers retained. Attributed/embedded quotations omitted; examples belong to their precise meaning. Example-only headword additions are lookup-only; daily discovery is unchanged. Full dictionaries are optional public downloads.",
+  languages, rankHashes, supplementHashes, discovery: source.discovery,
 }, null, 2) + "\n");

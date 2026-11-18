@@ -44,8 +44,17 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.maxfluency.app.R
+import com.maxfluency.core.Language
 import com.maxfluency.core.WordEntry
 import java.util.Locale
+
+@Composable
+internal fun PronunciationGuide(entry: WordEntry) {
+    if (entry.language == Language.ENGLISH && entry.pronunciationGuide.isNotBlank()) {
+        Text(stringResource(R.string.pronunciation_guide, entry.pronunciationGuide),
+            style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+    }
+}
 
 @Composable
 fun LoadingPanel() {

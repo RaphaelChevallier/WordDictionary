@@ -14,4 +14,5 @@ gradlew text eol=lf
 *.gz binary
 *.zst binary
 *.mflx binary
+*.mfpr binary
 *.jar binary

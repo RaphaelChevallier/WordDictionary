@@ -62,10 +62,14 @@ import com.maxfluency.app.MaxFluencyViewModel
 import com.maxfluency.app.OfflineSpeech
 import com.maxfluency.app.R
 import com.maxfluency.app.data.HomeView
+import com.maxfluency.app.data.ArchivedDailyWord
+import com.maxfluency.app.data.VocabularyLevel
 import java.time.Duration
+import java.time.LocalDate
 import java.time.ZonedDateTime
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
+import kotlinx.coroutines.flow.first
 
 @Composable
 internal fun AppNavigationBar(route: String, onNavigate: (String) -> Unit, homeView: HomeView = HomeView.GARDEN) {
@@ -102,7 +106,8 @@ internal fun AppNavigationBar(route: String, onNavigate: (String) -> Unit, homeV
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MaxFluencyApp(state: AppUiState, viewModel: MaxFluencyViewModel) {
+fun MaxFluencyApp(state: AppUiState, viewModel: MaxFluencyViewModel,
+    reminderTarget: ArchivedWordTarget? = null, onReminderHandled: () -> Unit = {}) {
     val context = LocalContext.current
     val lifecycle = LocalLifecycleOwner.current.lifecycle
     val nav = rememberNavController()
@@ -122,6 +127,7 @@ fun MaxFluencyApp(state: AppUiState, viewModel: MaxFluencyViewModel) {
     LaunchedEffect(lifecycle, viewModel, state.daily?.date) {
         lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
             while (isActive) {
+                viewModel.refreshSystemLanguage()
                 viewModel.refreshDayIfNeeded()
                 val now = ZonedDateTime.now()
                 val midnight = now.toLocalDate().plusDays(1).atStartOfDay(now.zone)
@@ -141,12 +147,27 @@ fun MaxFluencyApp(state: AppUiState, viewModel: MaxFluencyViewModel) {
         viewModel.openEntry(id)
         nav.navigate("entry/${Uri.encode(id)}") { launchSingleTop = true }
     }
+    fun archivedEntry(word: ArchivedDailyWord) {
+        viewModel.openArchivedEntry(word.entry.id, word.date, word.level)
+        nav.navigate("entry/${Uri.encode(word.entry.id)}?day=${word.date}&level=${word.level.name}") {
+            launchSingleTop = true
+        }
+    }
+    LaunchedEffect(reminderTarget) {
+        reminderTarget?.let {
+            nav.currentBackStackEntryFlow.first()
+            viewModel.openArchivedEntry(it.id, it.date, it.level)
+            nav.navigate("entry/${Uri.encode(it.id)}?day=${it.date}&level=${it.level.name}") { launchSingleTop = true }
+            onReminderHandled()
+        }
+    }
+    state.ankiExport?.let { AnkiExportDialog(it, viewModel) }
 
     Scaffold(
         containerColor = MaterialTheme.colorScheme.surface,
         topBar = {
             TopAppBar(
-                title = { Text(stringResource(R.string.app_name)) },
+                title = { Text(stringResource(if (route == "calendar") R.string.word_calendar else R.string.app_name)) },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.surface,
                     scrolledContainerColor = MaterialTheme.colorScheme.surface,
@@ -154,6 +175,15 @@ fun MaxFluencyApp(state: AppUiState, viewModel: MaxFluencyViewModel) {
                 navigationIcon = {
                     if (route !in roots) IconButton(onClick = { nav.popBackStack() }) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, stringResource(R.string.back))
+                    }
+                },
+                actions = {
+                    if (route == "today" || route == "alternate") {
+                        IconButton(onClick = { nav.navigate("calendar") { launchSingleTop = true } },
+                            enabled = state.daily != null,
+                            modifier = Modifier.testTag("open-word-calendar")) {
+                            Icon(Icons.Default.DateRange, stringResource(R.string.word_calendar))
+                        }
                     }
                 },
             )
@@ -181,7 +211,13 @@ fun MaxFluencyApp(state: AppUiState, viewModel: MaxFluencyViewModel) {
                         homeView = if (state.settings.homeView == HomeView.GARDEN) HomeView.WORD_OF_DAY else HomeView.GARDEN)
                 }
                 composable("library") {
-                    LibraryScreen(state, ::entry, viewModel::toggleFavorite)
+                    LibraryScreen(state, ::entry, viewModel::toggleFavorite, viewModel::requestAnkiExport)
+                }
+                composable("calendar") {
+                    LaunchedEffect(viewModel, state.daily?.date) { viewModel.openCalendar() }
+                    DisposableEffect(viewModel) { onDispose { viewModel.closeCalendar() } }
+                    WordCalendarScreen(state.calendar, viewModel::calendarMonth, viewModel::calendarLanguage,
+                        viewModel::calendarLevel, viewModel::calendarToday, ::archivedEntry, viewModel::retryCalendar)
                 }
                 composable("settings") {
                     SettingsScreen(state, viewModel, { nav.navigate("credits") }, {
@@ -202,10 +238,21 @@ fun MaxFluencyApp(state: AppUiState, viewModel: MaxFluencyViewModel) {
                         }
                     })
                 }
-                composable("entry/{id}", arguments = listOf(navArgument("id") { type = NavType.StringType })) { backStack ->
+                composable("entry/{id}?day={day}&level={level}", arguments = listOf(
+                    navArgument("id") { type = NavType.StringType },
+                    navArgument("day") { type = NavType.StringType; nullable = true; defaultValue = null },
+                    navArgument("level") { type = NavType.StringType; nullable = true; defaultValue = null },
+                )) { backStack ->
                     val id = backStack.arguments?.getString("id") ?: error("Missing internal word navigation ID")
-                    LaunchedEffect(id) {
-                        if (viewModel.state.value.entryId != id) viewModel.openEntry(id)
+                    val date = backStack.arguments?.getString("day")?.let(LocalDate::parse)
+                    val level = backStack.arguments?.getString("level")?.let(VocabularyLevel::valueOf)
+                    check((date == null) == (level == null)) { "Incomplete daily word navigation context" }
+                    LaunchedEffect(id, date, level) {
+                        val currentState = viewModel.state.value
+                        if (date != null && level != null) {
+                            if (currentState.entryId != id || currentState.entryArchive?.date != date ||
+                                currentState.entryArchive?.level != level) viewModel.openArchivedEntry(id, date, level)
+                        } else if (currentState.entryId != id || currentState.entryArchive != null) viewModel.openEntry(id)
                     }
                     EntryScreen(
                         state = state,
@@ -217,7 +264,9 @@ fun MaxFluencyApp(state: AppUiState, viewModel: MaxFluencyViewModel) {
                                 Log.e("MaxFluency", "Clipboard service is unavailable")
                                 viewModel.message(R.string.error_copy)
                             } else {
-                                val text = word.word + "\n\n" + word.senses.joinToString("\n\n") { it.definition } +
+                                val text = word.word + "\n\n" + word.senses.joinToString("\n\n") {
+                                    (listOf(it.definition) + it.examples).joinToString("\n")
+                                } +
                                     "\n\n" + word.sourceLinks.joinToString("\n") { it.second } +
                                     "\nhttps://creativecommons.org/licenses/by-sa/4.0/"
                                 clipboard.setPrimaryClip(ClipData.newPlainText(word.word, text))
@@ -228,7 +277,14 @@ fun MaxFluencyApp(state: AppUiState, viewModel: MaxFluencyViewModel) {
                             viewModel.relatedWord(word, source.language)
                             root("today")
                         },
-                        onRetry = { viewModel.retryEntry(id) },
+                        onRetry = {
+                            if (date != null && level != null) viewModel.openArchivedEntry(id, date, level)
+                            else viewModel.retryEntry(id)
+                        },
+                        onTranslate = { viewModel.showTranslation() },
+                        onDownloadTranslation = { viewModel.showTranslation(downloadModels = true) },
+                        onHideTranslation = viewModel::hideTranslation,
+                        onAnkiExport = { viewModel.requestAnkiExport(listOf(it)) },
                     )
                 }
             }

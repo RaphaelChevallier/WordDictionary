@@ -139,9 +139,13 @@ class BlockLexicon(
         val sourceIds = sources(record[0].integer())
         val pronunciation = record[1].text()
         val senses = record[2].collection(64).map {
-            val sense = it.tuple(3)
+            val sense = it.collection(4)
+            if (sense.size !in 3..4) corrupt("Invalid dictionary sense")
             val part = parts.getOrNull(sense[0].integer()) ?: corrupt("Invalid dictionary part of speech")
-            Sense(part, sense[2].text(), sources(sense[1].integer()).map { source -> source.id })
+            val examples = sense.getOrNull(3)?.collection(3)?.map { value ->
+                value.text().also { text -> if (text.isBlank() || text.length > 600) corrupt("Invalid dictionary example") }
+            }.orEmpty()
+            Sense(part, sense[2].text(), sources(sense[1].integer()).map { source -> source.id }, examples)
         }
         if (senses.isEmpty()) corrupt("Empty dictionary definition")
         val related = record[3].collection(64).map { it.text() }

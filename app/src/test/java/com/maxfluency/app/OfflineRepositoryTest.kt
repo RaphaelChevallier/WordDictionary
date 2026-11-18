@@ -88,6 +88,78 @@ class OfflineRepositoryTest {
     }
 
     @Test
+    fun dailyMeaningCountIncludesSensesHiddenFromThePreview() = runBlocking {
+        val date = LocalDate.of(2026, 11, 17)
+        val language = Language.ENGLISH
+        val level = VocabularyLevel.INTERMEDIATE
+        val word = WordEntry("en:__meaning_count_fixture__", language, "__meaning_count_fixture__", "",
+            listOf(Sense("noun", "An eligible preview meaning."),
+                Sense("adv", "A grammatical meaning available in the full entry."),
+                Sense("adv", "Another grammatical meaning available in the full entry.")),
+            emptyList(), "en")
+        val preview = requireNotNull(discoveryPreview(word, lexicon.manifest().discovery))
+        assertEquals(1, preview.senses.size)
+        val gridWord = preview.copy(id = "en:__grid_fixture__", word = "__grid_fixture__")
+        personal.recordViewed(word)
+        personal.saveDaily("$date:en:${level.name}", listOf(preview, gridWord), date.minusDays(7).toString(), word)
+        val daily = lexicon.daily(language, date, level)
+        assertEquals(preview, daily.featured)
+        assertEquals(3, daily.featuredMeaningCount)
+        val explored = lexicon.exploreGarden(language, date, level, daily.round, gridWord.id)
+        assertEquals(3, explored.featuredMeaningCount)
+        lexicon.close()
+        lexicon = LexiconRepository(context)
+        val restored = lexicon.daily(language, date, level)
+        assertEquals(preview, restored.featured)
+        assertEquals(3, restored.featuredMeaningCount)
+        assertEquals(word, requireNotNull(lexicon.preparedEntry(word.id)).entry)
+    }
+
+    @Test
+    fun spanishCoverageSupplementIsSearchableWithoutDuplicateEntries() = runBlocking {
+        val matches = lexicon.search(Language.SPANISH, SearchPlan.Prefix("aeromozo"))
+            .filter { it.word == "aeromozo" }
+        assertEquals(1, matches.size)
+        val entry = requireNotNull(lexicon.entry(matches.single().id))
+        assertTrue(entry.senses.any { it.definition == "Persona que atiende a los pasajeros en un avión." })
+        assertTrue(entry.sourceLinks.any { it.second == "https://es.wiktionary.org/wiki/aeromozo" })
+        personal.setFavorite(entry, true)
+        lexicon.resetCache()
+        assertEquals(entry, lexicon.entry(entry.id))
+        assertTrue(personal.words().single().favorite)
+    }
+
+    @Test
+    fun examplesRemainAttachedToMeaningsAcrossOfflineLookupAndSavedSnapshots() = runBlocking {
+        val entry = requireNotNull(lexicon.entry("fr:abjurer"))
+        assertEquals(2, entry.senses.size)
+        assertTrue(entry.senses[0].examples.isEmpty())
+        assertEquals(2, entry.senses[1].examples.size)
+        personal.setFavorite(entry, true)
+        personal.close()
+        personal = PersonalStore(context)
+        assertEquals(entry, personal.words().single().entry)
+        lexicon.resetCache()
+        val searched = lexicon.search(Language.FRENCH, SearchPlan.Prefix("abjurer")).single { it.word == "abjurer" }
+        assertEquals(entry, searched)
+        assertEquals(entry, requireNotNull(lexicon.preparedEntry(entry.id)).entry)
+    }
+
+    @Test
+    fun polishedDefinitionsRecoverReadingMediaAndRetainSourceWarnings() = runBlocking {
+        val lire = requireNotNull(lexicon.entry("fr:lire"))
+        assertTrue("The old eight-sense bank omitted the audio/video meaning",
+            lire.senses.any { it.definition.contains("fichier vidéo ou audio") })
+        assertTrue(lire.senses.size > 8)
+        val adjective = requireNotNull(lexicon.entry("en:abnormal"))
+        assertFalse(adjective.senses.any { it.definition.contains("[[") || it.definition.contains("]]") })
+        val fish = requireNotNull(lexicon.entry("es:carpintero"))
+        assertTrue("A formatting fix must not erase the source's uncertainty warning",
+            fish.senses.any { it.definition.contains("(definición imprecisa)") })
+        assertFalse(fish.senses.any { it.definition.contains("^([") })
+    }
+
+    @Test
     fun savedWordsSurvivePackReplacement() = runBlocking {
         val retired = WordEntry(
             id = "fr:__maxfluency_retired_fixture__",
@@ -173,7 +245,7 @@ class OfflineRepositoryTest {
             db.version = 2
         }
         val migrated = requireNotNull(personal.daily(key))
-        assertEquals(3, personal.readableDatabase.version)
+        assertEquals(4, personal.readableDatabase.version)
         assertEquals(listOf(entry, grid), migrated.entries)
         assertEquals(0, migrated.round)
         assertTrue(migrated.explored.isEmpty())
@@ -206,6 +278,21 @@ class OfflineRepositoryTest {
             try { Zstd.decompress(bytes_, expected) }
             catch (error: ZstdException) { throw IOException("Corrupt compressed frame", error) }
         })
+
+    @Test
+    fun englishGuidesKeepOriginalPhoneticsAndOtherLanguagesUnchanged() = runBlocking {
+        val disaster = requireNotNull(lexicon.entry("en:disaster"))
+        assertEquals("dih-ZAS-ter", disaster.pronunciationGuide)
+        assertTrue(disaster.pronunciation.isNotBlank())
+        assertTrue(requireNotNull(lexicon.entry("fr:le")).pronunciationGuide.isEmpty())
+        assertTrue(requireNotNull(lexicon.entry("es:ma\u00f1ana")).pronunciationGuide.isEmpty())
+        val unknown = disaster.copy(id = "en:__missing_cmu_word__", word = "__missing_cmu_word__")
+        assertTrue(lexicon.withPronunciationGuide(unknown).pronunciationGuide.isEmpty())
+        val daily = lexicon.daily(Language.ENGLISH, LocalDate.of(2026, 11, 13))
+        (daily.grid + daily.featured).forEach {
+            assertEquals(lexicon.preparedEntry(it.id)?.entry?.pronunciationGuide, it.pronunciationGuide)
+        }
+    }
 
     @Test
     fun preparedGardenSurvivesSearchAndRestart() = runBlocking {

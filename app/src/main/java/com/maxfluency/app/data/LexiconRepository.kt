@@ -15,12 +15,15 @@ import com.maxfluency.core.PackManifest
 import com.maxfluency.core.SearchPlan
 import com.maxfluency.core.WordEntry
 import com.maxfluency.core.discoveryPreview
+import com.maxfluency.core.dailyIndices
 import com.maxfluency.core.dictionaryJson
+import com.maxfluency.core.withUsageExamples
 import java.io.File
 import java.io.IOException
 import java.nio.ByteBuffer
 import java.security.MessageDigest
 import java.time.LocalDate
+import java.time.YearMonth
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.currentCoroutineContext
 import kotlinx.coroutines.ensureActive
@@ -47,6 +50,7 @@ class LexiconRepository(context: Context) {
     private val api = PublicDictionaryApi()
     private val ranks = VocabularyRanks(context)
     private val full = FullDictionaryStore.get(context)
+    private val pronunciationGuides = PronunciationGuides(context)
     private val prepared = LruCache<String, PreparedEntry>(128)
     @Volatile private var preparedDaily: Map<String, PreparedEntry> = emptyMap()
 
@@ -59,18 +63,63 @@ class LexiconRepository(context: Context) {
     suspend fun daily(language: Language, date: LocalDate, level: VocabularyLevel = VocabularyLevel.INTERMEDIATE): DailyWords = withContext(Dispatchers.IO) {
         mutex.withLock {
             val key = "$date:${language.code}:${level.name}"
-            personal.daily(key)?.let { return@withLock prepareDaily(it.words(date)) }
-            val entries = discoveryCandidates(language, date, level, 0).take(21)
+            val archived = personal.archivedWord(date, language, level)
+            personal.daily(key)?.let {
+                val daily = prepareDaily(it.words(date))
+                personal.saveArchivedWords(listOf(ArchivedDailyWord(date, level,
+                    preparedEntry(daily.featured.id)?.entry ?: daily.featured)))
+                return@withLock daily
+            }
+            val candidates = discoveryCandidates(language, date, level, 0).take(21)
+            val featured = archived?.entry?.let {
+                discoveryPreview(it, readManifest().discovery) ?: it.also {
+                    Log.i("LexiconRepository", "Preserving a previously assigned daily word under a changed discovery policy")
+                }
+            } ?: candidates.firstOrNull() ?: throw IOException("No local daily word is available")
+            val entries = listOf(featured) + candidates.filter { it.id != featured.id }.take(20)
             if (entries.size < 21) throw IOException("Not enough local words for daily discovery")
-            personal.saveDaily(key, entries, date.minusDays(7).toString())
-            cache.seen(entries.map { it.id })
-            prepareDaily(DailyWords(date, entries.first(), entries.drop(1)))
+            personal.saveDaily(key, entries, date.minusDays(7).toString(),
+                archived?.entry ?: readEntry(featured.id) ?: featured)
+            val chosen = personal.daily(key) ?: throw IOException("The selected daily words were not saved")
+            cache.seen(chosen.entries.map { it.id })
+            prepareDaily(chosen.words(date))
         }
     }
 
+    suspend fun calendarMonth(month: YearMonth, language: Language, level: VocabularyLevel): List<ArchivedDailyWord> =
+        withContext(Dispatchers.IO) {
+            mutex.withLock {
+                val today = LocalDate.now()
+                if (month.year !in 1..9999 || month > YearMonth.from(today)) {
+                    throw IOException("A daily word calendar month must not be in the future")
+                }
+                val existing = personal.archivedMonth(month, language, level).associateBy { it.date }
+                val dictionary = openReader(language)
+                val positions = dictionary.daily.filter { ranks.level(language, dictionary.wordAt(it)) == level }
+                if (positions.isEmpty()) throw IOException("No offline words are available for this calendar level")
+                val last = minOf(month.atEndOfMonth(), today)
+                val additions = buildList {
+                    for (day in 1..last.dayOfMonth) {
+                        currentCoroutineContext().ensureActive()
+                        val date = month.atDay(day)
+                        if (date in existing) continue
+                        val saved = personal.daily("$date:${language.code}:${level.name}")?.entries?.first()
+                        val entry = saved?.let { readEntry(it.id) ?: it } ?: pronunciationGuides.enrich(
+                            dictionary.entryAt(positions[dailyIndices(date, language, positions.size).first()]))
+                        add(ArchivedDailyWord(date, level, entry, backfilled = saved == null))
+                    }
+                }
+                personal.saveArchivedWords(additions)
+                personal.archivedMonth(month, language, level).filter { it.date <= today }
+            }
+        }
+
+    suspend fun archivedWord(date: LocalDate, language: Language, level: VocabularyLevel): ArchivedDailyWord =
+        personal.archivedWord(date, language, level) ?: throw IOException("The archived daily word is missing")
+
     suspend fun exploreGarden(language: Language, date: LocalDate, level: VocabularyLevel, round: Int,
         id: String): DailyWords = withContext(Dispatchers.IO) {
-        mutex.withLock { personal.exploreDaily("$date:${language.code}:${level.name}", id, round).words(date) }
+        mutex.withLock { applyPreparedDetails(personal.exploreDaily("$date:${language.code}:${level.name}", id, round).words(date)) }
     }
 
     suspend fun refreshGarden(language: Language, date: LocalDate, level: VocabularyLevel, round: Int,
@@ -128,9 +177,15 @@ class LexiconRepository(context: Context) {
     private suspend fun prepareDaily(daily: DailyWords): DailyWords {
         preparedDaily = (daily.grid + daily.featured).associate { word ->
             word.id to (preparedEntry(word.id) ?: readEntry(word.id)?.let { PreparedEntry(it) }
-                ?: PreparedEntry(personal.snapshot(word.id) ?: word, archived = true))
+                ?: PreparedEntry(enrich(personal.snapshot(word.id) ?: word), archived = true))
         }
-        return daily
+        return applyPreparedDetails(daily)
+    }
+
+    private fun applyPreparedDetails(daily: DailyWords): DailyWords {
+        fun guide(word: WordEntry) = word.copy(pronunciationGuide = preparedEntry(word.id)?.entry?.pronunciationGuide.orEmpty())
+        return daily.copy(featured = guide(daily.featured), grid = daily.grid.map(::guide),
+            featuredMeaningCount = (preparedEntry(daily.featured.id)?.entry ?: daily.featured).senses.size)
     }
 
     suspend fun search(language: Language, plan: SearchPlan): List<WordEntry> = withContext(Dispatchers.IO) {
@@ -138,6 +193,7 @@ class LexiconRepository(context: Context) {
         mutex.withLock {
             (full.search(language, plan) + cache.search(language, plan) +
                 openReader(language).search(plan) { operation.ensureActive() }).distinctBy { it.id }.take(60)
+                .map(::enrich)
                 .also { entries -> entries.forEach { prepared.put(it.id, PreparedEntry(it)) } }
         }
     }
@@ -150,7 +206,9 @@ class LexiconRepository(context: Context) {
         preparedEntry(id)?.let { return if (it.archived) null else it.entry }
         val language = Language.fromCode(id.substringBefore(':'))
             ?: throw IOException("Unsupported dictionary entry language")
-        val entry = full.entry(language, id.substringAfter(':')) ?: cache.get(id) ?: openReader(language).entry(id.substringAfter(':'))
+        val external = full.entry(language, id.substringAfter(':')) ?: cache.get(id)
+        val entry = if (external != null) enrich(external)
+            else openReader(language).entry(id.substringAfter(':'))?.let(pronunciationGuides::enrich)
         if (entry != null) prepared.put(id, PreparedEntry(entry))
         return entry
     }
@@ -161,6 +219,7 @@ class LexiconRepository(context: Context) {
             loadedManifest = null
             preparedDaily = emptyMap()
             prepared.evictAll()
+            pronunciationGuides.close()
             removeLegacyCache()
         }
     }
@@ -170,6 +229,7 @@ class LexiconRepository(context: Context) {
             closeReader()
             preparedDaily = emptyMap()
             prepared.evictAll()
+            pronunciationGuides.close()
             if (cacheDelegate.isInitialized()) cache.close()
             personal.close()
         }
@@ -178,7 +238,7 @@ class LexiconRepository(context: Context) {
     suspend fun lookupOnline(language: Language, word: String): Pair<WordEntry?, Boolean> = withContext(Dispatchers.IO) {
         val local = entry("${language.code}:${word.trim()}")
         if (local != null) return@withContext local to true
-        val entry = api.lookup(language, word) ?: return@withContext null to true
+        val entry = api.lookup(language, word)?.let(pronunciationGuides::enrich) ?: return@withContext null to true
         val protected = personal.protectedIds(LocalDate.now().toString())
         val saved = cache.put(entry, ranks.level(language, entry.word), protected)
         prepared.put(entry.id, PreparedEntry(entry))
@@ -187,6 +247,12 @@ class LexiconRepository(context: Context) {
     }
 
     suspend fun seen(entry: WordEntry) = withContext(Dispatchers.IO) { cache.seen(entry.id) }
+
+    suspend fun withPronunciationGuide(entry: WordEntry): WordEntry =
+        withContext(Dispatchers.IO) { mutex.withLock { enrich(entry) } }
+
+    private fun enrich(entry: WordEntry): WordEntry =
+        pronunciationGuides.enrich(entry.withUsageExamples(openReader(entry.language).entry(entry.word)))
 
     suspend fun answer(entry: WordEntry, correct: Boolean) {
         personal.answer(entry.id, correct)

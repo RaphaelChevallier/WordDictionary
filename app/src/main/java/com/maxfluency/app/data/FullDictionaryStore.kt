@@ -305,7 +305,7 @@ class FullDictionaryStore private constructor(private val context: Context) {
         if (parsed.isEmpty()) return null
         return parsed.first().copy(
             pronunciation = parsed.firstNotNullOfOrNull { it.pronunciation.takeIf { value -> value.isNotBlank() } }.orEmpty(),
-            senses = parsed.flatMap { it.senses }.distinctBy { it.partOfSpeech to it.definition },
+            senses = mergeSenses(parsed.flatMap { it.senses }),
             related = parsed.flatMap { it.related }.distinct().take(16))
     }
 

@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -42,6 +43,7 @@ import kotlinx.coroutines.withContext
 
 @Composable
 fun SettingsScreen(state: AppUiState, viewModel: MaxFluencyViewModel, onCredits: () -> Unit, onAssessment: () -> Unit) {
+    var removeTranslationModels by remember { mutableStateOf(false) }
     val interfaceLanguage = AppCompatDelegate.getApplicationLocales()[0]?.language.orEmpty()
     LazyColumn(Modifier.testTag("settings-screen"), contentPadding = PaddingValues(24.dp), verticalArrangement = Arrangement.spacedBy(24.dp)) {
         item {
@@ -96,10 +98,23 @@ fun SettingsScreen(state: AppUiState, viewModel: MaxFluencyViewModel, onCredits:
         }
         item {
             TextButton(onClick = onCredits) { Text(stringResource(R.string.data_licenses)) }
+            TextButton(onClick = { removeTranslationModels = true }) { Text(stringResource(R.string.remove_translation_models)) }
             Text(stringResource(R.string.privacy_note), style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
+        item { ReminderSettings(state.settings, viewModel) }
     }
+    if (removeTranslationModels) AlertDialog(
+        onDismissRequest = { removeTranslationModels = false },
+        title = { Text(stringResource(R.string.remove_translation_models)) },
+        text = { Text(stringResource(R.string.remove_translation_models_message)) },
+        confirmButton = {
+            TextButton(onClick = { removeTranslationModels = false; viewModel.removeTranslationModels() }) {
+                Text(stringResource(R.string.remove_translation_models))
+            }
+        },
+        dismissButton = { TextButton(onClick = { removeTranslationModels = false }) { Text(stringResource(R.string.cancel)) } },
+    )
 }
 
 @Composable
@@ -123,7 +138,8 @@ fun CreditsScreen(state: AppUiState, onSource: (String) -> Unit) {
             license = withContext(Dispatchers.IO) {
                 val names = context.assets.list("licenses")?.sorted()
                     ?: throw IOException("Offline licenses are missing")
-                val required = setOf("CC-BY-SA-4.0.txt", "ZSTD-JNI-BSD-2-Clause.txt", "ZSTANDARD-BSD-3-Clause.txt")
+                val required = setOf("CC-BY-SA-4.0.txt", "ZSTD-JNI-BSD-2-Clause.txt", "ZSTANDARD-BSD-3-Clause.txt",
+                    "CMUDICT-LICENSE.txt", "GOOGLE-TRANSLATE-NOTICE.txt")
                 if (!names.containsAll(required)) throw IOException("An offline dependency license is missing")
                 names.joinToString("\n\n") { name ->
                     name + "\n\n" + context.assets.open("licenses/$name").bufferedReader().use { it.readText() }
@@ -165,6 +181,18 @@ fun CreditsScreen(state: AppUiState, onSource: (String) -> Unit) {
                     .format(pack.compressedBytes / 1e6)
                 Text(stringResource(R.string.pack_info,
                     Language.fromCode(pack.language)?.nativeName ?: pack.language, pack.entries, size))
+            }
+        }
+        item {
+            Text(stringResource(R.string.pronunciation_guide_credit), style = MaterialTheme.typography.bodyMedium)
+            TextButton(onClick = { onSource("https://github.com/cmusphinx/cmudict") }) {
+                Text(stringResource(R.string.cmudict_source))
+            }
+        }
+        item {
+            Text(stringResource(R.string.translation_credit), style = MaterialTheme.typography.bodyMedium)
+            TextButton(onClick = { onSource("https://developers.google.com/ml-kit/language/translation") }) {
+                Text(stringResource(R.string.translate_with_google))
             }
         }
         item { SectionTitle(stringResource(R.string.license_title)) }

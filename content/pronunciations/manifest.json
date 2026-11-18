@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "language": "en",
+  "file": "en-779580a2e1c8f1a7.mfpr",
+  "entries": 126037,
+  "bytes": 2909571,
+  "sha256": "779580a2e1c8f1a70b2c8bee69593f9ad2cf5e13aac2e5a46aaf27ce6624aaac",
+  "builderSha256": "2e330b73e9da761c80effb1c7e111f01e587095ef70658b2f5203ac18d75c16d",
+  "source": {
+    "name": "CMUdict",
+    "revision": "74790861f652b15e4ac49015a90074ad62a27690",
+    "url": "https://raw.githubusercontent.com/cmusphinx/cmudict/74790861f652b15e4ac49015a90074ad62a27690/cmudict.dict",
+    "sha256": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+    "license": "CMUDICT-LICENSE.txt",
+    "licenseSha256": "bd4ce8e44170a5f9f481310ca85c51de3c4f851a65e679b40e603b143bd3542a"
+  },
+  "modifications": "Approximate North American English respellings; primary stress capitalized; up to two source-listed variants."
+}

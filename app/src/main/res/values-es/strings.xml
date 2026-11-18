@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="daily_reminder">Recordatorio de la palabra del día</string>
+    <string name="reminder_channel">Recordatorios de la palabra del día</string>
+    <string name="reminder_time">Hora del recordatorio · %1$s</string>
+    <string name="reminder_note">Una palabra y su definición, según el idioma del diccionario y el nivel elegidos. Hora local; Android puede retrasar la entrega para ahorrar batería.</string>
+    <string name="reminder_permission_needed">Permite las notificaciones en los ajustes de Android para recibir los recordatorios diarios.</string>
+    <string name="reminder_system_settings">Abrir ajustes de notificaciones</string>
+    <string name="error_reminder">No se pudo actualizar el recordatorio. Inténtalo de nuevo.</string>
+    <string name="anki_export">Exportar a Anki</string>
+    <string name="more_word_actions">Más acciones para esta palabra</string>
+    <string name="anki_export_saved">Exportar palabras guardadas a Anki</string>
+    <plurals name="anki_export_title">
+        <item quantity="one">Exportar %1$d palabra a Anki</item>
+        <item quantity="other">Exportar %1$d palabras a Anki</item>
+    </plurals>
+    <string name="anki_export_description">Palabra delante; significados y ejemplos originales detrás, con sus fuentes. Guarda un mazo sin conexión o envíalo a AnkiDroid en este dispositivo. Se omiten las notas existentes; el progreso no cambia.</string>
+    <string name="anki_save_deck">Guardar mazo (.apkg)</string>
+    <string name="anki_send_direct">Enviar a AnkiDroid</string>
+    <string name="anki_not_installed">Instala y abre AnkiDroid para usar el envío directo. Puedes exportar archivos sin AnkiDroid.</string>
+    <string name="anki_permission_needed">No se concedió acceso a AnkiDroid. Puedes guardar un archivo de mazo.</string>
+    <string name="anki_export_failed">No se pudo completar la exportación. Puede que se añadieran algunas tarjetas; al reintentar se omiten las notas existentes. También puedes exportar un archivo.</string>
+    <string name="anki_export_progress">Preparando tarjetas · %1$d / %2$d</string>
+    <string name="anki_wait">Espera a que termine la exportación o unos segundos antes de reintentar.</string>
+    <string name="anki_export_limit">Elige de 1 a 5.000 palabras guardadas, o exporta una palabra desde su ficha.</string>
+    <string name="anki_file_saved">Mazo Anki guardado. Abre el archivo .apkg en Anki para importarlo.</string>
+    <string name="anki_added_count">Se añadieron %1$s tarjetas a AnkiDroid. Se omitieron las notas existentes.</string>
+    <string name="word_calendar">Calendario de palabras del día</string>
+    <string name="previous_month">Mes anterior</string>
+    <string name="next_month">Mes siguiente</string>
+    <string name="calendar_note">Las palabras del día guardadas no cambian. Las fechas sin guardar reciben una palabra sin conexión para el idioma y el nivel elegidos.</string>
+    <string name="calendar_assigned_day">Asignada sin conexión a esta fecha.</string>
+    <string name="word_of_day_date">Palabra del día · %1$s</string>
+    <string name="error_calendar">No se pudo abrir el calendario de palabras del día. Inténtalo de nuevo.</string>
     <string name="today">Hoy</string>
     <string name="library">Colección</string>
     <string name="settings">Ajustes</string>
@@ -35,6 +67,37 @@
     <string name="empty_favorites">Tu colección empieza con una palabra que te guste. Toca la estrella de cualquier definición.</string>
     <string name="empty_history">Aquí aparecerán las palabras que descubras.</string>
     <string name="listen">Escuchar</string>
+    <string name="show_definition_translation">Mostrar palabra y significados en %1$s</string>
+    <string name="checking_definition_translation">Comprobando traducción al %1$s…</string>
+    <string name="preparing_definition_translation">Preparando traducción al %1$s…</string>
+    <string name="cancel">Cancelar</string>
+    <string name="hide_definition_translation">Ocultar traducción al %1$s</string>
+    <string name="translated_definition_title">Traducción al %1$s</string>
+    <string name="original_definition">Significados y ejemplos originales</string>
+    <string name="machine_translation_note">Traducción automática de la palabra, los significados y los ejemplos. La traducción de una palabra depende del contexto; compárala con los originales.</string>
+    <string name="usage_examples">Ejemplos</string>
+    <plurals name="meaning_count">
+        <item quantity="one">%1$d significado</item>
+        <item quantity="other">%1$d significados</item>
+    </plurals>
+    <plurals name="more_meanings">
+        <item quantity="one">%1$d significado más</item>
+        <item quantity="many">%1$d significados más</item>
+        <item quantity="other">%1$d significados más</item>
+    </plurals>
+    <string name="translate_with_google">Traducir con Google</string>
+    <string name="google_translation_attribution">Con la tecnología de Google Translate</string>
+    <string name="translation_download_title">¿Activar traducción sin conexión?</string>
+    <string name="translation_download_message">El teléfono no tiene un traductor del sistema listo para estos idiomas. Google Translate necesita descargar unos 30 MB por modelo de idioma requerido. Se requiere Wi-Fi. Las definiciones permanecen en el dispositivo; después la traducción funciona sin conexión. Google recibe diagnósticos del SDK, no el texto de las definiciones.</string>
+    <string name="translation_failed">No se pudo completar la traducción. La definición original no ha cambiado. Toca de nuevo para reintentar.</string>
+    <string name="translation_unsupported">La traducción al %1$s no está disponible en este dispositivo.</string>
+    <string name="remove_translation_models">Eliminar descargas de traducción</string>
+    <string name="remove_translation_models_message">¿Eliminar los modelos de traducción descargados por esta aplicación? Se conservarán los diccionarios y las palabras guardadas. Podrás volver a descargar los modelos más tarde.</string>
+    <string name="translation_models_removed">Se eliminaron las descargas de traducción sin conexión.</string>
+    <string name="translation_models_remove_failed">No se pudieron eliminar las descargas de traducción. Inténtalo más tarde.</string>
+    <string name="translation_credit">Las traducciones opcionales usan primero el traductor del sistema Android si está listo. Si no, usan Google Translate mediante ML Kit en el dispositivo. Los modelos solo se descargan con permiso. Google recibe diagnósticos de uso del SDK y del dispositivo, incluidos los idiomas configurados, pero no el texto de las definiciones ni las traducciones. La traducción automática puede ser inexacta; los originales siguen visibles.</string>
+    <string name="pronunciation_guide">Pronunciación: %1$s</string>
+    <string name="pronunciation_guide_credit">Las guías inglesas son transcripciones simplificadas aproximadas del inglés norteamericano, derivadas de CMUdict. Las mayúsculas indican el acento principal; uu como en book, oo como en food y zh como en vision. Escuchar usa la voz instalada en el dispositivo, cuyo acento puede ser diferente.</string>
     <string name="listen_device_voice">Escuchar (voz del dispositivo)</string>
     <string name="copy">Copiar</string>
     <string name="copied">Definición copiada.</string>
@@ -62,7 +125,7 @@
     <string name="pack_info">%1$s · %2$,d palabras · %3$s MB comprimidos</string>
     <string name="credits">Créditos de los datos</string>
     <string name="license_title">Licencias</string>
-    <string name="privacy_note">Sin cuenta, seguimiento ni anuncios. Tus palabras, progreso y niveles permanecen en este dispositivo. Las búsquedas en línea envían la palabra a Wikcionario. Los diccionarios completos se descargan directamente de reader.dict, sin un servidor propio.</string>
+    <string name="privacy_note">Sin cuenta ni anuncios. Tus palabras y progreso permanecen en este dispositivo. Las búsquedas en línea envían la palabra a Wikcionario; los diccionarios completos vienen de reader.dict. La traducción opcional de Google es local, pero su SDK envía diagnósticos de uso y del dispositivo a Google, no el texto de las definiciones.</string>
     <string name="offline_dictionaries">Diccionarios completos sin conexión</string>
     <string name="download_dictionary">Descargar el diccionario completo</string>
     <string name="download_size">Aprox. %1$s MB. Se recomienda Wi-Fi.</string>

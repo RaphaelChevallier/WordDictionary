@@ -46,6 +46,19 @@ android {
         }
     }
 
+    splits {
+        abi {
+            isEnable = true
+            reset()
+            include("arm64-v8a", "armeabi-v7a", "x86", "x86_64")
+            isUniversalApk = false
+        }
+    }
+
+    packaging {
+        jniLibs.useLegacyPackaging = true
+    }
+
     buildFeatures {
         compose = true
         buildConfig = true
@@ -58,6 +71,7 @@ android {
 
     androidResources {
         noCompress += "mflx"
+        noCompress += "mfpr"
         localeFilters += listOf("en", "fr", "es")
     }
 
@@ -77,6 +91,11 @@ val prepareStarterLexicon = tasks.register<Exec>("prepareStarterLexicon") {
     commandLine("node", "tools/starter.mjs", "prepare")
 }
 
+val preparePronunciationGuides = tasks.register<Exec>("preparePronunciationGuides") {
+    workingDir(rootProject.projectDir)
+    commandLine("node", "tools/pronunciation.mjs", "prepare")
+}
+
 abstract class BundleLexiconTask @Inject constructor(private val files: FileSystemOperations) : DefaultTask() {
     @get:InputDirectory
     @get:PathSensitive(PathSensitivity.RELATIVE)
@@ -94,6 +113,10 @@ abstract class BundleLexiconTask @Inject constructor(private val files: FileSyst
     @get:PathSensitive(PathSensitivity.RELATIVE)
     abstract val ranksDirectory: DirectoryProperty
 
+    @get:InputDirectory
+    @get:PathSensitive(PathSensitivity.RELATIVE)
+    abstract val pronunciationDirectory: DirectoryProperty
+
     @get:OutputDirectory
     abstract val outputDirectory: DirectoryProperty
 
@@ -104,6 +127,7 @@ abstract class BundleLexiconTask @Inject constructor(private val files: FileSyst
             from(manifestFile) { into("lexicon") }
             from(licensesDirectory) { into("licenses") }
             from(ranksDirectory) { into("ranks") }
+            from(pronunciationDirectory) { into("pronunciations") }
             into(outputDirectory)
         }
     }
@@ -112,11 +136,12 @@ abstract class BundleLexiconTask @Inject constructor(private val files: FileSyst
 androidComponents.onVariants { variant ->
     val capitalized = variant.name.replaceFirstChar(Char::uppercaseChar)
     val bundle = tasks.register<BundleLexiconTask>("bundle${capitalized}Lexicon") {
-        dependsOn(prepareStarterLexicon)
+        dependsOn(prepareStarterLexicon, preparePronunciationGuides)
         packsDirectory.set(rootProject.layout.projectDirectory.dir("content/starter/packs"))
         manifestFile.set(rootProject.layout.projectDirectory.file("content/starter/manifest.json"))
         licensesDirectory.set(rootProject.layout.projectDirectory.dir("content/licenses"))
         ranksDirectory.set(rootProject.layout.projectDirectory.dir("content/starter/ranks"))
+        pronunciationDirectory.set(rootProject.layout.projectDirectory.dir("content/pronunciations"))
         outputDirectory.set(layout.buildDirectory.dir("generated/lexiconAssets/${variant.name}"))
     }
 
@@ -141,9 +166,17 @@ dependencies {
     implementation("androidx.navigation:navigation-compose:2.9.5")
     implementation("androidx.datastore:datastore-preferences:1.1.7")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.10.2")
+    implementation("com.google.mlkit:translate:17.0.3")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
     implementation("com.github.luben:zstd-jni:1.5.7-12@aar")
     implementation("androidx.work:work-runtime-ktx:2.10.5")
+
+    constraints {
+        implementation("com.squareup.okhttp3:okhttp:4.12.0") {
+            because("Patch the legacy TLS certificate validation dependency pulled in by ML Kit.")
+        }
+    }
 
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")

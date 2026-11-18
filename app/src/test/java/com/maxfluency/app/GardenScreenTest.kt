@@ -100,6 +100,74 @@ class GardenScreenTest {
     }
 
     @Test
+    fun onlyACompletedNewWordsRoundAnimatesTheGarden() {
+        var state by mutableStateOf(AppUiState(loading = false,
+            daily = DailyWords(LocalDate.of(2026, 11, 13), words.first(), words.drop(1))))
+        compose.setContent {
+            MaxFluencyTheme {
+                Surface {
+                    TodayScreen(state, onWord = { id ->
+                        val daily = requireNotNull(state.daily)
+                        state = state.copy(daily = daily.copy(explored = daily.explored + id))
+                    }, onQuery = {}, onLanguage = {}, onMode = {}, onRetry = {}, onOnlineSearch = {},
+                        onRefresh = { state = state.copy(refreshingGarden = true) }, onSpeak = {})
+                }
+            }
+        }
+        var wordTag = "garden-word-en:clarity"
+        fun wordTop() = compose.onNodeWithTag(wordTag).getUnclippedBoundsInRoot().top
+        val restingTop = wordTop()
+        compose.mainClock.autoAdvance = false
+        try {
+            compose.onNodeWithTag("garden-word-en:clarity").performClick()
+            compose.mainClock.advanceTimeByFrame()
+            assertEquals("Opening a word must not animate the garden", restingTop,
+                wordTop())
+            compose.onNodeWithTag("refresh-garden").performClick()
+            compose.mainClock.advanceTimeByFrame()
+            assertEquals("Keep existing words steady while a replacement loads", restingTop,
+                wordTop())
+            compose.runOnIdle {
+                val daily = requireNotNull(state.daily)
+                state = state.copy(refreshingGarden = false, daily = daily.copy(round = daily.round + 1,
+                    grid = daily.grid.map { it.copy(id = "en:new-${it.word}") }, explored = emptySet()))
+            }
+            wordTag = "garden-word-en:new-clarity"
+            compose.mainClock.advanceTimeByFrame()
+            compose.onAllNodesWithTag("daily-grid").assertCountEquals(1)
+            val enteringTop = wordTop()
+            assertTrue("New words should enter with a small movement: $enteringTop vs $restingTop", enteringTop > restingTop)
+            compose.mainClock.advanceTimeBy(96)
+            val middleTop = wordTop()
+            assertTrue("The refresh movement should settle smoothly", middleTop < enteringTop && middleTop > restingTop)
+            compose.onNodeWithTag(wordTag).performClick()
+            compose.mainClock.advanceTimeByFrame()
+            assertTrue("Fresh words stay tappable while settling", "en:new-clarity" in requireNotNull(state.daily).explored)
+            assertTrue("Reading a fresh word must not restart its entrance", wordTop() < middleTop)
+            compose.mainClock.advanceTimeBy(240)
+            assertEquals(restingTop, wordTop())
+            compose.runOnIdle {
+                state = state.copy(daily = requireNotNull(state.daily).copy(date = LocalDate.of(2026, 11, 14), round = 0))
+            }
+            compose.mainClock.advanceTimeByFrame()
+            assertEquals("A different day must not replay a manual refresh animation", restingTop,
+                wordTop())
+            compose.runOnIdle { state = state.copy(loading = true) }
+            compose.mainClock.advanceTimeByFrame()
+            compose.runOnIdle {
+                state = state.copy(loading = false, daily = requireNotNull(state.daily).copy(round = 4))
+            }
+            compose.mainClock.advanceTimeByFrame()
+            assertEquals("Loading another saved selection must not act like New words", restingTop, wordTop())
+            compose.onNodeWithTag("refresh-garden").performClick()
+            compose.mainClock.advanceTimeByFrame()
+            compose.runOnIdle { state = state.copy(refreshingGarden = false) }
+            compose.mainClock.advanceTimeByFrame()
+            assertEquals("An unsuccessful refresh must leave the garden steady", restingTop, wordTop())
+        } finally { compose.mainClock.autoAdvance = true }
+    }
+
+    @Test
     fun newWordsAreAlwaysOptional() {
         var state by mutableStateOf(AppUiState(loading = false,
             daily = DailyWords(LocalDate.of(2026, 11, 13), words.first(), words.drop(1))))
