@@ -1,14 +1,29 @@
 # MaxFluency
 
-A native Kotlin/Jetpack Compose vocabulary app for English, French, and Spanish.
-The app installs a small starter bank, uses public dictionaries for requested online
-lookups, and encourages optional full offline language downloads.
+Native Android (Kotlin/Jetpack Compose) and iOS 18+ (SwiftUI) vocabulary clients for
+English, French, and Spanish. Both install a small starter bank, use public dictionaries
+for explicitly requested online lookups, and offer optional full offline downloads.
 
-APKs are processor-specific so a phone does not download the translation engine four
+Android APKs are processor-specific so a phone does not download the translation engine four
 times. Locally signed optimized builds measure **13.97-15.26 MB per APK**
 (**ARM64: 14.76 MB**), with a build-enforced **19 MB per-device limit**.
 Most modern phones use **arm64-v8a**.
 Full dictionaries and optional translation models download separately after installation.
+
+## Repository layout
+
+- [apps/android](apps/android): the complete Android Gradle project, including its JVM core.
+- [apps/ios](apps/ios): native SwiftUI app, Xcode project, unit/UI tests and signing template.
+- [content](content): shared pinned dictionaries, pronunciation data, ranks and licences.
+  The Apple zlib packs are reproducible derivatives of the same words, not an edited fork.
+- [tools](tools): shared build/content tools. Run the existing Android npm commands from
+  the repository root; open `apps/android` when importing into Android Studio.
+- [version.properties](version.properties): the common app/content release version.
+
+The initial iOS source port includes the current screens and integrations. Its Apple
+SDK build, simulator UI and real-device services must still be checked on a Mac;
+Windows content/project/syntax checks are **not** an Xcode build.
+See the [iOS setup and platform notes](apps/ios/README.md).
 
 ## Daily interface
 
@@ -355,12 +370,14 @@ small configured list of basic function words. Mixed-meaning previews show an el
 meaning, while opening the definition restores the full entry. Lookup definitions are not
 deleted merely to curate daily learning.
 
-## Build locally
+## Build Android locally
 
 Requirements: JDK 17-24 (21 recommended), Android SDK platform 36, build-tools 35.0.0,
 and Node.js 24+. Node and the large build-source snapshots never ship as app code.
+The development-only Swift syntax checker requires the root npm dependencies.
 
 ```powershell
+npm ci
 npm test
 npm run test:android
 npm run build
@@ -369,8 +386,8 @@ npm run build:release
 
 Outputs:
 
-- `app\build\outputs\apk\debug\app-arm64-v8a-debug.apk` - installable ARM64 development build.
-- `app\build\outputs\apk\release\app-arm64-v8a-release-unsigned.apk` - optimized ARM64
+- `apps\android\app\build\outputs\apk\debug\app-arm64-v8a-debug.apk` - installable ARM64 development build.
+- `apps\android\app\build\outputs\apk\release\app-arm64-v8a-release-unsigned.apk` - optimized ARM64
   release, requiring an owner-provided production signing configuration.
 - Equivalent APKs are generated for **armeabi-v7a** (32-bit ARM), **x86**, and **x86_64**.
   Install only the APK matching the device, not all four. `adb shell getprop ro.product.cpu.abi`
@@ -389,6 +406,27 @@ development tooling and are not representative of release speed.
 The helper recognizes installed Windows JDKs, `JAVA_HOME`, `MAXFLUENCY_JAVA_HOME`,
 `ANDROID_HOME`, `ANDROID_SDK_ROOT`, and the ignored project-local SDK. It changes only
 its child process environment.
+
+## Build iOS on a Mac
+
+Transfer a checkout **containing these local changes**, including the shared root
+content, to your Mac. Open `apps/ios/MaxFluency.xcodeproj` in Xcode 16+ and choose the
+MaxFluency scheme. No Android SDK is needed for the iOS app.
+
+From that Mac checkout:
+
+```sh
+npm ci
+npm run ios:prepare
+npm run test:ios
+```
+
+`npm run build:ios` performs an unsigned simulator build; `test:ios` selects an installed
+iOS 18+ simulator and runs the native unit/UI test targets. On Windows,
+`npm run verify:ios` verifies exact shared assets, project wiring and Swift syntax only.
+Physical-iPhone translation, notification delivery, installed voices and AnkiMobile
+handoff require separate device checks. Apple language packs are system-managed;
+AnkiMobile is optional and sold separately, while `.apkg` export requires no Anki purchase.
 
 ### Starter content
 

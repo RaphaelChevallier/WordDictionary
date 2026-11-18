@@ -4,6 +4,7 @@ import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
+const androidRoot = join(root, "apps", "android");
 const windows = process.platform === "win32";
 const environment = { ...process.env };
 const tasks = process.argv.slice(2);
@@ -53,9 +54,9 @@ console.log(`Building MaxFluency with ${javaHome}`);
 const result = windows
   ? spawnSync(environment.ComSpec || "cmd.exe",
     ["/d", "/s", "/c", ["gradlew.bat", ...arguments_].join(" ")],
-    { cwd: root, env: environment, stdio: "inherit", windowsHide: true })
-  : spawnSync(join(root, "gradlew"), arguments_,
-    { cwd: root, env: environment, stdio: "inherit" });
+    { cwd: androidRoot, env: environment, stdio: "inherit", windowsHide: true })
+  : spawnSync("sh", [join(androidRoot, "gradlew"), ...arguments_],
+    { cwd: androidRoot, env: environment, stdio: "inherit" });
 if (result.error) throw result.error;
 process.exitCode = result.status ?? 1;
 if (result.status === 0) {
@@ -64,7 +65,7 @@ if (result.status === 0) {
     ["assembleRelease", "release"],
   ]) {
     if (!tasks.some((requested) => requested === task || requested.endsWith(`:${task}`))) continue;
-    const directory = join(root, "app", "build", "outputs", "apk", variant);
+    const directory = join(androidRoot, "app", "build", "outputs", "apk", variant);
     const metadata = JSON.parse(readFileSync(join(directory, "output-metadata.json"), "utf8"));
     if (!metadata.elements?.length) throw new Error("The build produced no installable APK outputs.");
     for (const output of metadata.elements) {

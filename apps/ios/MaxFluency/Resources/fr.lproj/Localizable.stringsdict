@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>anki_export_title</key><dict>
+    <key>NSStringLocalizedFormatKey</key><string>%#@count@</string>
+    <key>count</key><dict><key>NSStringFormatSpecTypeKey</key><string>NSStringPluralRuleType</string>
+      <key>NSStringFormatValueTypeKey</key><string>ld</string>
+      <key>one</key><string>Exporter %ld mot vers Anki</string>
+      <key>other</key><string>Exporter %ld mots vers Anki</string>
+    </dict>
+  </dict>
+  <key>meaning_count</key><dict>
+    <key>NSStringLocalizedFormatKey</key><string>%#@count@</string>
+    <key>count</key><dict><key>NSStringFormatSpecTypeKey</key><string>NSStringPluralRuleType</string>
+      <key>NSStringFormatValueTypeKey</key><string>ld</string>
+      <key>one</key><string>%ld sens</string>
+      <key>other</key><string>%ld sens</string>
+    </dict>
+  </dict>
+  <key>more_meanings</key><dict>
+    <key>NSStringLocalizedFormatKey</key><string>%#@count@</string>
+    <key>count</key><dict><key>NSStringFormatSpecTypeKey</key><string>NSStringPluralRuleType</string>
+      <key>NSStringFormatValueTypeKey</key><string>ld</string>
+      <key>one</key><string>%ld autre sens</string>
+      <key>many</key><string>%ld autres sens</string>
+      <key>other</key><string>%ld autres sens</string>
+    </dict>
+  </dict>
+  <key>word_count</key><dict>
+    <key>NSStringLocalizedFormatKey</key><string>%#@count@</string>
+    <key>count</key><dict><key>NSStringFormatSpecTypeKey</key><string>NSStringPluralRuleType</string>
+      <key>NSStringFormatValueTypeKey</key><string>ld</string>
+      <key>one</key><string>%ld mot disponible hors ligne</string>
+      <key>other</key><string>%ld mots disponibles hors ligne</string>
+    </dict>
+  </dict>
+</dict></plist>

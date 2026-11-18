@@ -2,7 +2,7 @@
   "name": "maxfluency-build-tools",
   "version": "0.2.0",
   "private": true,
-  "description": "Build-only tooling; no JavaScript or network client ships in the Android app.",
+  "description": "Shared build-only tooling; no JavaScript runtime ships in either native app.",
   "engines": {
     "node": ">=24.0.0"
   },
@@ -11,11 +11,19 @@
     "build:release": "node tools/android.mjs assembleRelease",
     "test": "node --test tools/*.test.mjs",
     "test:android": "node tools/android.mjs :core:test :app:testDebugUnitTest",
+    "ios:prepare": "node tools/ios.mjs prepare",
+    "build:ios": "node tools/ios.mjs build",
+    "test:ios": "node tools/ios.mjs test",
+    "verify:ios": "node tools/ios.mjs verify",
     "content:sync": "node tools/lexicon.mjs sync",
     "content:verify": "node tools/starter.mjs verify",
     "content:prepare": "node tools/starter.mjs prepare",
     "examples:generate": "node tools/usage-examples.mjs generate",
     "pronunciation:generate": "node tools/pronunciation.mjs generate",
     "pronunciation:verify": "node tools/pronunciation.mjs prepare"
+  },
+  "devDependencies": {
+    "@repomix/tree-sitter-wasms": "0.1.17",
+    "web-tree-sitter": "0.27.2"
   }
 }

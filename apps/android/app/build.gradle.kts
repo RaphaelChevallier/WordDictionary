@@ -19,8 +19,9 @@ plugins {
     id("org.jetbrains.kotlin.plugin.compose")
 }
 
+val repositoryDirectory = rootProject.layout.projectDirectory.dir("../..")
 val releaseProperties = Properties().apply {
-    rootProject.file("version.properties").inputStream().use(::load)
+    repositoryDirectory.file("version.properties").asFile.inputStream().use(::load)
 }
 val appVersion = releaseProperties.getProperty("versionName")
 val appVersionCode = releaseProperties.getProperty("versionCode").toInt()
@@ -87,12 +88,12 @@ kotlin {
 }
 
 val prepareStarterLexicon = tasks.register<Exec>("prepareStarterLexicon") {
-    workingDir(rootProject.projectDir)
+    workingDir(repositoryDirectory.asFile)
     commandLine("node", "tools/starter.mjs", "prepare")
 }
 
 val preparePronunciationGuides = tasks.register<Exec>("preparePronunciationGuides") {
-    workingDir(rootProject.projectDir)
+    workingDir(repositoryDirectory.asFile)
     commandLine("node", "tools/pronunciation.mjs", "prepare")
 }
 
@@ -137,16 +138,16 @@ androidComponents.onVariants { variant ->
     val capitalized = variant.name.replaceFirstChar(Char::uppercaseChar)
     val bundle = tasks.register<BundleLexiconTask>("bundle${capitalized}Lexicon") {
         dependsOn(prepareStarterLexicon, preparePronunciationGuides)
-        packsDirectory.set(rootProject.layout.projectDirectory.dir("content/starter/packs"))
-        manifestFile.set(rootProject.layout.projectDirectory.file("content/starter/manifest.json"))
-        licensesDirectory.set(rootProject.layout.projectDirectory.dir("content/licenses"))
-        ranksDirectory.set(rootProject.layout.projectDirectory.dir("content/starter/ranks"))
-        pronunciationDirectory.set(rootProject.layout.projectDirectory.dir("content/pronunciations"))
+        packsDirectory.set(repositoryDirectory.dir("content/starter/packs"))
+        manifestFile.set(repositoryDirectory.file("content/starter/manifest.json"))
+        licensesDirectory.set(repositoryDirectory.dir("content/licenses"))
+        ranksDirectory.set(repositoryDirectory.dir("content/starter/ranks"))
+        pronunciationDirectory.set(repositoryDirectory.dir("content/pronunciations"))
         outputDirectory.set(layout.buildDirectory.dir("generated/lexiconAssets/${variant.name}"))
     }
 
     tasks.withType<Test>().configureEach {
-        systemProperty("maxfluency.projectDir", rootProject.projectDir.absolutePath)
+        systemProperty("maxfluency.projectDir", repositoryDirectory.asFile.absolutePath)
         systemProperty("maxfluency.publicDictionaryIntegration", providers.gradleProperty("publicDictionaryIntegration").orElse("false").get())
     }
     variant.sources.assets?.addGeneratedSourceDirectory(bundle) { it.outputDirectory }
