@@ -43,11 +43,17 @@ final class ServiceTests: XCTestCase {
 
     @MainActor
     func testMeasuredGardenPackingKeepsEveryTargetSeparate() throws {
-        let sizes = (0..<20).map { index in CGSize(width: index % 5 == 3 ? 48 : CGFloat(70 + index * 3),
-                                                  height: index % 5 == 3 ? 120 : 48) }
+        let sizes: [CGSize] = (0..<20).map { index in
+            let rotated = index % 5 == 3
+            let width: CGFloat = rotated ? 48 : CGFloat(70 + index * 3)
+            let height: CGFloat = rotated ? 120 : 48
+            return CGSize(width: width, height: height)
+        }
         let positions = try XCTUnwrap(GardenLayout.pack(sizes: sizes, width: 390, height: 900))
         XCTAssertEqual(positions.count, sizes.count)
-        let rectangles = zip(positions, sizes).map { CGRect(origin: $0.0, size: $0.1) }
+        let rectangles: [CGRect] = zip(positions, sizes).map { position, size in
+            CGRect(origin: position, size: size)
+        }
         for index in rectangles.indices {
             XCTAssertTrue(CGRect(x: 0, y: 0, width: 390, height: 900).contains(rectangles[index]))
             for other in rectangles.indices where other > index {

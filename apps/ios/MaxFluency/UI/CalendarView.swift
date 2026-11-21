@@ -49,26 +49,7 @@ struct CalendarView: View {
                         }
                         LazyVGrid(columns: Array(repeating: GridItem(.fixed(48), spacing: 2), count: 7), spacing: 2) {
                             ForEach(model.calendarCells) { cell in
-                                if let number = cell.number {
-                                    Button {
-                                        if let word = cell.word { model.openArchive(word) }
-                                    } label: {
-                                        VStack(alignment: .leading, spacing: 4) {
-                                            Text(number.formatted(.number.locale(model.locale))).readingFont(12, weight: .medium)
-                                            if let word = cell.word {
-                                                Text(word.entry.word).readingFont(14, design: .serif).lineLimit(3)
-                                            }
-                                            Spacer(minLength: 0)
-                                        }
-                                        .padding(4).frame(width: 48, height: 84, alignment: .topLeading)
-                                        .foregroundStyle(cell.future ? AppPalette.secondary : AppPalette.foreground)
-                                        .background(AppPalette.surface, in: RoundedRectangle(cornerRadius: 6))
-                                        .overlay(RoundedRectangle(cornerRadius: 6).stroke(cell.id == (model.calendarSelected ?? LocalDay.string()) ? AppPalette.foreground : AppPalette.outline))
-                                    }
-                                    .buttonStyle(.plain).disabled(cell.future || cell.word == nil || model.calendarLoading)
-                                    .accessibilityLabel((cell.date?.formatted(.dateTime.weekday(.wide).day().month(.wide).year().locale(model.locale)) ?? "") + ", " + (cell.word?.entry.word ?? ""))
-                                    .accessibilityIdentifier("calendar-day-\(cell.id)")
-                                } else { Color.clear.frame(width: 48, height: 84) }
+                                CalendarDayView(cell: cell)
                             }
                         }.frame(width: 348)
                     }
@@ -76,5 +57,33 @@ struct CalendarView: View {
                 Text(model.text("calendar_note")).readingFont(12).foregroundStyle(AppPalette.secondary)
             }.padding(16).frame(maxWidth: .infinity, alignment: .leading)
         }.navigationTitle(model.text("word_calendar")).accessibilityIdentifier("calendar-screen")
+    }
+}
+
+private struct CalendarDayView: View {
+    @Environment(AppModel.self) private var model
+    let cell: CalendarCell
+
+    var body: some View {
+        if let number = cell.number {
+            Button {
+                if let word = cell.word { model.openArchive(word) }
+            } label: {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(number.formatted(.number.locale(model.locale))).readingFont(12, weight: .medium)
+                    if let word = cell.word {
+                        Text(word.entry.word).readingFont(14, design: .serif).lineLimit(3)
+                    }
+                    Spacer(minLength: 0)
+                }
+                .padding(4).frame(width: 48, height: 84, alignment: .topLeading)
+                .foregroundStyle(cell.future ? AppPalette.secondary : AppPalette.foreground)
+                .background(AppPalette.surface, in: RoundedRectangle(cornerRadius: 6))
+                .overlay(RoundedRectangle(cornerRadius: 6).stroke(cell.id == (model.calendarSelected ?? LocalDay.string()) ? AppPalette.foreground : AppPalette.outline))
+            }
+            .buttonStyle(.plain).disabled(cell.future || cell.word == nil || model.calendarLoading)
+            .accessibilityLabel((cell.date?.formatted(.dateTime.weekday(.wide).day().month(.wide).year().locale(model.locale)) ?? "") + ", " + (cell.word?.entry.word ?? ""))
+            .accessibilityIdentifier("calendar-day-\(cell.id)")
+        } else { Color.clear.frame(width: 48, height: 84) }
     }
 }

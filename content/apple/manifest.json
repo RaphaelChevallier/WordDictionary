@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "compression": "zlib-frames",
-  "builderSha256": "420223b7514bc35fa69a936b2c395632ad3e587bf05d601323353feb2e43e264",
+  "builderSha256": "02e15d88f25a30c5d8775448cc504dbb798596c4b1ec5a47e901c35e2db5a459",
   "sourceManifestSha256": "a43d4cdc96774bb67f89d74067849655071174256224f826ab6c13e428d395d4",
   "pronunciationManifestSha256": "802252dfe5026716a0ae0e0152b7ec832dec2bd27ea15d3089262cb43031c4e9",
   "sourcePackHashes": {
@@ -218,24 +218,24 @@
       "file": "en.mfap",
       "entries": 2465,
       "dailyEntries": 2403,
-      "compressedBytes": 1527587,
-      "sha256": "b10a53132ccc6b52e4dbd1fa84e75b8304b0b28b86ad10c4418f226296f432e4"
+      "compressedBytes": 1533598,
+      "sha256": "e14e6c4f8aee316332af2dd8ec76641a57061c874adb57bc2ae5c0c3793000cc"
     },
     {
       "language": "fr",
       "file": "fr.mfap",
       "entries": 2692,
       "dailyEntries": 2640,
-      "compressedBytes": 1783516,
-      "sha256": "beee3219f2b1f4851dca5e7e8ef5740a807c2e30ac1855705a7103bf068a92ba"
+      "compressedBytes": 1782863,
+      "sha256": "8175017207fc57ea9becb639141b710089c669556c357e61dc6a330388d17714"
     },
     {
       "language": "es",
       "file": "es.mfap",
       "entries": 3078,
       "dailyEntries": 2699,
-      "compressedBytes": 1656152,
-      "sha256": "8304f80a79eab8f3b182f3eb88745c55b2a1984e3d67f8a2bee78dc92873cc5a"
+      "compressedBytes": 1659989,
+      "sha256": "091087cf50a92c83aa58973e371369f23a7e5c99c3e41cdac7e9e6271d702710"
     }
   ]
 }

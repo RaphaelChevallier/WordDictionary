@@ -31,7 +31,7 @@ struct WordGardenView: View {
 
     private var measuredGarden: some View {
             let scale = min(max(min(viewportWidth / 350, viewportHeight / 460), 0.85), 1.6)
-            GardenLayout(viewportHeight: viewportHeight) {
+            return GardenLayout(viewportHeight: viewportHeight) {
                 ForEach(words.indices, id: \.self) { index in
                     let word = words[index]
                     let rotated = index % 5 == 3
